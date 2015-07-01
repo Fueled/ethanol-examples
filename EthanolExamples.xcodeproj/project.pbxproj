@@ -1,0 +1,581 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F47357E31B44320B007688EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47357E21B44320B007688EC /* AppDelegate.swift */; };
+		F47357E81B44320B007688EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47357E61B44320B007688EC /* Main.storyboard */; };
+		F47357EA1B44320C007688EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47357E91B44320B007688EC /* Assets.xcassets */; };
+		F47357ED1B44320C007688EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47357EB1B44320C007688EC /* LaunchScreen.storyboard */; };
+		F47357F81B44320C007688EC /* EthanolExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47357F71B44320C007688EC /* EthanolExamplesTests.swift */; };
+		F47358031B44320C007688EC /* EthanolExamplesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47358021B44320C007688EC /* EthanolExamplesUITests.swift */; };
+		F47358111B4435CA007688EC /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47358101B4435CA007688EC /* CategoryViewController.swift */; };
+		F47358131B4435E7007688EC /* DemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47358121B4435E6007688EC /* DemoListViewController.swift */; };
+		F47359501B45A551007688EC /* TextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F473594E1B45A551007688EC /* TextFieldViewController.m */; };
+		F47359511B45A551007688EC /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F473594F1B45A551007688EC /* TextFieldViewController.xib */; };
+		F47359531B45B8EF007688EC /* DemoInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47359521B45B8EF007688EC /* DemoInformation.swift */; };
+		F47359711B45BC32007688EC /* EthanolUIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F473596D1B45BC32007688EC /* EthanolUIComponents.framework */; };
+		F47359721B45BC32007688EC /* EthanolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F473596E1B45BC32007688EC /* EthanolUtilities.framework */; };
+		F47359731B45BC32007688EC /* EthanolValidationFormatting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F473596F1B45BC32007688EC /* EthanolValidationFormatting.framework */; };
+		F47359741B45BC32007688EC /* NSInvocationHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47359701B45BC32007688EC /* NSInvocationHelpers.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F47357F41B44320C007688EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F47357D71B44320B007688EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F47357DE1B44320B007688EC;
+			remoteInfo = EthanolExamples;
+		};
+		F47357FF1B44320C007688EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F47357D71B44320B007688EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F47357DE1B44320B007688EC;
+			remoteInfo = EthanolExamples;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F47357DF1B44320B007688EC /* EthanolExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EthanolExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F47357E21B44320B007688EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F47357E71B44320B007688EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F47357E91B44320B007688EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F47357EC1B44320C007688EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F47357EE1B44320C007688EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F47357F31B44320C007688EC /* EthanolExamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EthanolExamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F47357F71B44320C007688EC /* EthanolExamplesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthanolExamplesTests.swift; sourceTree = "<group>"; };
+		F47357F91B44320C007688EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F47357FE1B44320C007688EC /* EthanolExamplesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EthanolExamplesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F47358021B44320C007688EC /* EthanolExamplesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthanolExamplesUITests.swift; sourceTree = "<group>"; };
+		F47358041B44320C007688EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F47358101B4435CA007688EC /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		F47358121B4435E6007688EC /* DemoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoListViewController.swift; sourceTree = "<group>"; };
+		F473594C1B45A550007688EC /* EthanolExamples-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EthanolExamples-Bridging-Header.h"; sourceTree = "<group>"; };
+		F473594D1B45A551007688EC /* TextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldViewController.h; sourceTree = "<group>"; };
+		F473594E1B45A551007688EC /* TextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldViewController.m; sourceTree = "<group>"; };
+		F473594F1B45A551007688EC /* TextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
+		F47359521B45B8EF007688EC /* DemoInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoInformation.swift; sourceTree = "<group>"; };
+		F473596D1B45BC32007688EC /* EthanolUIComponents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolUIComponents.framework; path = Carthage/Build/iOS/EthanolUIComponents.framework; sourceTree = "<group>"; };
+		F473596E1B45BC32007688EC /* EthanolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolUtilities.framework; path = Carthage/Build/iOS/EthanolUtilities.framework; sourceTree = "<group>"; };
+		F473596F1B45BC32007688EC /* EthanolValidationFormatting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolValidationFormatting.framework; path = Carthage/Build/iOS/EthanolValidationFormatting.framework; sourceTree = "<group>"; };
+		F47359701B45BC32007688EC /* NSInvocationHelpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NSInvocationHelpers.framework; path = Carthage/Build/iOS/NSInvocationHelpers.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F47357DC1B44320B007688EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F47359711B45BC32007688EC /* EthanolUIComponents.framework in Frameworks */,
+				F47359721B45BC32007688EC /* EthanolUtilities.framework in Frameworks */,
+				F47359731B45BC32007688EC /* EthanolValidationFormatting.framework in Frameworks */,
+				F47359741B45BC32007688EC /* NSInvocationHelpers.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F47357F01B44320C007688EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F47357FB1B44320C007688EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F47357D61B44320B007688EC = {
+			isa = PBXGroup;
+			children = (
+				F47357E11B44320B007688EC /* EthanolExamples */,
+				F47357F61B44320C007688EC /* EthanolExamplesTests */,
+				F47358011B44320C007688EC /* EthanolExamplesUITests */,
+				F47359751B45BDBB007688EC /* Dependencies */,
+				F47357E01B44320B007688EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F47357E01B44320B007688EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F47357DF1B44320B007688EC /* EthanolExamples.app */,
+				F47357F31B44320C007688EC /* EthanolExamplesTests.xctest */,
+				F47357FE1B44320C007688EC /* EthanolExamplesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F47357E11B44320B007688EC /* EthanolExamples */ = {
+			isa = PBXGroup;
+			children = (
+				F47357E21B44320B007688EC /* AppDelegate.swift */,
+				F47358101B4435CA007688EC /* CategoryViewController.swift */,
+				F47358121B4435E6007688EC /* DemoListViewController.swift */,
+				F47359521B45B8EF007688EC /* DemoInformation.swift */,
+				F473594D1B45A551007688EC /* TextFieldViewController.h */,
+				F473594E1B45A551007688EC /* TextFieldViewController.m */,
+				F473594F1B45A551007688EC /* TextFieldViewController.xib */,
+				F47357E61B44320B007688EC /* Main.storyboard */,
+				F47357E91B44320B007688EC /* Assets.xcassets */,
+				F47357EB1B44320C007688EC /* LaunchScreen.storyboard */,
+				F47357EE1B44320C007688EC /* Info.plist */,
+				F473594C1B45A550007688EC /* EthanolExamples-Bridging-Header.h */,
+			);
+			path = EthanolExamples;
+			sourceTree = "<group>";
+		};
+		F47357F61B44320C007688EC /* EthanolExamplesTests */ = {
+			isa = PBXGroup;
+			children = (
+				F47357F71B44320C007688EC /* EthanolExamplesTests.swift */,
+				F47357F91B44320C007688EC /* Info.plist */,
+			);
+			path = EthanolExamplesTests;
+			sourceTree = "<group>";
+		};
+		F47358011B44320C007688EC /* EthanolExamplesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F47358021B44320C007688EC /* EthanolExamplesUITests.swift */,
+				F47358041B44320C007688EC /* Info.plist */,
+			);
+			path = EthanolExamplesUITests;
+			sourceTree = "<group>";
+		};
+		F47359751B45BDBB007688EC /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				F473596D1B45BC32007688EC /* EthanolUIComponents.framework */,
+				F473596E1B45BC32007688EC /* EthanolUtilities.framework */,
+				F473596F1B45BC32007688EC /* EthanolValidationFormatting.framework */,
+				F47359701B45BC32007688EC /* NSInvocationHelpers.framework */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F47357DE1B44320B007688EC /* EthanolExamples */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F47358071B44320C007688EC /* Build configuration list for PBXNativeTarget "EthanolExamples" */;
+			buildPhases = (
+				F47357DB1B44320B007688EC /* Sources */,
+				F47357DC1B44320B007688EC /* Frameworks */,
+				F47357DD1B44320B007688EC /* Resources */,
+				F47359581B45BA57007688EC /* Carthage Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EthanolExamples;
+			productName = EthanolExamples;
+			productReference = F47357DF1B44320B007688EC /* EthanolExamples.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F47357F21B44320C007688EC /* EthanolExamplesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F473580A1B44320C007688EC /* Build configuration list for PBXNativeTarget "EthanolExamplesTests" */;
+			buildPhases = (
+				F47357EF1B44320C007688EC /* Sources */,
+				F47357F01B44320C007688EC /* Frameworks */,
+				F47357F11B44320C007688EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F47357F51B44320C007688EC /* PBXTargetDependency */,
+			);
+			name = EthanolExamplesTests;
+			productName = EthanolExamplesTests;
+			productReference = F47357F31B44320C007688EC /* EthanolExamplesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F47357FD1B44320C007688EC /* EthanolExamplesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F473580D1B44320C007688EC /* Build configuration list for PBXNativeTarget "EthanolExamplesUITests" */;
+			buildPhases = (
+				F47357FA1B44320C007688EC /* Sources */,
+				F47357FB1B44320C007688EC /* Frameworks */,
+				F47357FC1B44320C007688EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F47358001B44320C007688EC /* PBXTargetDependency */,
+			);
+			name = EthanolExamplesUITests;
+			productName = EthanolExamplesUITests;
+			productReference = F47357FE1B44320C007688EC /* EthanolExamplesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F47357D71B44320B007688EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Stephane Copin";
+				TargetAttributes = {
+					F47357DE1B44320B007688EC = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					F47357F21B44320C007688EC = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = F47357DE1B44320B007688EC;
+					};
+					F47357FD1B44320C007688EC = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = F47357DE1B44320B007688EC;
+					};
+				};
+			};
+			buildConfigurationList = F47357DA1B44320B007688EC /* Build configuration list for PBXProject "EthanolExamples" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F47357D61B44320B007688EC;
+			productRefGroup = F47357E01B44320B007688EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F47357DE1B44320B007688EC /* EthanolExamples */,
+				F47357F21B44320C007688EC /* EthanolExamplesTests */,
+				F47357FD1B44320C007688EC /* EthanolExamplesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F47357DD1B44320B007688EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F47359511B45A551007688EC /* TextFieldViewController.xib in Resources */,
+				F47357ED1B44320C007688EC /* LaunchScreen.storyboard in Resources */,
+				F47357EA1B44320C007688EC /* Assets.xcassets in Resources */,
+				F47357E81B44320B007688EC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F47357F11B44320C007688EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F47357FC1B44320C007688EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F47359581B45BA57007688EC /* Carthage Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/EthanolUIComponents.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/EthanolUtilities.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/EthanolValidationFormatting.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/NSInvocationHelpers.framework",
+			);
+			name = "Carthage Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F47357DB1B44320B007688EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F47359501B45A551007688EC /* TextFieldViewController.m in Sources */,
+				F47358111B4435CA007688EC /* CategoryViewController.swift in Sources */,
+				F47357E31B44320B007688EC /* AppDelegate.swift in Sources */,
+				F47358131B4435E7007688EC /* DemoListViewController.swift in Sources */,
+				F47359531B45B8EF007688EC /* DemoInformation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F47357EF1B44320C007688EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F47357F81B44320C007688EC /* EthanolExamplesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F47357FA1B44320C007688EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F47358031B44320C007688EC /* EthanolExamplesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F47357F51B44320C007688EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F47357DE1B44320B007688EC /* EthanolExamples */;
+			targetProxy = F47357F41B44320C007688EC /* PBXContainerItemProxy */;
+		};
+		F47358001B44320C007688EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F47357DE1B44320B007688EC /* EthanolExamples */;
+			targetProxy = F47357FF1B44320C007688EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F47357E61B44320B007688EC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F47357E71B44320B007688EC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F47357EB1B44320C007688EC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F47357EC1B44320C007688EC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F47358051B44320C007688EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F47358061B44320C007688EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F47358081B44320C007688EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/**";
+				INFOPLIST_FILE = EthanolExamples/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fueled.EthanolExamples;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EthanolExamples/EthanolExamples-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F47358091B44320C007688EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/**";
+				INFOPLIST_FILE = EthanolExamples/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fueled.EthanolExamples;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EthanolExamples/EthanolExamples-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		F473580B1B44320C007688EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = EthanolExamplesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fueled.EthanolExamplesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EthanolExamples.app/EthanolExamples";
+			};
+			name = Debug;
+		};
+		F473580C1B44320C007688EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = EthanolExamplesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fueled.EthanolExamplesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EthanolExamples.app/EthanolExamples";
+			};
+			name = Release;
+		};
+		F473580E1B44320C007688EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EthanolExamplesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fueled.EthanolExamplesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = EthanolExamples;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		F473580F1B44320C007688EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EthanolExamplesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fueled.EthanolExamplesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = EthanolExamples;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F47357DA1B44320B007688EC /* Build configuration list for PBXProject "EthanolExamples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F47358051B44320C007688EC /* Debug */,
+				F47358061B44320C007688EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F47358071B44320C007688EC /* Build configuration list for PBXNativeTarget "EthanolExamples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F47358081B44320C007688EC /* Debug */,
+				F47358091B44320C007688EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F473580A1B44320C007688EC /* Build configuration list for PBXNativeTarget "EthanolExamplesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F473580B1B44320C007688EC /* Debug */,
+				F473580C1B44320C007688EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F473580D1B44320C007688EC /* Build configuration list for PBXNativeTarget "EthanolExamplesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F473580E1B44320C007688EC /* Debug */,
+				F473580F1B44320C007688EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F47357D71B44320B007688EC /* Project object */;
+}
