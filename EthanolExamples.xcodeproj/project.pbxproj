@@ -18,10 +18,6 @@
 		F47359501B45A551007688EC /* TextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F473594E1B45A551007688EC /* TextFieldViewController.m */; };
 		F47359511B45A551007688EC /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F473594F1B45A551007688EC /* TextFieldViewController.xib */; };
 		F47359531B45B8EF007688EC /* DemoInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47359521B45B8EF007688EC /* DemoInformation.swift */; };
-		F47359711B45BC32007688EC /* EthanolUIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F473596D1B45BC32007688EC /* EthanolUIComponents.framework */; };
-		F47359721B45BC32007688EC /* EthanolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F473596E1B45BC32007688EC /* EthanolUtilities.framework */; };
-		F47359731B45BC32007688EC /* EthanolValidationFormatting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F473596F1B45BC32007688EC /* EthanolValidationFormatting.framework */; };
-		F47359741B45BC32007688EC /* NSInvocationHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47359701B45BC32007688EC /* NSInvocationHelpers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,10 +57,6 @@
 		F473594E1B45A551007688EC /* TextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldViewController.m; sourceTree = "<group>"; };
 		F473594F1B45A551007688EC /* TextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
 		F47359521B45B8EF007688EC /* DemoInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoInformation.swift; sourceTree = "<group>"; };
-		F473596D1B45BC32007688EC /* EthanolUIComponents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolUIComponents.framework; path = Carthage/Build/iOS/EthanolUIComponents.framework; sourceTree = "<group>"; };
-		F473596E1B45BC32007688EC /* EthanolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolUtilities.framework; path = Carthage/Build/iOS/EthanolUtilities.framework; sourceTree = "<group>"; };
-		F473596F1B45BC32007688EC /* EthanolValidationFormatting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolValidationFormatting.framework; path = Carthage/Build/iOS/EthanolValidationFormatting.framework; sourceTree = "<group>"; };
-		F47359701B45BC32007688EC /* NSInvocationHelpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NSInvocationHelpers.framework; path = Carthage/Build/iOS/NSInvocationHelpers.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,10 +64,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F47359711B45BC32007688EC /* EthanolUIComponents.framework in Frameworks */,
-				F47359721B45BC32007688EC /* EthanolUtilities.framework in Frameworks */,
-				F47359731B45BC32007688EC /* EthanolValidationFormatting.framework in Frameworks */,
-				F47359741B45BC32007688EC /* NSInvocationHelpers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,10 +145,6 @@
 		F47359751B45BDBB007688EC /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				F473596D1B45BC32007688EC /* EthanolUIComponents.framework */,
-				F473596E1B45BC32007688EC /* EthanolUtilities.framework */,
-				F473596F1B45BC32007688EC /* EthanolValidationFormatting.framework */,
-				F47359701B45BC32007688EC /* NSInvocationHelpers.framework */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
@@ -176,6 +160,7 @@
 				F47357DC1B44320B007688EC /* Frameworks */,
 				F47357DD1B44320B007688EC /* Resources */,
 				F47359581B45BA57007688EC /* Carthage Copy Frameworks */,
+				0C4A098A1B7930DA005D2203 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -294,6 +279,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0C4A098A1B7930DA005D2203 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/LlamaKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		F47359581B45BA57007688EC /* Carthage Copy Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
