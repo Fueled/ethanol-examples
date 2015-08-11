@@ -43,19 +43,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		0C4A09D91B794203005D2203 /* Copy Files */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Copy Files";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		0C4A0A071B79594F005D2203 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C4A0A081B79594F005D2203 /* EthanolTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,12 +105,6 @@
 		F47357D61B44320B007688EC = {
 			isa = PBXGroup;
 			children = (
-				0CF38FE81B7AA90900A32BE1 /* EthanolUIComponents.framework */,
-				0C4A0A071B79594F005D2203 /* CocoaLumberjack.framework */,
-				0C4A0A081B79594F005D2203 /* EthanolTools.framework */,
-				0C4A0A091B79594F005D2203 /* EthanolUtilities.framework */,
-				0C4A0A0A1B79594F005D2203 /* EthanolValidationFormatting.framework */,
-				0C4A0A0B1B79594F005D2203 /* NSInvocationHelpers.framework */,
 				F47357E11B44320B007688EC /* EthanolExamples */,
 				F47357F61B44320C007688EC /* EthanolExamplesTests */,
 				F47358011B44320C007688EC /* EthanolExamplesUITests */,
@@ -182,6 +163,12 @@
 		F47359751B45BDBB007688EC /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				0CF38FE81B7AA90900A32BE1 /* EthanolUIComponents.framework */,
+				0C4A0A071B79594F005D2203 /* CocoaLumberjack.framework */,
+				0C4A0A081B79594F005D2203 /* EthanolTools.framework */,
+				0C4A0A091B79594F005D2203 /* EthanolUtilities.framework */,
+				0C4A0A0A1B79594F005D2203 /* EthanolValidationFormatting.framework */,
+				0C4A0A0B1B79594F005D2203 /* NSInvocationHelpers.framework */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
@@ -197,8 +184,6 @@
 				F47357DC1B44320B007688EC /* Frameworks */,
 				F47357DD1B44320B007688EC /* Resources */,
 				F47359581B45BA57007688EC /* Carthage Copy Frameworks */,
-				0C4A098A1B7930DA005D2203 /* ShellScript */,
-				0C4A09D91B794203005D2203 /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -317,32 +302,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0C4A098A1B7930DA005D2203 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/LlamaKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
 		F47359581B45BA57007688EC /* Carthage Copy Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/EthanolUIComponents.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/EthanolUtilities.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/EthanolValidationFormatting.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/NSInvocationHelpers.framework",
-				"",
+				"$(CONFIGURATION_BUILD_DIR)/EthanolUtilities.framework",
+				"$(CONFIGURATION_BUILD_DIR)/EthanolValidationFormatting.framework",
+				"$(CONFIGURATION_BUILD_DIR)/NSInvocationHelpers.framework",
+				"$(CONFIGURATION_BUILD_DIR)/EthanolTools.framework",
+				"$(CONFIGURATION_BUILD_DIR)/EthanolUIComponents.framework",
+				"$(CONFIGURATION_BUILD_DIR)/CocoaLumberjack.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
@@ -503,23 +474,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SRCROOT)/Carthage/**",
-					"$(PROJECT_DIR)/Carthage/Checkouts/CocoaLumberjack/build/Debug",
-					"$(PROJECT_DIR)/Carthage/Checkouts/CocoaLumberjack/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/ethanol-tools/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/ethanol-ui-components/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/ethanol-utilities/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/ethanol-validation-formatting/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/NSInvocation-Helpers/build/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/EthanolExamples-ahpkvmpfftyfibefzszgneugsjdl/Build/Products/Debug-iphoneos",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = EthanolExamples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Checkouts/CocoaLumberjack/build/Debug-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-Objc",
 					"-all_load",
@@ -537,23 +495,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SRCROOT)/Carthage/**",
-					"$(PROJECT_DIR)/Carthage/Checkouts/CocoaLumberjack/build/Debug",
-					"$(PROJECT_DIR)/Carthage/Checkouts/CocoaLumberjack/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/ethanol-tools/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/ethanol-ui-components/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/ethanol-utilities/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/ethanol-validation-formatting/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/NSInvocation-Helpers/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Developer/Xcode/DerivedData/EthanolExamples-ahpkvmpfftyfibefzszgneugsjdl/Build/Products/Debug-iphoneos",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = EthanolExamples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Checkouts/CocoaLumberjack/build/Debug-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-Objc",
 					"-all_load",
