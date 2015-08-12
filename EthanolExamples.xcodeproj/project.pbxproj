@@ -49,6 +49,7 @@
 		0C4A0A091B79594F005D2203 /* EthanolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C4A0A0A1B79594F005D2203 /* EthanolValidationFormatting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolValidationFormatting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C4A0A0B1B79594F005D2203 /* NSInvocationHelpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NSInvocationHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CBCEC931B7BA1F200F8A6CC /* TextfieldPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TextfieldPlayground.playground; sourceTree = "<group>"; };
 		0CF38FE81B7AA90900A32BE1 /* EthanolUIComponents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolUIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47357DF1B44320B007688EC /* EthanolExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EthanolExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47357E21B44320B007688EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +103,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CAEB5201B7B9C0B00ECE726 /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				0CBCEC931B7BA1F200F8A6CC /* TextfieldPlayground.playground */,
+			);
+			name = Playgrounds;
+			sourceTree = "<group>";
+		};
 		F47357D61B44320B007688EC = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +135,7 @@
 		F47357E11B44320B007688EC /* EthanolExamples */ = {
 			isa = PBXGroup;
 			children = (
+				0CAEB5201B7B9C0B00ECE726 /* Playgrounds */,
 				F47357E21B44320B007688EC /* AppDelegate.swift */,
 				F47358101B4435CA007688EC /* CategoryViewController.swift */,
 				F47358121B4435E6007688EC /* DemoListViewController.swift */,
