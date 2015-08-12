@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C4A0A0C1B79594F005D2203 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4A0A071B79594F005D2203 /* CocoaLumberjack.framework */; };
+		0C4A0A0D1B79594F005D2203 /* EthanolTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4A0A081B79594F005D2203 /* EthanolTools.framework */; };
+		0C4A0A0E1B79594F005D2203 /* EthanolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4A0A091B79594F005D2203 /* EthanolUtilities.framework */; };
+		0C4A0A0F1B79594F005D2203 /* EthanolValidationFormatting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4A0A0A1B79594F005D2203 /* EthanolValidationFormatting.framework */; };
+		0C4A0A101B79594F005D2203 /* NSInvocationHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4A0A0B1B79594F005D2203 /* NSInvocationHelpers.framework */; };
+		0CF38FE91B7AA90A00A32BE1 /* EthanolUIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF38FE81B7AA90900A32BE1 /* EthanolUIComponents.framework */; };
 		F47357E31B44320B007688EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47357E21B44320B007688EC /* AppDelegate.swift */; };
 		F47357E81B44320B007688EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47357E61B44320B007688EC /* Main.storyboard */; };
 		F47357EA1B44320C007688EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47357E91B44320B007688EC /* Assets.xcassets */; };
@@ -18,10 +24,6 @@
 		F47359501B45A551007688EC /* TextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F473594E1B45A551007688EC /* TextFieldViewController.m */; };
 		F47359511B45A551007688EC /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F473594F1B45A551007688EC /* TextFieldViewController.xib */; };
 		F47359531B45B8EF007688EC /* DemoInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47359521B45B8EF007688EC /* DemoInformation.swift */; };
-		F47359711B45BC32007688EC /* EthanolUIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F473596D1B45BC32007688EC /* EthanolUIComponents.framework */; };
-		F47359721B45BC32007688EC /* EthanolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F473596E1B45BC32007688EC /* EthanolUtilities.framework */; };
-		F47359731B45BC32007688EC /* EthanolValidationFormatting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F473596F1B45BC32007688EC /* EthanolValidationFormatting.framework */; };
-		F47359741B45BC32007688EC /* NSInvocationHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47359701B45BC32007688EC /* NSInvocationHelpers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C4A0A071B79594F005D2203 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C4A0A081B79594F005D2203 /* EthanolTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C4A0A091B79594F005D2203 /* EthanolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C4A0A0A1B79594F005D2203 /* EthanolValidationFormatting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolValidationFormatting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C4A0A0B1B79594F005D2203 /* NSInvocationHelpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NSInvocationHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CF38FE81B7AA90900A32BE1 /* EthanolUIComponents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolUIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47357DF1B44320B007688EC /* EthanolExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EthanolExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47357E21B44320B007688EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F47357E71B44320B007688EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,10 +69,6 @@
 		F473594E1B45A551007688EC /* TextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldViewController.m; sourceTree = "<group>"; };
 		F473594F1B45A551007688EC /* TextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
 		F47359521B45B8EF007688EC /* DemoInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoInformation.swift; sourceTree = "<group>"; };
-		F473596D1B45BC32007688EC /* EthanolUIComponents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolUIComponents.framework; path = Carthage/Build/iOS/EthanolUIComponents.framework; sourceTree = "<group>"; };
-		F473596E1B45BC32007688EC /* EthanolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolUtilities.framework; path = Carthage/Build/iOS/EthanolUtilities.framework; sourceTree = "<group>"; };
-		F473596F1B45BC32007688EC /* EthanolValidationFormatting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolValidationFormatting.framework; path = Carthage/Build/iOS/EthanolValidationFormatting.framework; sourceTree = "<group>"; };
-		F47359701B45BC32007688EC /* NSInvocationHelpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NSInvocationHelpers.framework; path = Carthage/Build/iOS/NSInvocationHelpers.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,10 +76,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F47359711B45BC32007688EC /* EthanolUIComponents.framework in Frameworks */,
-				F47359721B45BC32007688EC /* EthanolUtilities.framework in Frameworks */,
-				F47359731B45BC32007688EC /* EthanolValidationFormatting.framework in Frameworks */,
-				F47359741B45BC32007688EC /* NSInvocationHelpers.framework in Frameworks */,
+				0CF38FE91B7AA90A00A32BE1 /* EthanolUIComponents.framework in Frameworks */,
+				0C4A0A0C1B79594F005D2203 /* CocoaLumberjack.framework in Frameworks */,
+				0C4A0A0D1B79594F005D2203 /* EthanolTools.framework in Frameworks */,
+				0C4A0A0E1B79594F005D2203 /* EthanolUtilities.framework in Frameworks */,
+				0C4A0A0F1B79594F005D2203 /* EthanolValidationFormatting.framework in Frameworks */,
+				0C4A0A101B79594F005D2203 /* NSInvocationHelpers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,10 +163,12 @@
 		F47359751B45BDBB007688EC /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				F473596D1B45BC32007688EC /* EthanolUIComponents.framework */,
-				F473596E1B45BC32007688EC /* EthanolUtilities.framework */,
-				F473596F1B45BC32007688EC /* EthanolValidationFormatting.framework */,
-				F47359701B45BC32007688EC /* NSInvocationHelpers.framework */,
+				0CF38FE81B7AA90900A32BE1 /* EthanolUIComponents.framework */,
+				0C4A0A071B79594F005D2203 /* CocoaLumberjack.framework */,
+				0C4A0A081B79594F005D2203 /* EthanolTools.framework */,
+				0C4A0A091B79594F005D2203 /* EthanolUtilities.framework */,
+				0C4A0A0A1B79594F005D2203 /* EthanolValidationFormatting.framework */,
+				0C4A0A0B1B79594F005D2203 /* NSInvocationHelpers.framework */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
@@ -300,10 +308,12 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/EthanolUIComponents.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/EthanolUtilities.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/EthanolValidationFormatting.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/NSInvocationHelpers.framework",
+				"$(CONFIGURATION_BUILD_DIR)/EthanolUtilities.framework",
+				"$(CONFIGURATION_BUILD_DIR)/EthanolValidationFormatting.framework",
+				"$(CONFIGURATION_BUILD_DIR)/NSInvocationHelpers.framework",
+				"$(CONFIGURATION_BUILD_DIR)/EthanolTools.framework",
+				"$(CONFIGURATION_BUILD_DIR)/EthanolUIComponents.framework",
+				"$(CONFIGURATION_BUILD_DIR)/CocoaLumberjack.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
@@ -464,13 +474,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/**";
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = EthanolExamples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"-Objc",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fueled.EthanolExamples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EthanolExamples/EthanolExamples-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "Carthage/Checkout/ethanol-validation-formatting/EthanolValidationFormatting/EthanolValidationFormatting.h\n Carthage/Checkout/NSInvocation-Helpers/NSInvocationHelpers/NSInvocationHelpers.h\nCarthage/Checkout/NSInvocation-Helpers/NSInvocationHelpers/NSInvocationHelpers.h\n Carthage/Checkout/ethanol-ui-components/EthanolUIComponents/EthanolUIComponents.h Carthage/Checkout/ethanol-utilities/EthanolUtilities/EthanolUtilities.h\n Carthage/Checkout/ethanol-tools/EthanolTools/EthanolTools.h\n Carthage/Checkout/CocoaLumberjack/Classes/CocoaLumberjack.h\n";
 			};
 			name = Debug;
 		};
@@ -479,12 +495,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/**";
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = EthanolExamples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"-Objc",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fueled.EthanolExamples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EthanolExamples/EthanolExamples-Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "Carthage/Checkout/ethanol-validation-formatting/EthanolValidationFormatting/EthanolValidationFormatting.h\n Carthage/Checkout/NSInvocation-Helpers/NSInvocationHelpers/NSInvocationHelpers.h\nCarthage/Checkout/NSInvocation-Helpers/NSInvocationHelpers/NSInvocationHelpers.h\n Carthage/Checkout/ethanol-ui-components/EthanolUIComponents/EthanolUIComponents.h Carthage/Checkout/ethanol-utilities/EthanolUtilities/EthanolUtilities.h\n Carthage/Checkout/ethanol-tools/EthanolTools/EthanolTools.h\n Carthage/Checkout/CocoaLumberjack/Classes/CocoaLumberjack.h\n";
 			};
 			name = Release;
 		};
