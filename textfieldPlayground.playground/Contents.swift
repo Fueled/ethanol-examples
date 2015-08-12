@@ -1,6 +1,6 @@
+//: Playground - noun: a place where people can play
 
-import Cocoa
-//import Ethanol
+import EthanolUIComponents
 
 /*:
 # ETHTextField Playground
@@ -11,4 +11,6 @@ Learn how to use ETHTextField in your project and enjoy its numerous benefits su
 * And many others.
 */
 
-//var ethTextfield: ETHTextField! = ETHTextField()
+var str = "Hello, playground"
+
+var ethTextfield: ETHTextField! = ETHTextField()
