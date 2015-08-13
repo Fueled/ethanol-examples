@@ -12,7 +12,7 @@
       location = "container:"
       name = "Playgrounds">
       <FileRef
-         location = "group:/Users/bastienfalcou/Documents/EthanolExampleSwift/ethanol-examples/textfieldPlayground.playground">
+         location = "group:MyPlayground.playground">
       </FileRef>
    </Group>
    <Group

@@ -1,6 +1,7 @@
 //: Playground - noun: a place where people can play
 
 import EthanolUIComponents
+import EthanolValidationFormatting
 
 /*:
 # ETHTextField Playground
@@ -13,4 +14,8 @@ Learn how to use ETHTextField in your project and enjoy its numerous benefits su
 
 var str = "Hello, playground"
 
-var ethTextfield: ETHTextField! = ETHTextField()
+var ethTextfield = ETHTextField()
+
+ethTextfield.text = "NY"
+ethTextfield.validator = ETHUSAStateValidator()
+ethTextfield.validateInput()
