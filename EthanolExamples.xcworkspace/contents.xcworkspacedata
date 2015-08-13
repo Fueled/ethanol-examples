@@ -12,7 +12,7 @@
       location = "container:"
       name = "Playgrounds">
       <FileRef
-         location = "group:MyPlayground.playground">
+         location = "group:wgwgehew.playground">
       </FileRef>
    </Group>
    <Group
