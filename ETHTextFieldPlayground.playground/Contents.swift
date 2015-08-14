@@ -6,7 +6,7 @@ import EthanolValidationFormatting
 # ETHTextField Playground
 Learn how to use ETHTextField in your project and enjoy its numerous benefits such as:
 * String Validation
-* String Formatting
+* String Formattingg
 * Convenience Properties
 * And many others.
 */

@@ -24,6 +24,7 @@
 		F47359501B45A551007688EC /* TextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F473594E1B45A551007688EC /* TextFieldViewController.m */; };
 		F47359511B45A551007688EC /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F473594F1B45A551007688EC /* TextFieldViewController.xib */; };
 		F47359531B45B8EF007688EC /* DemoInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47359521B45B8EF007688EC /* DemoInformation.swift */; };
+		F4C384A21B7E9B5D00F2B30A /* EthanolUIExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C384A11B7E9B5D00F2B30A /* EthanolUIExtensions.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		F473594E1B45A551007688EC /* TextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldViewController.m; sourceTree = "<group>"; };
 		F473594F1B45A551007688EC /* TextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
 		F47359521B45B8EF007688EC /* DemoInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoInformation.swift; sourceTree = "<group>"; };
+		F4C384A11B7E9B5D00F2B30A /* EthanolUIExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolUIExtensions.framework; path = EthanolUIExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4C384A21B7E9B5D00F2B30A /* EthanolUIExtensions.framework in Frameworks */,
 				0CF38FE91B7AA90A00A32BE1 /* EthanolUIComponents.framework in Frameworks */,
 				0C4A0A0C1B79594F005D2203 /* CocoaLumberjack.framework in Frameworks */,
 				0C4A0A0D1B79594F005D2203 /* EthanolTools.framework in Frameworks */,
@@ -105,6 +108,7 @@
 		F47357D61B44320B007688EC = {
 			isa = PBXGroup;
 			children = (
+				F4C384A11B7E9B5D00F2B30A /* EthanolUIExtensions.framework */,
 				F47357E11B44320B007688EC /* EthanolExamples */,
 				F47357F61B44320C007688EC /* EthanolExamplesTests */,
 				F47358011B44320C007688EC /* EthanolExamplesUITests */,
@@ -314,6 +318,7 @@
 				"$(CONFIGURATION_BUILD_DIR)/EthanolTools.framework",
 				"$(CONFIGURATION_BUILD_DIR)/EthanolUIComponents.framework",
 				"$(CONFIGURATION_BUILD_DIR)/CocoaLumberjack.framework",
+				"$(CONFIGURATION_BUILD_DIR)/EthanolExtensions.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
