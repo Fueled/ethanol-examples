@@ -12,12 +12,15 @@
       location = "container:"
       name = "Playgrounds">
       <FileRef
-         location = "group:wgwgehew.playground">
+         location = "group:ETHTextFieldPlayground.playground">
       </FileRef>
    </Group>
    <Group
       location = "container:"
       name = "Dependencies">
+      <FileRef
+         location = "group:Carthage/Checkouts/NSInvocation-Helpers/NSInvocationHelpers.xcodeproj">
+      </FileRef>
       <FileRef
          location = "group:Carthage/Checkouts/CocoaLumberjack/Lumberjack.xcodeproj">
       </FileRef>
@@ -25,13 +28,10 @@
          location = "group:Carthage/Checkouts/ethanol-tools/EthanolTools.xcodeproj">
       </FileRef>
       <FileRef
-         location = "group:Carthage/Checkouts/ethanol-validation-formatting/EthanolValidationFormatting.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:Carthage/Checkouts/NSInvocation-Helpers/NSInvocationHelpers.xcodeproj">
-      </FileRef>
-      <FileRef
          location = "group:Carthage/Checkouts/ethanol-utilities/EthanolUtilities.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Carthage/Checkouts/ethanol-validation-formatting/EthanolValidationFormatting.xcodeproj">
       </FileRef>
       <FileRef
          location = "group:Carthage/Checkouts/ethanol-ui-components/EthanolUIComponents.xcodeproj">
