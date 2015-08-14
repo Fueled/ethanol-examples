@@ -19,7 +19,7 @@ class DemoInformation {
         return viewControllerBuilder()
       }
       if let viewControllerClass = self.viewControllerClass {
-        return viewControllerClass.alloc().dynamicType.init() as! UIViewController
+        return viewControllerClass.init() as! UIViewController
       }
       
       return UIViewController()
