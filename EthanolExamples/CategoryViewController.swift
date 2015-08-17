@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EthanolTools
 
 enum Category {
   case UIComponents
@@ -28,6 +29,16 @@ class CategoryViewController: UITableViewController {
     self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: CategoryViewControllerTableViewCellIdentifier)
   }
   
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
+    print("The top view controller is \(UIViewController.topMostController) \(self.isTopMostController)")
+  }
+  
+  override func viewDidDisappear(animated: Bool) {
+    super.viewDidDisappear(animated)
+    print("The top view controller is \(UIViewController.topMostController) \(self.isTopMostController)")
+  }
+
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     guard let demosSelected = self.demosSelected else { return }
     
