@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EthanolUIExtensions
 
 class DemoListViewController: UITableViewController {
   private let DemoListViewControllerTableViewCellIdentifier = "DemoListViewControllerTableViewCellIdentifier"
@@ -15,8 +16,15 @@ class DemoListViewController: UITableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: DemoListViewControllerTableViewCellIdentifier)
+  }
+  
+  override func viewDidAppear(animated: Bool) {
+    self.tableView.eth_handleKeyboardNotifications()
+  }
+  
+  override func viewDidDisappear(animated: Bool) {
+    self.tableView.eth_stopHandlingKeyboardNotifications()
   }
   
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
