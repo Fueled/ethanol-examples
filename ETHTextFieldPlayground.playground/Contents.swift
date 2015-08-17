@@ -326,6 +326,9 @@ If the length > 3 digits excluding auto added slash, the beginning of the string
 // Set Formatter
 testClass.ethTextfield.formatter = ETHCreditCardExpirationDateFormatter()
 
+// Short Credit Card Expiration Number (Without slash)
+testClass.ethTextfield.text = "0920"
+
 // Regular Credit Card Expiration Number
 testClass.ethTextfield.text = "09/2030"
 
@@ -359,6 +362,9 @@ testClass.ethTextfield.text = "1668606893"
 /*:
 # Convenience Properties
 */
+
+testClass.ethTextfield.formatter = nil
+
 /*:
 __Maximum Length__
 Sepcifies limit of characters of the text field. Once this limit reached, it won't be possible to add any other character.
@@ -369,7 +375,7 @@ Please note that for now, if you set a String longer than this maximum length pr
 // Set maximum length
 testClass.ethTextfield.maximumLength = 10
 
-// Current limitation: set String longer than maximum length programmatically won't shorten the text field text (exceeds the limit).
+// The text will be truncated to the first 10 characters
 testClass.ethTextfield.text = "That's a pretty long text"
 
 /*:
@@ -412,6 +418,6 @@ let phoneNumberSet = NSMutableCharacterSet(charactersInString: "+()*#")
 phoneNumberSet.formUnionWithCharacterSet(NSCharacterSet.decimalDigitCharacterSet())
 testClass.ethTextfield.allowedCharacterSet = phoneNumberSet
 
-// Current limitation: set String with not allowed characters programmatically will allow those characters
-// Here abc should not be accepted and added to the text field (not a part of a phone number string)
-testClass.ethTextfield.text = "abc123"
+// Here the letters should not be accepted and added to the text field (not a part of a phone number string)
+// the text will also be limited to the maximum length set earlier of 10
+testClass.ethTextfield.text = "abca+12asgfgshdegas1757sd124879189dfhv3"
