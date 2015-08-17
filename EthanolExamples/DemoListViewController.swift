@@ -17,7 +17,6 @@ class DemoListViewController: UITableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: DemoListViewControllerTableViewCellIdentifier)
   }
   
@@ -25,7 +24,6 @@ class DemoListViewController: UITableViewController {
     super.viewDidAppear(animated)
     print("The top view controller is \(UIViewController.topMostController)")
   }
-  
   
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     guard let demos = self.demos else { return }
