@@ -24,6 +24,7 @@ public final class ETHTextFieldTestClass: NSObject, ETHTextFieldDelegate {
   }
   
   // ETHTextFieldDelegate method called everytime a ETHTextField validates. Error handling will be implemented here.
+  // If you return false in that method, the ETHTextField will not loose focus and still be the first responder
   public func textField(textField: ETHTextField, didValidateText text: String, withReason reason: ETHTextFieldValidationReason, withSuccess success: Bool, error: NSError) -> Bool {
     if !success {
       switch reason {
@@ -37,7 +38,7 @@ public final class ETHTextFieldTestClass: NSObject, ETHTextFieldDelegate {
         // Validation triggered by Keyboard Return key tapped
         break
       case .LostFocus:
-        // Validation triggered when text field resigned first responder
+        // Validation triggered when text field wants to resign first responder
         break
       case .Programatically:
         // Validation triggered when we call validateInput()
