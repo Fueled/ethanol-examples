@@ -46,6 +46,10 @@ static NSString * const kCellIdentifier = @"Cell";
   [self.validatorTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellIdentifier];
   [self.charactersTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellIdentifier];
   
+  
+  [self.validatorTableView eth_handleKeyboardNotifications];
+  [self.formatterTableView eth_handleKeyboardNotifications];
+  
   self.validators = @[[ETHNonemptyValidator validator],
                       [ETHSelectorValidator validatorWithSelector:@selector(eth_isValidEmail) error:@"This is not a valid email"],
                       [ETHBlockValidator validatorWithBlock:^BOOL(id object, NSString **errorMessage) {
