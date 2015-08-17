@@ -70,7 +70,7 @@
 		F473594E1B45A551007688EC /* TextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldViewController.m; sourceTree = "<group>"; };
 		F473594F1B45A551007688EC /* TextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
 		F47359521B45B8EF007688EC /* DemoInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoInformation.swift; sourceTree = "<group>"; };
-		F4C384A11B7E9B5D00F2B30A /* EthanolUIExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolUIExtensions.framework; path = EthanolUIExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4C384A11B7E9B5D00F2B30A /* EthanolUIExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolUIExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,7 +318,7 @@
 				"$(CONFIGURATION_BUILD_DIR)/EthanolTools.framework",
 				"$(CONFIGURATION_BUILD_DIR)/EthanolUIComponents.framework",
 				"$(CONFIGURATION_BUILD_DIR)/CocoaLumberjack.framework",
-				"$(CONFIGURATION_BUILD_DIR)/EthanolExtensions.framework",
+				"$(CONFIGURATION_BUILD_DIR)/EthanolUIExtensions.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
