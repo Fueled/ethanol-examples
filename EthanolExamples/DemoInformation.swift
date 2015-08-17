@@ -37,4 +37,5 @@ class DemoInformation {
     self.viewControllerClass = nil
     self.viewControllerBuilder = viewControllerBuilder
   }
+  
 }
