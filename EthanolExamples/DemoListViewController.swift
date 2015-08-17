@@ -19,14 +19,6 @@ class DemoListViewController: UITableViewController {
     self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: DemoListViewControllerTableViewCellIdentifier)
   }
   
-  override func viewDidAppear(animated: Bool) {
-    self.tableView.eth_handleKeyboardNotifications()
-  }
-  
-  override func viewDidDisappear(animated: Bool) {
-    self.tableView.eth_stopHandlingKeyboardNotifications()
-  }
-  
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     guard let demos = self.demos else { return }
     
