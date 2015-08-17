@@ -14,6 +14,9 @@
       <FileRef
          location = "group:ETHTextFieldPlayground.playground">
       </FileRef>
+      <FileRef
+         location = "group:ETHPageControlPlayground.playground">
+      </FileRef>
    </Group>
    <Group
       location = "container:"
