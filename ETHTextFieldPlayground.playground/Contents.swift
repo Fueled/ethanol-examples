@@ -152,7 +152,7 @@ testClass.ethTextfield.validator = ETHUSAStateValidator()
 testClass.ethTextfield.text = "NY"
 testClass.ethTextfield.validateInput()
 
-// Invalid US State, catch error
+// Invalid US State
 testClass.ethTextfield.text = "Random Text"
 testClass.ethTextfield.validateInput()
 
@@ -225,6 +225,10 @@ testClass.ethTextfield.validateInput()
 testClass.ethTextfield.text = "092015"
 testClass.ethTextfield.validateInput()
 
+// Invalid Credit Card Expiration Date: month doesn't exist
+testClass.ethTextfield.text = "13/2015"
+testClass.ethTextfield.validateInput()
+
 // Invalid Credit Card Expiration Date: not enough characters
 testClass.ethTextfield.text = "09/201"
 testClass.ethTextfield.validateInput()
@@ -251,7 +255,7 @@ testClass.ethTextfield.validateInput()
 testClass.ethTextfield.text = "4111111111111111"
 testClass.ethTextfield.validateInput()
 
-// Valid Credit Card Number: VISA with spaces and other characters (removed, not taken into consideration by Ethanol)
+// Invalid Credit Card Number: VISA with spaces and other characters
 testClass.ethTextfield.text = "4111 a 1111 b 1111 c 1111 d"
 testClass.ethTextfield.validateInput()
 
@@ -311,11 +315,14 @@ testClass.ethTextfield.text = "4111111111111111"
 // Set Formatter
 testClass.ethTextfield.formatter = ETHCreditCardNumberFormatter()
 
-// What happens if the number of characters exceeds 20 (considered as the maximum, for American Express credit card numbers).
+// What happens if the number of characters exceeds 19 (considered as the maximum).
 testClass.ethTextfield.text = "37828224631000566666"
 
 // Set Formatter
 testClass.ethTextfield.formatter = ETHCreditCardNumberFormatter()
+
+// What happens if the number is not actually a credit card number
+testClass.ethTextfield.text = "378282246s31000566"
 
 /*:
 __Credit Card Epiration Number Formatter__
@@ -325,6 +332,9 @@ If the length > 3 digits excluding auto added slash, the beginning of the string
 
 // Set Formatter
 testClass.ethTextfield.formatter = ETHCreditCardExpirationDateFormatter()
+
+// Short Credit Card Expiration Number (Without slash)
+testClass.ethTextfield.text = "0920"
 
 // Short Credit Card Expiration Number (Without slash)
 testClass.ethTextfield.text = "0920"
@@ -418,6 +428,7 @@ let phoneNumberSet = NSMutableCharacterSet(charactersInString: "+()*#")
 phoneNumberSet.formUnionWithCharacterSet(NSCharacterSet.decimalDigitCharacterSet())
 testClass.ethTextfield.allowedCharacterSet = phoneNumberSet
 
+// Current limitation: set String with not allowed characters programmatically will allow those characters
 // Here the letters should not be accepted and added to the text field (not a part of a phone number string)
 // the text will also be limited to the maximum length set earlier of 10
 testClass.ethTextfield.text = "abca+12asgfgshdegas1757sd124879189dfhv3"
