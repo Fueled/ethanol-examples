@@ -46,9 +46,7 @@ static NSString * const kCellIdentifier = @"Cell";
   [self.validatorTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellIdentifier];
   [self.charactersTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellIdentifier];
   
-  
-  [self.validatorTableView eth_handleKeyboardNotifications];
-  [self.formatterTableView eth_handleKeyboardNotifications];
+  [self handleKeyboardNotifications];
   
   self.validators = @[[ETHNonemptyValidator validator],
                       [ETHSelectorValidator validatorWithSelector:@selector(eth_isValidEmail) error:@"This is not a valid email"],
@@ -85,6 +83,16 @@ static NSString * const kCellIdentifier = @"Cell";
                                @"characters": [NSCharacterSet symbolCharacterSet]}];
   
   self.textField.maximumLength = 20;
+}
+
+- (void)handleKeyboardNotifications {
+  [self.validatorTableView eth_handleKeyboardNotifications];
+  [self.formatterTableView eth_handleKeyboardNotifications];
+  
+  // Example to show how notificatin can be read on any NSObject for custom changes
+  [self eth_RegisterForKeyboardNotificationsWithHandler:^(BOOL show, CGRect startRect, CGRect endRect, NSTimeInterval duration, UIViewAnimationOptions animationOptions) {
+    self.containerScrollView.backgroundColor = show ? [UIColor redColor] : [UIColor whiteColor];
+  }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
