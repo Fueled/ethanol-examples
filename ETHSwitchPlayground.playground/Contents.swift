@@ -6,6 +6,8 @@ Learn how to use ETHSwitch in your project and enjoy the highly customable UI be
 * Custom background color for both ON and OFF states
 * Custom background images for both ON and OFF states
 * Custom foreground color
+-----
+__Tip:__ ETHSwitch supports IBDesignable and IBInspectable for its properties.
 */
 
 let ethSwitch = ETHSwitch(frame: CGRectMake(0.0, 0.0, 51.0, 31.0))
