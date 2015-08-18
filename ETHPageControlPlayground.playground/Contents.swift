@@ -1,4 +1,3 @@
-//: Playground - noun: a place where people can play
 
 import EthanolUIComponents
 
@@ -7,6 +6,8 @@ import EthanolUIComponents
 ETHPageControl is a remake of UIPageControl providing a couple of really handy customizations. ETHPageControl is not a subclass of UIPageControl, but it implements the same methods (with very same method signatures) in order to offer the same public interface as UIPageControl (with additional new handy properties and methods). Learn here how to enjoy its enhancements:
 * Change dynamically the distance between the dots
 * Set custom images instead of default dots
+-----
+__Tip:__ ETHPageControl supports IBDesignable and IBInspectable for its properties. The rendering in XIB files and Storyboards can sometimes be messed up on XCode (do not show default dots, their position can be weird, among others), but don't worry, the final view will behave as expected!
 */
 
 // Create the ETHPageControl
