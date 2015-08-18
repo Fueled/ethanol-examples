@@ -47,6 +47,24 @@ static NSString * const kCellIdentifier = @"Cell";
   
   [self handleKeyboardNotifications];
   
+  [self eth_RegisterForKeyboardNotificationsWithHandler:^(BOOL showing, KeyboardNotificationState state, CGRect beginRect, CGRect endRect, NSTimeInterval duration, UIViewAnimationOptions options) {
+    switch (state) {
+      case KeyboardNotificationStateDidShow:
+        self.view.backgroundColor = [UIColor redColor];
+        break;
+      case KeyboardNotificationStateWillShow:
+        self.view.backgroundColor = [UIColor greenColor];
+        break;
+      case KeyboardNotificationStateWillHide:
+        self.view.backgroundColor = [UIColor blueColor];
+        break;
+      case KeyboardNotificationStateDidHide:
+      default:
+        self.view.backgroundColor = [UIColor whiteColor];
+        break;
+    }
+  }];
+  
   self.validators = @[[ETHNonemptyValidator validator],
                       [ETHSelectorValidator validatorWithSelector:@selector(eth_isValidEmail) error:@"This is not a valid email"],
                       [ETHBlockValidator validatorWithBlock:^BOOL(id object, NSString **errorMessage) {
