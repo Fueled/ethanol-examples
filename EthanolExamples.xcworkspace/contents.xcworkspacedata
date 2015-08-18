@@ -20,6 +20,9 @@
       <FileRef
          location = "group:ETHSwitchPlayground.playground">
       </FileRef>
+      <FileRef
+         location = "group:ETHPausableTimerPlayground.playground">
+      </FileRef>
    </Group>
    <Group
       location = "container:"
