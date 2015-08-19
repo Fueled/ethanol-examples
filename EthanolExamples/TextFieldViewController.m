@@ -8,8 +8,8 @@
 
 #import "TextFieldViewController.h"
 
-@import EthanolUIComponents;
 @import EthanolValidationFormatting;
+@import EthanolUIComponents;
 @import EthanolUIExtensions;
 @import EthanolTools;
 
@@ -48,7 +48,7 @@ static NSString * const kCellIdentifier = @"Cell";
   
   [self handleKeyboardNotifications];
   
-  [self eth_RegisterForKeyboardNotificationsWithHandler:^(BOOL showing, KeyboardNotificationState state, CGRect beginRect, CGRect endRect, NSTimeInterval duration, UIViewAnimationOptions options) {
+  [self eth_registerForKeyboardNotificationsWithHandler:^(BOOL showing, KeyboardNotificationState state, CGRect beginRect, CGRect endRect, NSTimeInterval duration, UIViewAnimationOptions options) {
     switch (state) {
       case KeyboardNotificationStateDidShow:
         self.view.backgroundColor = [UIColor redColor];
@@ -108,8 +108,22 @@ static NSString * const kCellIdentifier = @"Cell";
   [self.formatterTableView eth_handleKeyboardNotifications];
   
   // Example to show how notificatin can be read on any NSObject for custom changes
-  [self eth_RegisterForKeyboardNotificationsWithHandler:^(BOOL show, CGRect startRect, CGRect endRect, NSTimeInterval duration, UIViewAnimationOptions animationOptions) {
-    self.containerScrollView.backgroundColor = show ? [UIColor redColor] : [UIColor whiteColor];
+  [self eth_registerForKeyboardNotificationsWithHandler:^(BOOL show, KeyboardNotificationState state, CGRect startRect, CGRect endRect, NSTimeInterval duration, UIViewAnimationOptions animationOptions) {
+    self.view.backgroundColor = show ? [UIColor redColor] : [UIColor whiteColor];
+    switch(state) {
+      case KeyboardNotificationStateWillShow:
+        self.containerScrollView.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.5];
+        break;
+      case KeyboardNotificationStateDidShow:
+        self.containerScrollView.backgroundColor = [[UIColor yellowColor] colorWithAlphaComponent:0.5];
+        break;
+      case KeyboardNotificationStateWillHide:
+        self.containerScrollView.backgroundColor = [[UIColor greenColor] colorWithAlphaComponent:0.5];
+        break;
+      case KeyboardNotificationStateDidHide:
+        self.containerScrollView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
+        break;
+    }
   }];
 }
 
