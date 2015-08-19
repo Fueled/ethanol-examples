@@ -11,6 +11,7 @@ import EthanolTools
 
 enum Category {
   case UIComponents
+  case UIExtensions
 }
 
 class CategoryViewController: UITableViewController {
@@ -18,7 +19,9 @@ class CategoryViewController: UITableViewController {
   private let CategoryViewControllerTableViewCellIdentifier = "CategoryViewControllerTableViewCellIdentifier"
   
   private let categories: [(Category, String, demos: [DemoInformation])] = [
-    (.UIComponents, "UI Components", [DemoInformation(name: "TextField", viewControllerClass: TextFieldViewController.self)])
+    (.UIComponents, "UI Components", [DemoInformation(name: "TextField", viewControllerClass: TextFieldViewController.self)]),
+    (.UIExtensions, "UI Extensions", [DemoInformation(name: "NavigationItem", viewControllerClass: NavigationItemViewController.self)]),
+    
   ]
   
   private var demosSelected: (String, Array<DemoInformation>)?
