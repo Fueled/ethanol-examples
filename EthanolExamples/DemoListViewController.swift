@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import EthanolUIExtensions
 import EthanolTools
+import EthanolUIExtensions
 
 class DemoListViewController: UITableViewController {
   private let DemoListViewControllerTableViewCellIdentifier = "DemoListViewControllerTableViewCellIdentifier"
@@ -17,7 +17,6 @@ class DemoListViewController: UITableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: DemoListViewControllerTableViewCellIdentifier)
   }
   

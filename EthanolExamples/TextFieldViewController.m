@@ -8,10 +8,10 @@
 
 #import "TextFieldViewController.h"
 
-@import EthanolUIComponents;
-@import EthanolValidationFormatting;
-@import EthanolUIExtensions;
 @import EthanolTools;
+@import EthanolUIComponents;
+@import EthanolUIExtensions;
+@import EthanolValidationFormatting;
 
 static NSString * const kCellIdentifier = @"Cell";
 
@@ -45,6 +45,26 @@ static NSString * const kCellIdentifier = @"Cell";
   [self.formatterTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellIdentifier];
   [self.validatorTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellIdentifier];
   [self.charactersTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellIdentifier];
+  
+  [self handleKeyboardNotifications];
+  
+  [self eth_registerForKeyboardNotificationsWithHandler:^(BOOL showing, KeyboardNotificationState state, CGRect beginRect, CGRect endRect, NSTimeInterval duration, UIViewAnimationOptions options) {
+    switch (state) {
+      case KeyboardNotificationStateDidShow:
+        self.view.backgroundColor = [UIColor redColor];
+        break;
+      case KeyboardNotificationStateWillShow:
+        self.view.backgroundColor = [UIColor greenColor];
+        break;
+      case KeyboardNotificationStateWillHide:
+        self.view.backgroundColor = [UIColor blueColor];
+        break;
+      case KeyboardNotificationStateDidHide:
+      default:
+        self.view.backgroundColor = [UIColor whiteColor];
+        break;
+    }
+  }];
   
   self.validators = @[[ETHNonemptyValidator validator],
                       [ETHSelectorValidator validatorWithSelector:@selector(eth_isValidEmail) error:@"This is not a valid email"],
@@ -81,6 +101,30 @@ static NSString * const kCellIdentifier = @"Cell";
                                @"characters": [NSCharacterSet symbolCharacterSet]}];
   
   self.textField.maximumLength = 20;
+}
+
+- (void)handleKeyboardNotifications {
+  [self.validatorTableView eth_handleKeyboardNotifications];
+  [self.formatterTableView eth_handleKeyboardNotifications];
+  
+  // Example to show how notificatin can be read on any NSObject for custom changes
+  [self eth_registerForKeyboardNotificationsWithHandler:^(BOOL show, KeyboardNotificationState state, CGRect startRect, CGRect endRect, NSTimeInterval duration, UIViewAnimationOptions animationOptions) {
+    self.view.backgroundColor = show ? [UIColor redColor] : [UIColor whiteColor];
+    switch(state) {
+      case KeyboardNotificationStateWillShow:
+        self.containerScrollView.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.5];
+        break;
+      case KeyboardNotificationStateDidShow:
+        self.containerScrollView.backgroundColor = [[UIColor yellowColor] colorWithAlphaComponent:0.5];
+        break;
+      case KeyboardNotificationStateWillHide:
+        self.containerScrollView.backgroundColor = [[UIColor greenColor] colorWithAlphaComponent:0.5];
+        break;
+      case KeyboardNotificationStateDidHide:
+        self.containerScrollView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
+        break;
+    }
+  }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
