@@ -13,6 +13,8 @@
 		0C4A0A0F1B79594F005D2203 /* EthanolValidationFormatting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4A0A0A1B79594F005D2203 /* EthanolValidationFormatting.framework */; };
 		0C4A0A101B79594F005D2203 /* NSInvocationHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4A0A0B1B79594F005D2203 /* NSInvocationHelpers.framework */; };
 		0CF38FE91B7AA90A00A32BE1 /* EthanolUIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF38FE81B7AA90900A32BE1 /* EthanolUIComponents.framework */; };
+		65891EA51B848C8800F80F6E /* NavigationItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65891EA31B848C8800F80F6E /* NavigationItemViewController.xib */; };
+		65891EA61B848C8800F80F6E /* NavigationItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65891EA41B848C8800F80F6E /* NavigationItemViewController.swift */; };
 		F47357E31B44320B007688EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47357E21B44320B007688EC /* AppDelegate.swift */; };
 		F47357E81B44320B007688EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47357E61B44320B007688EC /* Main.storyboard */; };
 		F47357EA1B44320C007688EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47357E91B44320B007688EC /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 		0C4A0A0A1B79594F005D2203 /* EthanolValidationFormatting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolValidationFormatting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C4A0A0B1B79594F005D2203 /* NSInvocationHelpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NSInvocationHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CF38FE81B7AA90900A32BE1 /* EthanolUIComponents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolUIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65891EA31B848C8800F80F6E /* NavigationItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationItemViewController.xib; sourceTree = "<group>"; };
+		65891EA41B848C8800F80F6E /* NavigationItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationItemViewController.swift; sourceTree = "<group>"; };
 		F47357DF1B44320B007688EC /* EthanolExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EthanolExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47357E21B44320B007688EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F47357E71B44320B007688EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 				F473594D1B45A551007688EC /* TextFieldViewController.h */,
 				F473594E1B45A551007688EC /* TextFieldViewController.m */,
 				F473594F1B45A551007688EC /* TextFieldViewController.xib */,
+				65891EA41B848C8800F80F6E /* NavigationItemViewController.swift */,
+				65891EA31B848C8800F80F6E /* NavigationItemViewController.xib */,
 				F47357E61B44320B007688EC /* Main.storyboard */,
 				F47357E91B44320B007688EC /* Assets.xcassets */,
 				F47357EB1B44320C007688EC /* LaunchScreen.storyboard */,
@@ -283,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F47359511B45A551007688EC /* TextFieldViewController.xib in Resources */,
+				65891EA51B848C8800F80F6E /* NavigationItemViewController.xib in Resources */,
 				F47357ED1B44320C007688EC /* LaunchScreen.storyboard in Resources */,
 				F47357EA1B44320C007688EC /* Assets.xcassets in Resources */,
 				F47357E81B44320B007688EC /* Main.storyboard in Resources */,
@@ -339,6 +346,7 @@
 				F47357E31B44320B007688EC /* AppDelegate.swift in Sources */,
 				F47358131B4435E7007688EC /* DemoListViewController.swift in Sources */,
 				F47359531B45B8EF007688EC /* DemoInformation.swift in Sources */,
+				65891EA61B848C8800F80F6E /* NavigationItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
