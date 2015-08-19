@@ -10,6 +10,8 @@
 
 @import EthanolUIComponents;
 @import EthanolValidationFormatting;
+@import EthanolUIExtensions;
+@import EthanolTools;
 
 static NSString * const kCellIdentifier = @"Cell";
 
@@ -85,6 +87,12 @@ static NSString * const kCellIdentifier = @"Cell";
   [super viewWillAppear:animated];
   
   [self.containerScrollView flashScrollIndicators];
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+  [super viewDidAppear:animated];
+  
+  NSLog(@"The top view controller is %@",[UIViewController topMostController]);
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {

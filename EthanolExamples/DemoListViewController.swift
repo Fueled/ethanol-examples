@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import EthanolUIExtensions
+import EthanolTools
 
 class DemoListViewController: UITableViewController {
   private let DemoListViewControllerTableViewCellIdentifier = "DemoListViewControllerTableViewCellIdentifier"
@@ -18,6 +20,12 @@ class DemoListViewController: UITableViewController {
     
     self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: DemoListViewControllerTableViewCellIdentifier)
   }
+  
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
+    print("The top view controller is \(UIViewController.topMostController)")
+  }
+  
   
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     guard let demos = self.demos else { return }
