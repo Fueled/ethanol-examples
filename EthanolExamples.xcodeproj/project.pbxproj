@@ -15,6 +15,10 @@
 		0CF38FE91B7AA90A00A32BE1 /* EthanolUIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF38FE81B7AA90900A32BE1 /* EthanolUIComponents.framework */; };
 		65891EA51B848C8800F80F6E /* NavigationItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65891EA31B848C8800F80F6E /* NavigationItemViewController.xib */; };
 		65891EA61B848C8800F80F6E /* NavigationItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65891EA41B848C8800F80F6E /* NavigationItemViewController.swift */; };
+		65933F891B848F73007ED988 /* SamplePushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65933F851B848F73007ED988 /* SamplePushViewController.xib */; };
+		65933F8A1B848F73007ED988 /* SamplePushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65933F861B848F73007ED988 /* SamplePushViewController.swift */; };
+		65933F8B1B848F73007ED988 /* AnimateTransitionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65933F871B848F73007ED988 /* AnimateTransitionViewController.xib */; };
+		65933F8C1B848F73007ED988 /* AnimateTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65933F881B848F73007ED988 /* AnimateTransitionViewController.swift */; };
 		F47357E31B44320B007688EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47357E21B44320B007688EC /* AppDelegate.swift */; };
 		F47357E81B44320B007688EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47357E61B44320B007688EC /* Main.storyboard */; };
 		F47357EA1B44320C007688EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47357E91B44320B007688EC /* Assets.xcassets */; };
@@ -55,6 +59,10 @@
 		0CF38FE81B7AA90900A32BE1 /* EthanolUIComponents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolUIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65891EA31B848C8800F80F6E /* NavigationItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationItemViewController.xib; sourceTree = "<group>"; };
 		65891EA41B848C8800F80F6E /* NavigationItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationItemViewController.swift; sourceTree = "<group>"; };
+		65933F851B848F73007ED988 /* SamplePushViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SamplePushViewController.xib; sourceTree = "<group>"; };
+		65933F861B848F73007ED988 /* SamplePushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SamplePushViewController.swift; sourceTree = "<group>"; };
+		65933F871B848F73007ED988 /* AnimateTransitionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimateTransitionViewController.xib; sourceTree = "<group>"; };
+		65933F881B848F73007ED988 /* AnimateTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateTransitionViewController.swift; sourceTree = "<group>"; };
 		F47357DF1B44320B007688EC /* EthanolExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EthanolExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47357E21B44320B007688EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F47357E71B44320B007688EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -141,6 +149,10 @@
 				F473594E1B45A551007688EC /* TextFieldViewController.m */,
 				F473594F1B45A551007688EC /* TextFieldViewController.xib */,
 				65891EA41B848C8800F80F6E /* NavigationItemViewController.swift */,
+				65933F851B848F73007ED988 /* SamplePushViewController.xib */,
+				65933F861B848F73007ED988 /* SamplePushViewController.swift */,
+				65933F871B848F73007ED988 /* AnimateTransitionViewController.xib */,
+				65933F881B848F73007ED988 /* AnimateTransitionViewController.swift */,
 				65891EA31B848C8800F80F6E /* NavigationItemViewController.xib */,
 				F47357E61B44320B007688EC /* Main.storyboard */,
 				F47357E91B44320B007688EC /* Assets.xcassets */,
@@ -288,7 +300,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65933F891B848F73007ED988 /* SamplePushViewController.xib in Resources */,
 				F47359511B45A551007688EC /* TextFieldViewController.xib in Resources */,
+				65933F8B1B848F73007ED988 /* AnimateTransitionViewController.xib in Resources */,
 				65891EA51B848C8800F80F6E /* NavigationItemViewController.xib in Resources */,
 				F47357ED1B44320C007688EC /* LaunchScreen.storyboard in Resources */,
 				F47357EA1B44320C007688EC /* Assets.xcassets in Resources */,
@@ -342,6 +356,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F47359501B45A551007688EC /* TextFieldViewController.m in Sources */,
+				65933F8C1B848F73007ED988 /* AnimateTransitionViewController.swift in Sources */,
+				65933F8A1B848F73007ED988 /* SamplePushViewController.swift in Sources */,
 				F47358111B4435CA007688EC /* CategoryViewController.swift in Sources */,
 				F47357E31B44320B007688EC /* AppDelegate.swift in Sources */,
 				F47358131B4435E7007688EC /* DemoListViewController.swift in Sources */,
