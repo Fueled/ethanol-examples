@@ -21,9 +21,4 @@ class SamplePushViewController: UIViewController {
     print("current back button title \(self.navigationController?.eth_currentBackButtonTitle)")
   }
   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-  
 }
