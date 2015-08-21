@@ -23,12 +23,7 @@ class NavigationItemViewController: UIViewController {
     super.viewDidAppear(animated)
     
   }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-  
+    
   func setupNavigationBar(){
     self.navigationItem.setCustomBackButtonWithTitle("Custom", target:self, selector: "backTapped")
   

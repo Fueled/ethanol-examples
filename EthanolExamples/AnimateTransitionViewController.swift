@@ -16,18 +16,10 @@ class AnimateTransitionViewController: UIViewController {
     self.title = "Animate"
   }
   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-  
   
   @IBAction func pushWithAnimationTapped(sender: AnyObject) {
     let viewController = SamplePushViewController()
     self.navigationController?.eth_animatedTransitionToViewController(viewController, transitionOption: UIViewAnimationOptions.TransitionFlipFromRight, completionHandler: { (Bool finished) -> Void in
-      
     })
-    
   }
-  
 }
