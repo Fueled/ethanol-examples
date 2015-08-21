@@ -8,6 +8,7 @@
 
 import UIKit
 import EthanolTools
+import EthanolUIExtensions
 
 enum Category {
   case UIComponents
@@ -20,7 +21,7 @@ class CategoryViewController: UITableViewController {
   
   private let categories: [(Category, String, demos: [DemoInformation])] = [
     (.UIComponents, "UI Components", [DemoInformation(name: "TextField", viewControllerClass: TextFieldViewController.self)]),
-    (.UIExtensions, "UI Extensions", [DemoInformation(name: "NavigationItem", viewControllerClass: NavigationItemViewController.self)]),
+    (.UIExtensions, "UI Extensions", [DemoInformation(name: "NavigationItem", viewControllerClass: NavigationItemViewController.self),DemoInformation(name: "AnimateTransitions", viewControllerClass: AnimateTransitionViewController.self)]),
     
   ]
   
@@ -53,8 +54,8 @@ class CategoryViewController: UITableViewController {
   }
   
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    self.demosSelected = (self.categories[indexPath.row].1, self.categories[indexPath.row].2)
-    self.performSegueWithIdentifier(ShowDemoListViewControllerSegueIdentifier, sender: self)
+     self.demosSelected = (self.categories[indexPath.row].1, self.categories[indexPath.row].2)
+     self.performSegueWithIdentifier(ShowDemoListViewControllerSegueIdentifier, sender: self)
   }
   
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
