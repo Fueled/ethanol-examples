@@ -35,6 +35,7 @@
 		0CBD47DA1B8F64710005C476 /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CBD47D11B8F64710005C476 /* TextFieldViewController.xib */; };
 		0CF38FE91B7AA90A00A32BE1 /* EthanolUIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF38FE81B7AA90900A32BE1 /* EthanolUIComponents.framework */; };
 		654B366A1B85F0F000FAA212 /* EthanolContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654B36691B85F0F000FAA212 /* EthanolContacts.framework */; };
+		65F1A2C71B8B4E500044854C /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F1A2C61B8B4E500044854C /* ContactsViewController.swift */; };
 		F47357F81B44320C007688EC /* EthanolExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47357F71B44320C007688EC /* EthanolExamplesTests.swift */; };
 		F47358031B44320C007688EC /* EthanolExamplesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47358021B44320C007688EC /* EthanolExamplesUITests.swift */; };
 		F4C384A21B7E9B5D00F2B30A /* EthanolUIExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C384A11B7E9B5D00F2B30A /* EthanolUIExtensions.framework */; };
@@ -100,6 +101,7 @@
 		0CBD47DB1B8F647F0005C476 /* ETHTextFieldPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = ETHTextFieldPlayground.playground; path = ValidationFormatting/ETHTextFieldPlayground.playground; sourceTree = "<group>"; };
 		0CF38FE81B7AA90900A32BE1 /* EthanolUIComponents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolUIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		654B36691B85F0F000FAA212 /* EthanolContacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolContacts.framework; path = "Carthage/Checkouts/ethanol-contacts/build/Debug-iphoneos/EthanolContacts.framework"; sourceTree = "<group>"; };
+		65F1A2C61B8B4E500044854C /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		F47357DF1B44320B007688EC /* EthanolExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EthanolExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47357F31B44320C007688EC /* EthanolExamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EthanolExamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47357F71B44320C007688EC /* EthanolExamplesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthanolExamplesTests.swift; sourceTree = "<group>"; };
@@ -115,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				654B366A1B85F0F000FAA212 /* EthanolContacts.framework in Frameworks */,
+				65F1A2C51B8B4D450044854C /* EthanolContacts.framework in Frameworks */,
 				F4C384A21B7E9B5D00F2B30A /* EthanolUIExtensions.framework in Frameworks */,
 				0CF38FE91B7AA90A00A32BE1 /* EthanolUIComponents.framework in Frameworks */,
 				0C4A0A0C1B79594F005D2203 /* CocoaLumberjack.framework in Frameworks */,
@@ -244,6 +246,7 @@
 		F47357D61B44320B007688EC = {
 			isa = PBXGroup;
 			children = (
+				65F1A2C41B8B4D450044854C /* EthanolContacts.framework */,
 				F47357E11B44320B007688EC /* EthanolExamples */,
 				F47357F61B44320C007688EC /* EthanolExamplesTests */,
 				F47358011B44320C007688EC /* EthanolExamplesUITests */,
@@ -274,6 +277,7 @@
 				0CBD47AB1B8F63140005C476 /* Utilities */,
 				0CBD47B01B8F63AB0005C476 /* Resources */,
 				0CBD47B11B8F63B80005C476 /* Supporting Files */,
+				65F1A2C61B8B4E500044854C /* ContactsViewController.swift */,
 			);
 			path = EthanolExamples;
 			sourceTree = "<group>";
@@ -459,6 +463,7 @@
 				"$(BUILT_PRODUCTS_DIR)/EthanolUIComponents.framework",
 				"$(BUILT_PRODUCTS_DIR)/CocoaLumberjack.framework",
 				"$(BUILT_PRODUCTS_DIR)/EthanolUIExtensions.framework",
+				"$(BUILT_PRODUCTS_DIR)/EthanolContacts.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
@@ -485,6 +490,7 @@
 				0C4DF2711B8F698F00A30559 /* CategoryViewController.swift in Sources */,
 				0CBD47D51B8F64710005C476 /* NavigationItemViewController.swift in Sources */,
 				0C1E37821B9111D7007DCA90 /* DemoMapViewController.swift in Sources */,
+				65F1A2C71B8B4E500044854C /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
