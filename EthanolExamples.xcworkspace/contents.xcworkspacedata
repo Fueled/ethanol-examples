@@ -23,6 +23,9 @@
       <FileRef
          location = "group:ETHPausableTimerPlayground.playground">
       </FileRef>
+      <FileRef
+         location = "group:/Users/bastienfalcou/Documents/EthanolExampleSwift/ethanol-examples/ETHPlaceholderTextViewPlayground.playground">
+      </FileRef>
    </Group>
    <Group
       location = "container:"
