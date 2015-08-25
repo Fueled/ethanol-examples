@@ -10,6 +10,28 @@
    </Group>
    <Group
       location = "container:"
+      name = "Playgrounds">
+      <FileRef
+         location = "group:ETHTextFieldPlayground.playground">
+      </FileRef>
+      <FileRef
+         location = "group:ETHPageControlPlayground.playground">
+      </FileRef>
+      <FileRef
+         location = "group:ETHSwitchPlayground.playground">
+      </FileRef>
+      <FileRef
+         location = "group:ETHPausableTimerPlayground.playground">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/bastienfalcou/Documents/EthanolExampleSwift/ethanol-examples/ETHPlaceholderTextViewPlayground.playground">
+      </FileRef>
+      <FileRef
+         location = "group:MKMapView+ZoomLevelPlayground.playground">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
       name = "Dependencies">
       <FileRef
          location = "group:Carthage/Checkouts/ethanol-contacts/EthanolContacts.xcodeproj">
