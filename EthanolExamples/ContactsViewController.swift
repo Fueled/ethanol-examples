@@ -10,6 +10,7 @@ import UIKit
 import EthanolContacts
 
 let ContactsCellIdentifier = "ContactsCell"
+let ContactDetailSegueIdentifier = "ShowContactDetailSegue"
 
 class ContactsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
@@ -24,22 +25,14 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
   }
   
   func fetchContacts(){
-    let properties = ContactProperty.BasicProperties
-    
-    if #available(iOS 9.0, *) {
-      PhoneContactFetcher().fetchContactsForProperties(properties,
-        success: { (contacts) -> Void in
-          self.updateDataSourceAndReloadData(contacts)
-          
-        }, failure: { (error) -> Void in
-          print("error \(error)")
-          self.updateDataSourceAndReloadData([])
-      })
-    } else {
-      // Fallback on earlier versions
-      self.updateDataSourceAndReloadData([])
-    }
-    
+    let properties = ContactProperty.AllProperties
+    PhoneContactFetcher.contactFetcher.fetchContactsForProperties(properties,
+      success: { (contacts) -> Void in
+        self.updateDataSourceAndReloadData(contacts)
+      }, failure: { (error) -> Void in
+        print("error \(error)")
+        self.updateDataSourceAndReloadData([])
+    })
   }
   
   func updateDataSourceAndReloadData(contacts:[Contact]){
@@ -57,6 +50,18 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return self.dataSource.count
+  }
+  
+  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    self.performSegueWithIdentifier(ContactDetailSegueIdentifier, sender: indexPath)
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if let indexPath = sender as? NSIndexPath where segue.identifier == ContactDetailSegueIdentifier {
+      let dvc = segue.destinationViewController as! ContactDetailViewController
+      dvc.contact = self.dataSource[indexPath.row]
+    }
   }
   
 }

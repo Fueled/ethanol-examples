@@ -122,11 +122,47 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="hfM-L5-V9d" id="bZf-jw-ahH"/>
+                        <segue destination="1qK-9U-tEM" kind="show" identifier="ShowContactDetailSegue" id="lMt-J3-0G5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N90-pE-hjt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1698" y="1818"/>
+        </scene>
+        <!--Contact Detail View Controller-->
+        <scene sceneID="8rT-14-hZG">
+            <objects>
+                <viewController id="1qK-9U-tEM" customClass="ContactDetailViewController" customModule="EthanolExamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2GL-0a-7Zd"/>
+                        <viewControllerLayoutGuide type="bottom" id="TnZ-X7-GNL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8DM-ma-tgQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GE3-13-VKw">
+                                <rect key="frame" x="20" y="70" width="560" height="510"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GE3-13-VKw" firstAttribute="top" secondItem="8DM-ma-tgQ" secondAttribute="top" constant="70" id="8eC-1Q-THn"/>
+                            <constraint firstItem="GE3-13-VKw" firstAttribute="leading" secondItem="8DM-ma-tgQ" secondAttribute="leading" constant="20" id="IYL-Xq-GSG"/>
+                            <constraint firstItem="TnZ-X7-GNL" firstAttribute="top" secondItem="GE3-13-VKw" secondAttribute="bottom" constant="20" id="OcI-4a-KDx"/>
+                            <constraint firstAttribute="trailing" secondItem="GE3-13-VKw" secondAttribute="trailing" constant="20" id="pTp-dA-iEG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="GE3-13-VKw" id="jWl-ec-pmd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pHe-3q-h8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2412" y="1819"/>
         </scene>
     </scenes>
 </document>
