@@ -12,11 +12,11 @@ import EthanolContacts
 let ContactsCellIdentifier = "ContactsCell"
 let ContactDetailSegueIdentifier = "ShowContactDetailSegue"
 
-class ContactsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ContactsViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   
-  var dataSource:[Contact] = []
+  var dataSource = [Contact]()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -27,9 +27,9 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
   func fetchContacts(){
     let properties = ContactProperty.AllProperties
     PhoneContactFetcher.contactFetcher.fetchContactsForProperties(properties,
-      success: { (contacts) -> Void in
+      success: { contacts in
         self.updateDataSourceAndReloadData(contacts)
-      }, failure: { (error) -> Void in
+      }, failure: { error in
         print("error \(error)")
         self.updateDataSourceAndReloadData([])
     })
@@ -39,6 +39,17 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     self.dataSource = contacts
     self.tableView.reloadData()
   }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if let contact = sender as? Contact where segue.identifier == ContactDetailSegueIdentifier {
+      let dvc = segue.destinationViewController as! ContactDetailViewController
+      dvc.contact = contact
+    }
+  }
+}
+
+// MARK: - UITableViewDataSource
+extension ContactsViewController: UITableViewDataSource {
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier(ContactsCellIdentifier)!
@@ -51,17 +62,16 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return self.dataSource.count
   }
+}
+
+// MARK: - UITableViewDelegate
+extension ContactsViewController: UITableViewDelegate {
   
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
-    self.performSegueWithIdentifier(ContactDetailSegueIdentifier, sender: indexPath)
+    self.performSegueWithIdentifier(ContactDetailSegueIdentifier, sender:self.dataSource[indexPath.row])
   }
-  
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    if let indexPath = sender as? NSIndexPath where segue.identifier == ContactDetailSegueIdentifier {
-      let dvc = segue.destinationViewController as! ContactDetailViewController
-      dvc.contact = self.dataSource[indexPath.row]
-    }
-  }
-  
 }
+
+
+

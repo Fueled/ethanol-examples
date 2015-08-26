@@ -22,7 +22,7 @@ class ContactDetailViewController: UIViewController {
   }
   
   func populateContactDetails(){
-    if let contact = self.contact {
+    if let contact = contact {
       let descriptionString = "givenName : \(contact.givenName) , familyName : \(contact.familyName) , middleName : \(contact.middleName) , phone : \(contact.phone) , emails : \(contact.emails) , addresses : \(contact.addresses) , organizationName : \(contact.organizationName) , jobTitle : \(contact.jobTitle) , departmentName : \(contact.departmentName) , nickname : \(contact.nickname) , urls : \(contact.urls) , birthdayDate : \(contact.birthdayDate)"
       self.descriptionLabel.text = descriptionString
     }

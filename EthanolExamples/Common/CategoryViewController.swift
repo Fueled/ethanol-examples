@@ -41,8 +41,6 @@ class CategoryViewController: UITableViewController {
     super.viewDidLoad()
     
     self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: CategoryViewControllerTableViewCellIdentifier)
-    
-    
   }
   
   override func viewDidAppear(animated: Bool) {
