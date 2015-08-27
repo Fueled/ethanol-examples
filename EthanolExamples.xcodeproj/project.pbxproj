@@ -37,6 +37,7 @@
 		65ABB96A1B8C9243002E9DB3 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ABB9691B8C9243002E9DB3 /* ContactDetailViewController.swift */; };
 		65F1A2C71B8B4E500044854C /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F1A2C61B8B4E500044854C /* ContactsViewController.swift */; };
 		F407C07D1B988B5300428E8E /* EthanolContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F407C07C1B988B5300428E8E /* EthanolContacts.framework */; };
+		327273671B8F18E500A5BEE1 /* EthanolSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327273661B8F18E500A5BEE1 /* EthanolSocial.framework */; };
 		F47357F81B44320C007688EC /* EthanolExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47357F71B44320C007688EC /* EthanolExamplesTests.swift */; };
 		F47358031B44320C007688EC /* EthanolExamplesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47358021B44320C007688EC /* EthanolExamplesUITests.swift */; };
 		F4C384A21B7E9B5D00F2B30A /* EthanolUIExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C384A11B7E9B5D00F2B30A /* EthanolUIExtensions.framework */; };
@@ -103,6 +104,7 @@
 		65ABB9691B8C9243002E9DB3 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		65F1A2C61B8B4E500044854C /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		F407C07C1B988B5300428E8E /* EthanolContacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolContacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		327273661B8F18E500A5BEE1 /* EthanolSocial.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolSocial.framework; path = "Carthage/Checkouts/ethanol-social/build/Debug-iphoneos/EthanolSocial.framework"; sourceTree = "<group>"; };
 		F47357DF1B44320B007688EC /* EthanolExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EthanolExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47357F31B44320C007688EC /* EthanolExamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EthanolExamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47357F71B44320C007688EC /* EthanolExamplesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthanolExamplesTests.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F407C07D1B988B5300428E8E /* EthanolContacts.framework in Frameworks */,
+				327273671B8F18E500A5BEE1 /* EthanolSocial.framework in Frameworks */,
 				F4C384A21B7E9B5D00F2B30A /* EthanolUIExtensions.framework in Frameworks */,
 				0CF38FE91B7AA90A00A32BE1 /* EthanolUIComponents.framework in Frameworks */,
 				0C4A0A0C1B79594F005D2203 /* CocoaLumberjack.framework in Frameworks */,
@@ -312,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				F407C07C1B988B5300428E8E /* EthanolContacts.framework */,
+				327273661B8F18E500A5BEE1 /* EthanolSocial.framework */,
 				F4C384A11B7E9B5D00F2B30A /* EthanolUIExtensions.framework */,
 				0CF38FE81B7AA90900A32BE1 /* EthanolUIComponents.framework */,
 				0C4A0A071B79594F005D2203 /* CocoaLumberjack.framework */,
@@ -472,6 +476,7 @@
 				"$(BUILT_PRODUCTS_DIR)/CocoaLumberjack.framework",
 				"$(BUILT_PRODUCTS_DIR)/EthanolUIExtensions.framework",
 				"$(BUILT_PRODUCTS_DIR)/EthanolContacts.framework",
+				"$(BUILT_PRODUCTS_DIR)/EthanolSocial.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
@@ -621,6 +626,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Checkouts/ethanol-social/build/Debug-iphoneos";
 				INFOPLIST_FILE = "EthanolExamples/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -641,6 +647,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Checkouts/ethanol-social/build/Debug-iphoneos";
 				INFOPLIST_FILE = "EthanolExamples/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
