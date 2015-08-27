@@ -16,27 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    // Override point for customization after application launch.
-    let timer2 = ETHPausableTimer(timeInterval: 5.0, block: { (timer) -> Void in
-      // Code executed once done.
-      NSLog("\(timer.timeInterval)")
-    }, paused: true)
-    
-    // Start timer.
-    // At that point, timeInterval is still equal to 5. We also keep track of the time.
-    NSLog("\(timer2.timeInterval)")
-    
-    timer2.resume()
-    // Start timer.
-    // At that point, timeInterval is still equal to 5. We also keep track of the time.
-    NSLog("\(timer2.timeInterval)")
-    
-    // Pause timer after 2.5 seconds
-    // timeInterval value has been updated accordingly. We can see comparing times that 2.5 seconds elapsed.
-    usleep(2500000)
-    timer2.pause()
-    NSLog("\(timer2.timeInterval)")
-    
     return true
   }
 
