@@ -12,6 +12,7 @@ This helper will provide you handy methods such as:
 Implemented in *EthanolArrayUtilities*. Extension of SequenceType protocol.
 */
 
+// TODO
 let arrayOfElements1 = ["elt1", "elt2", "elt3", "elt4"]
 
 /*:

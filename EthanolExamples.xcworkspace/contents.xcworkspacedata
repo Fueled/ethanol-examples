@@ -32,6 +32,9 @@
       <FileRef
          location = "group:EthanolSwiftHelpersPlayground.playground">
       </FileRef>
+      <FileRef
+         location = "group:NSTimer+EthanolBlocks.playground">
+      </FileRef>
    </Group>
    <Group
       location = "container:"
