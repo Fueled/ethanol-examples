@@ -13,6 +13,7 @@ import EthanolUIExtensions
 enum Category {
   case UIComponents
   case UIExtensions
+  case Utilities
 }
 
 class CategoryViewController: UITableViewController {
@@ -21,8 +22,9 @@ class CategoryViewController: UITableViewController {
   
   private let categories: [(Category, String, demos: [DemoInformation])] = [
     (.UIComponents, "UI Components", [DemoInformation(name: "TextField", viewControllerClass: TextFieldViewController.self)]),
-    (.UIExtensions, "UI Extensions", [DemoInformation(name: "NavigationItem", viewControllerClass: NavigationItemViewController.self),DemoInformation(name: "AnimateTransitions", viewControllerClass: AnimateTransitionViewController.self)]),
-    
+    (.UIExtensions, "UI Extensions", [DemoInformation(name: "NavigationItem", viewControllerClass: NavigationItemViewController.self),
+                                      DemoInformation(name: "AnimateTransitions", viewControllerClass: AnimateTransitionViewController.self)]),
+    (.Utilities, "Utilities", [DemoInformation(name: "Object Helpers", viewControllerClass: ObjectHelpersExampleViewController.self)])
   ]
   
   private var demosSelected: (String, Array<DemoInformation>)?

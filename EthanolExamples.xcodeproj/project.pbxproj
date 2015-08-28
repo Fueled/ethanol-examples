@@ -15,6 +15,8 @@
 		0C4DF2711B8F698F00A30559 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DF26E1B8F698F00A30559 /* CategoryViewController.swift */; };
 		0C4DF2721B8F698F00A30559 /* DemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DF26F1B8F698F00A30559 /* DemoListViewController.swift */; };
 		0C4DF2731B8F698F00A30559 /* DemoInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DF2701B8F698F00A30559 /* DemoInformation.swift */; };
+		0C4E08F21B90C680007067D7 /* ObjectHelpersExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E08F11B90C680007067D7 /* ObjectHelpersExampleViewController.swift */; };
+		0C4E08F41B90C6F2007067D7 /* ObjectHelpersExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4E08F31B90C6F2007067D7 /* ObjectHelpersExampleViewController.xib */; };
 		0CBD47B81B8F63D90005C476 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD47B41B8F63D90005C476 /* AppDelegate.swift */; };
 		0CBD47BC1B8F63EE0005C476 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CBD47BA1B8F63EE0005C476 /* Assets.xcassets */; };
 		0CBD47C11B8F64190005C476 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBD47BF1B8F64190005C476 /* Main.storyboard */; };
@@ -59,6 +61,8 @@
 		0C4DF26E1B8F698F00A30559 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryViewController.swift; path = Common/CategoryViewController.swift; sourceTree = "<group>"; };
 		0C4DF26F1B8F698F00A30559 /* DemoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoListViewController.swift; path = Common/DemoListViewController.swift; sourceTree = "<group>"; };
 		0C4DF2701B8F698F00A30559 /* DemoInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoInformation.swift; path = Common/DemoInformation.swift; sourceTree = "<group>"; };
+		0C4E08F11B90C680007067D7 /* ObjectHelpersExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObjectHelpersExampleViewController.swift; path = Utilities/ObjectHelpersExampleViewController.swift; sourceTree = "<group>"; };
+		0C4E08F31B90C6F2007067D7 /* ObjectHelpersExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ObjectHelpersExampleViewController.xib; sourceTree = "<group>"; };
 		0CBD47B41B8F63D90005C476 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CBD47BA1B8F63EE0005C476 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		0CBD47BF1B8F64190005C476 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Resources/Storyboards/Main.storyboard; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 		0CBD47AB1B8F63140005C476 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0C4E08F11B90C680007067D7 /* ObjectHelpersExampleViewController.swift */,
+				0C4E08F31B90C6F2007067D7 /* ObjectHelpersExampleViewController.xib */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -386,6 +392,7 @@
 				0CBD47C21B8F64190005C476 /* LaunchScreen.storyboard in Resources */,
 				0CBD47D31B8F64710005C476 /* AnimateTransitionViewController.xib in Resources */,
 				0CBD47DA1B8F64710005C476 /* TextFieldViewController.xib in Resources */,
+				0C4E08F41B90C6F2007067D7 /* ObjectHelpersExampleViewController.xib in Resources */,
 				0CBD47D81B8F64710005C476 /* SamplePushViewController.xib in Resources */,
 				0CBD47BC1B8F63EE0005C476 /* Assets.xcassets in Resources */,
 				0CBD47C11B8F64190005C476 /* Main.storyboard in Resources */,
@@ -441,6 +448,7 @@
 				0CBD47B81B8F63D90005C476 /* AppDelegate.swift in Sources */,
 				0CBD47D71B8F64710005C476 /* SamplePushViewController.swift in Sources */,
 				0C4DF2731B8F698F00A30559 /* DemoInformation.swift in Sources */,
+				0C4E08F21B90C680007067D7 /* ObjectHelpersExampleViewController.swift in Sources */,
 				0CBD47D91B8F64710005C476 /* TextFieldViewController.m in Sources */,
 				0CBD47D41B8F64710005C476 /* AnimateTransitionViewController.swift in Sources */,
 				0C4DF2711B8F698F00A30559 /* CategoryViewController.swift in Sources */,
