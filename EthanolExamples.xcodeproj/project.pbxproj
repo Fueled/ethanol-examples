@@ -51,6 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C1E377C1B910B6B007DCA90 /* EthanolArrayUtilitiesPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = EthanolArrayUtilitiesPlayground.playground; sourceTree = "<group>"; };
+		0C1E377D1B910B6B007DCA90 /* EthanolSwiftHelpersPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = EthanolSwiftHelpersPlayground.playground; sourceTree = "<group>"; };
+		0C1E377E1B910B6B007DCA90 /* NSTimer+EthanolBlocks.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "NSTimer+EthanolBlocks.playground"; sourceTree = "<group>"; };
+		0C1E377F1B910B6B007DCA90 /* NSString+EthanolUtilsPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "NSString+EthanolUtilsPlayground.playground"; sourceTree = "<group>"; };
 		0C4A0A071B79594F005D2203 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C4A0A081B79594F005D2203 /* EthanolTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C4A0A091B79594F005D2203 /* EthanolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +139,10 @@
 		0CBD47AB1B8F63140005C476 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0C1E377C1B910B6B007DCA90 /* EthanolArrayUtilitiesPlayground.playground */,
+				0C1E377D1B910B6B007DCA90 /* EthanolSwiftHelpersPlayground.playground */,
+				0C1E377E1B910B6B007DCA90 /* NSTimer+EthanolBlocks.playground */,
+				0C1E377F1B910B6B007DCA90 /* NSString+EthanolUtilsPlayground.playground */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
