@@ -1,9 +1,11 @@
 github "CocoaLumberjack/CocoaLumberjack" "479279f102a8ab23084290697bafa77aac0d1bdf"
 github "stephanecopin/NSInvocation-Helpers" "1.0.1"
+
 github "Fueled/ethanol-utilities" "0.1.7"
 github "Fueled/ethanol-contacts" "0.1.3"
 github "Fueled/ethanol-tools" "0.1.6"
 github "Fueled/ethanol-validation-formatting" "0.2.4"
 github "Fueled/ethanol-ui-extensions" "0.1.9"
 github "Fueled/ethanol-ui-components" "0.2.17"
-github "Fueled/ethanol-social" "8fd6460e7e8eb214518b830b8f6a91700e9056ab"
+git "git@github.com:facebook/facebook-ios-sdk.git" "sdk-version-4.5.1"
+github "Fueled/ethanol-social" "7d56d826c0fad2fb61800a407b41c3009a092d09"

@@ -8,6 +8,7 @@
 
 import UIKit
 import EthanolTools
+import EthanolSocial
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+
+
+//	let socialManager = SocialManager.sharedManager
+//	let facebookService = socialManager.serviceForType(serviceType: ServiceType.Facebook)
+//	facebookService.login(success: { (success) -> Void in
+//		if success {
+//			print("Success")
+//		} else {
+//			print("Failed")
+//		}
+//	}, failure: { (error) -> Void in
+//		print("Error !! : \(error)")
+//	})
     return true
   }
 
