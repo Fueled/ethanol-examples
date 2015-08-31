@@ -63,6 +63,7 @@
 		0C4DF26E1B8F698F00A30559 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryViewController.swift; path = Common/CategoryViewController.swift; sourceTree = "<group>"; };
 		0C4DF26F1B8F698F00A30559 /* DemoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoListViewController.swift; path = Common/DemoListViewController.swift; sourceTree = "<group>"; };
 		0C4DF2701B8F698F00A30559 /* DemoInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoInformation.swift; path = Common/DemoInformation.swift; sourceTree = "<group>"; };
+		0C8EEDF01B95F61700974BDB /* EthanolSecurityPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = EthanolSecurityPlayground.playground; path = Utilities/EthanolSecurityPlayground.playground; sourceTree = "<group>"; };
 		0CBD47B41B8F63D90005C476 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CBD47BA1B8F63EE0005C476 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		0CBD47BF1B8F64190005C476 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Resources/Storyboards/Main.storyboard; sourceTree = "<group>"; };
@@ -139,6 +140,7 @@
 		0CBD47AB1B8F63140005C476 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0C8EEDF01B95F61700974BDB /* EthanolSecurityPlayground.playground */,
 				0C1E378A1B94CAC8007DCA90 /* EthanolArrayUtilitiesPlayground.playground */,
 				0C1E378B1B94CAC8007DCA90 /* EthanolSwiftHelpersPlayground.playground */,
 				0C1E378C1B94CAC8007DCA90 /* NSString+EthanolUtilsPlayground.playground */,
