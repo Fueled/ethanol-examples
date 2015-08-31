@@ -11,11 +11,13 @@ Note that ETHPausableTimer is not repeating (and hasn't been made for that purpo
 
 // Convenience method created for test purpose
 func minutesAndSecondsForDate(date: NSDate) -> String {
-  let dateFormatterMinutes = NSDateFormatter()
-  let dateFormatterSeconds = NSDateFormatter()
-  dateFormatterMinutes.dateFormat = "mm"
-  dateFormatterSeconds.dateFormat = "ss"
-  return "Time: \(dateFormatterMinutes.stringFromDate(date))m \(dateFormatterSeconds.stringFromDate(date))s"
+  let dateFormatter = NSDateFormatter()
+  dateFormatter.dateFormat = "mm"
+  var formattedString = "Time: \(dateFormatter.stringFromDate(date))m "
+  dateFormatter.dateFormat = "ss"
+  formattedString += "\(dateFormatter.stringFromDate(date))s"
+  print("The dateString is (formattedString)")
+  return formattedString
 }
 
 /*:
