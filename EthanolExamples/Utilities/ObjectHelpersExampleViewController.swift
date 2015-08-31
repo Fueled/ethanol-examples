@@ -9,6 +9,11 @@
 import UIKit
 import EthanolUtilities
 
+struct ObjectHelpersExampleViewControllerConstants {
+  static let createViewString = "Create view"
+  static let deallocViewString = "Dealloc view"
+}
+
 class ObjectHelpersExampleViewController: UIViewController {
   
   @IBOutlet weak var executeOnDeallocButton: UIButton!
@@ -17,14 +22,14 @@ class ObjectHelpersExampleViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    self.title = "Object Helpers"
+    title = "Object Helpers"
   }
   
   // MARK: Execute On Dealloc
   
   @IBAction func executeOnDeallocButtonTapped(sender: AnyObject) {
-    if let text = executeOnDeallocButton.titleLabel?.text where text == "Create view" {
-      executeOnDeallocButton.setTitle("Dealloc view", forState: .Normal)
+    if let text = executeOnDeallocButton.titleLabel?.text where text == ObjectHelpersExampleViewControllerConstants.createViewString {
+      executeOnDeallocButton.setTitle(ObjectHelpersExampleViewControllerConstants.deallocViewString, forState: .Normal)
       viewToDealloc = UIView(frame: CGRect(x: executeOnDeallocButton.frame.origin.x + executeOnDeallocButton.frame.size.width + 20.0, y: executeOnDeallocButton.frame.origin.y, width: executeOnDeallocButton.frame.size.height, height: executeOnDeallocButton.frame.size.height))
       viewToDealloc.backgroundColor = UIColor.redColor()
       view.addSubview(viewToDealloc)
@@ -36,7 +41,7 @@ class ObjectHelpersExampleViewController: UIViewController {
         self.presentViewController(alertController, animated: true, completion: nil)
       })
     } else {
-      executeOnDeallocButton.setTitle("Create view", forState: .Normal)
+      executeOnDeallocButton.setTitle(ObjectHelpersExampleViewControllerConstants.createViewString, forState: .Normal)
       viewToDealloc.removeFromSuperview()
       viewToDealloc = UIView()  // Create a new view deallocs the previous one, and triggers our performBlockOnDealloc to be called.
     }
