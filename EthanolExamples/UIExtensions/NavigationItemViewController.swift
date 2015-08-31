@@ -14,14 +14,7 @@ class NavigationItemViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    // Do any additional setup after loading the view.
     self.setupNavigationBar()
-    
-  }
-  
-  override func viewDidAppear(animated: Bool) {
-    super.viewDidAppear(animated)
-    
   }
     
   func setupNavigationBar(){
@@ -43,7 +36,4 @@ class NavigationItemViewController: UIViewController {
   func backTapped(){
       self.navigationController?.popViewControllerAnimated(true)
   }
-  
-  
-  
 }

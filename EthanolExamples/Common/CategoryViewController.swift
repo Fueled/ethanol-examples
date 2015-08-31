@@ -14,6 +14,7 @@ enum Category {
   case UIComponents
   case UIExtensions
   case Utilities
+  case Tools
 }
 
 class CategoryViewController: UITableViewController {
@@ -24,7 +25,8 @@ class CategoryViewController: UITableViewController {
     (.UIComponents, "UI Components", [DemoInformation(name: "TextField", viewControllerClass: TextFieldViewController.self)]),
     (.UIExtensions, "UI Extensions", [DemoInformation(name: "NavigationItem", viewControllerClass: NavigationItemViewController.self),
                                       DemoInformation(name: "AnimateTransitions", viewControllerClass: AnimateTransitionViewController.self)]),
-    (.Utilities, "Utilities", [DemoInformation(name: "Object Helpers", viewControllerClass: ObjectHelpersExampleViewController.self)])
+    (.Utilities, "Utilities", [DemoInformation(name: "Object Helpers", viewControllerClass: ObjectHelpersExampleViewController.self)]),
+    (.Tools, "Tools", [DemoInformation(name: "Screen Manager", viewControllerClass: ScreenManagerViewController.self)])
   ]
   
   private var demosSelected: (String, Array<DemoInformation>)?
