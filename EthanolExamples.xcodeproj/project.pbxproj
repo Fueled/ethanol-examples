@@ -37,6 +37,7 @@
 		65ABB96A1B8C9243002E9DB3 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ABB9691B8C9243002E9DB3 /* ContactDetailViewController.swift */; };
 		65F1A2C71B8B4E500044854C /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F1A2C61B8B4E500044854C /* ContactsViewController.swift */; };
 		F407C07D1B988B5300428E8E /* EthanolContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F407C07C1B988B5300428E8E /* EthanolContacts.framework */; };
+		321C686F1B95B2C700F671B6 /* SocialIntegrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C686E1B95B2C700F671B6 /* SocialIntegrationViewController.swift */; };
 		327273671B8F18E500A5BEE1 /* EthanolSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327273661B8F18E500A5BEE1 /* EthanolSocial.framework */; };
 		F47357F81B44320C007688EC /* EthanolExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47357F71B44320C007688EC /* EthanolExamplesTests.swift */; };
 		F47358031B44320C007688EC /* EthanolExamplesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47358021B44320C007688EC /* EthanolExamplesUITests.swift */; };
@@ -106,6 +107,7 @@
 		F407C07C1B988B5300428E8E /* EthanolContacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolContacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32087C411B948A700015F47C /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		32087C431B948E830015F47C /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "Carthage/Checkouts/facebook-ios-sdk/Bolts-IOS/build/Debug/Bolts.framework"; sourceTree = "<group>"; };
+		321C686E1B95B2C700F671B6 /* SocialIntegrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocialIntegrationViewController.swift; path = Social/SocialIntegrationViewController.swift; sourceTree = "<group>"; };
 		327273661B8F18E500A5BEE1 /* EthanolSocial.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolSocial.framework; path = "Carthage/Checkouts/ethanol-social/build/Debug-iphoneos/EthanolSocial.framework"; sourceTree = "<group>"; };
 		32F0F2D81B948A04003C6F40 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "Carthage/Checkouts/facebook-ios-sdk/FBSDKCoreKit/build/Debug-iphoneos/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		32F0F2D91B948A04003C6F40 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "Carthage/Checkouts/facebook-ios-sdk/FBSDKLoginKit/build/Debug-iphoneos/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
@@ -258,6 +260,14 @@
 			);
 			name = Contacts;
 			sourceTree = "<group>";
+			};
+		321C686D1B95B2A900F671B6 /* Social */ = {
+			isa = PBXGroup;
+			children = (
+				321C686E1B95B2C700F671B6 /* SocialIntegrationViewController.swift */,
+			);
+			name = Social;
+			sourceTree = "<group>";
 		};
 		F47357D61B44320B007688EC = {
 			isa = PBXGroup;
@@ -291,6 +301,7 @@
 				32F0F2AF1B9435B2003C6F40 /* Contacts */,
 				0CBD47AC1B8F63680005C476 /* ValidationFormatting */,
 				0CBD47AB1B8F63140005C476 /* Utilities */,
+				321C686D1B95B2A900F671B6 /* Social */,
 				0CBD47B01B8F63AB0005C476 /* Resources */,
 				0CBD47B11B8F63B80005C476 /* Supporting Files */,
 			);
@@ -503,6 +514,7 @@
 				0C4DF2721B8F698F00A30559 /* DemoListViewController.swift in Sources */,
 				0CBD47B81B8F63D90005C476 /* AppDelegate.swift in Sources */,
 				0CBD47D71B8F64710005C476 /* SamplePushViewController.swift in Sources */,
+				321C686F1B95B2C700F671B6 /* SocialIntegrationViewController.swift in Sources */,
 				0C4DF2731B8F698F00A30559 /* DemoInformation.swift in Sources */,
 				0C4E08F21B90C680007067D7 /* ObjectHelpersExampleViewController.swift in Sources */,
 				0CBD47D91B8F64710005C476 /* TextFieldViewController.m in Sources */,

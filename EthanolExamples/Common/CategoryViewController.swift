@@ -16,6 +16,7 @@ enum Category {
   case Utilities
   case Tools
   case Contacts
+  case Social
 }
 
 class CategoryViewController: UITableViewController {
@@ -33,6 +34,11 @@ class CategoryViewController: UITableViewController {
       let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
       return mainStoryboard.instantiateViewControllerWithIdentifier("ContactsViewControllerID")
       }]),
+    (.Social, "Social", [DemoInformation(name: "SocialIntegration", viewControllerBuilder: { () -> UIViewController in
+      let main = UIStoryboard(name: "Main", bundle: nil)
+      let controller = main.instantiateViewControllerWithIdentifier("SocialIntegrationViewControllerIdentifier")
+      return controller
+    })]),
   ]
   
   private var demosSelected: (String, Array<DemoInformation>)?

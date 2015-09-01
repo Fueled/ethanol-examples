@@ -46,6 +46,24 @@
             </objects>
             <point key="canvasLocation" x="1020" y="1022"/>
         </scene>
+        <!--Social Integration View Controller-->
+        <scene sceneID="3Gn-FV-TjE">
+            <objects>
+                <viewController storyboardIdentifier="SocialIntegrationViewControllerIdentifier" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mVU-el-sMs" customClass="SocialIntegrationViewController" customModule="EthanolExamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1wd-7o-ivW"/>
+                        <viewControllerLayoutGuide type="bottom" id="xLo-pV-TJw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zpS-Ex-Zpc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Oe-i1-6qH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1022" y="1779"/>
+        </scene>
         <!--Demo List View Controller-->
         <scene sceneID="8SX-75-3Zj">
             <objects>
