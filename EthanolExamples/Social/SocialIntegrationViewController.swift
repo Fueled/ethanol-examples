@@ -12,7 +12,7 @@ import EthanolSocial
 class FacebookIntegrationViewController: UIViewController {
 
 	@IBAction func loginTapped(sender: AnyObject) {
-    SocialManager.serviceForType(serviceType: .Facebook).loginSilentlyIfPossible(permissions: ["public_profile", "email"], success: { (success) in
+    SocialManager.serviceForType(serviceType: .Facebook).loginSilentlyIfPossible(permissions: [FacebookSocialServicePermission.PublicProfile, FacebookSocialServicePermission.Email], success: { (success) in
       print("Success : \(success)")
       print("user is : \(SocialManager.serviceForType(serviceType: .Facebook).currentUser?.socialServiceDescription)")
       }, failure: { (error) in
