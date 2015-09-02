@@ -9,19 +9,9 @@
 import Foundation
 import EthanolSocial
 
-class SocialIntegrationViewController: UIViewController {
+class FacebookIntegrationViewController: UIViewController {
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-
-    let loginButton = UIButton(type: .Custom)
-    loginButton.setTitle("Login", forState: .Normal)
-    loginButton.frame = self.view.frame
-    loginButton.addTarget(self, action: "loginTapped:", forControlEvents: .TouchUpInside)
-    self.view.addSubview(loginButton)
-  }
-
-  func loginTapped(sender:AnyObject) {
+	@IBAction func loginTapped(sender: AnyObject) {
     SocialManager.serviceForType(serviceType: .Facebook).loginSilentlyIfPossible(permissions: ["public_profile", "email"], success: { (success) in
       print("Success : \(success)")
       print("user is : \(SocialManager.serviceForType(serviceType: .Facebook).currentUser)")
@@ -29,5 +19,16 @@ class SocialIntegrationViewController: UIViewController {
         print("error: \(error)")
     })
   }
+}
 
+class TwitterIntegrationViewController: UIViewController {
+
+	@IBAction func loginTapped(sender: AnyObject) {
+		SocialManager.serviceForType(serviceType: .Twitter).loginSilentlyIfPossible(permissions: ["public_profile", "email"], success: { (success) in
+			print("Success : \(success)")
+			print("user is : \(SocialManager.serviceForType(serviceType: .Twitter).currentUser)")
+			}, failure: { (error) in
+				print("error: \(error)")
+		})
+	}
 }
