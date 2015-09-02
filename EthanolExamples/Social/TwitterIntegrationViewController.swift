@@ -12,7 +12,7 @@ import EthanolSocial
 class TwitterIntegrationViewController: UIViewController {
 
 	@IBAction func loginTapped(sender: AnyObject) {
-		SocialManager.serviceForType(serviceType: .Twitter).loginSilentlyIfPossible(permissions: ["public_profile", "email"], success: { (success) in
+		SocialManager.serviceForType(serviceType: .Twitter).loginSilentlyIfPossible(success: { (success) in
 			print("Success : \(success)")
 			print("user is : \(SocialManager.serviceForType(serviceType: .Twitter).currentUser?.socialServiceDescription)")
 			}, failure: { (error) in
