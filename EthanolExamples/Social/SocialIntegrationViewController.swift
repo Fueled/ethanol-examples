@@ -14,7 +14,7 @@ class FacebookIntegrationViewController: UIViewController {
 	@IBAction func loginTapped(sender: AnyObject) {
     SocialManager.serviceForType(serviceType: .Facebook).loginSilentlyIfPossible(permissions: ["public_profile", "email"], success: { (success) in
       print("Success : \(success)")
-      print("user is : \(SocialManager.serviceForType(serviceType: .Facebook).currentUser)")
+      print("user is : \(SocialManager.serviceForType(serviceType: .Facebook).currentUser?.socialServiceDescription)")
       }, failure: { (error) in
         print("error: \(error)")
     })
@@ -26,7 +26,7 @@ class TwitterIntegrationViewController: UIViewController {
 	@IBAction func loginTapped(sender: AnyObject) {
 		SocialManager.serviceForType(serviceType: .Twitter).loginSilentlyIfPossible(permissions: ["public_profile", "email"], success: { (success) in
 			print("Success : \(success)")
-			print("user is : \(SocialManager.serviceForType(serviceType: .Twitter).currentUser)")
+			print("user is : \(SocialManager.serviceForType(serviceType: .Twitter).currentUser?.socialServiceDescription)")
 			}, failure: { (error) in
 				print("error: \(error)")
 		})
