@@ -107,12 +107,12 @@
 		65F1A2C61B8B4E500044854C /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		F407C07C1B988B5300428E8E /* EthanolContacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolContacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32087C411B948A700015F47C /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
-		32087C431B948E830015F47C /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "Carthage/Checkouts/facebook-ios-sdk/Bolts-IOS/build/Debug/Bolts.framework"; sourceTree = "<group>"; };
-		327273661B8F18E500A5BEE1 /* EthanolSocial.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolSocial.framework; path = "Carthage/Checkouts/ethanol-social/build/Debug-iphoneos/EthanolSocial.framework"; sourceTree = "<group>"; };
+		32087C431B948E830015F47C /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Bolts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		327273661B8F18E500A5BEE1 /* EthanolSocial.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolSocial.framework; path = EthanolSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3279B73C1B9715EE00A5F12D /* FacebookIntegrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacebookIntegrationViewController.swift; path = Social/FacebookIntegrationViewController.swift; sourceTree = "<group>"; };
 		3279B73E1B97161000A5F12D /* TwitterIntegrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwitterIntegrationViewController.swift; path = Social/TwitterIntegrationViewController.swift; sourceTree = "<group>"; };
-		32F0F2D81B948A04003C6F40 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "Carthage/Checkouts/facebook-ios-sdk/FBSDKCoreKit/build/Debug-iphoneos/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
-		32F0F2D91B948A04003C6F40 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "Carthage/Checkouts/facebook-ios-sdk/FBSDKLoginKit/build/Debug-iphoneos/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		32F0F2D81B948A04003C6F40 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32F0F2D91B948A04003C6F40 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47357DF1B44320B007688EC /* EthanolExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EthanolExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47357F31B44320C007688EC /* EthanolExamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EthanolExamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47357F71B44320C007688EC /* EthanolExamplesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthanolExamplesTests.swift; sourceTree = "<group>"; };
@@ -650,12 +650,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/Carthage/Checkouts/ethanol-social/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/facebook-ios-sdk/FBSDKCoreKit/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/facebook-ios-sdk/FBSDKLoginKit/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/facebook-ios-sdk/Bolts-IOS/build/Debug",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "EthanolExamples/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -676,12 +671,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/Carthage/Checkouts/ethanol-social/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/facebook-ios-sdk/FBSDKCoreKit/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/facebook-ios-sdk/FBSDKLoginKit/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/facebook-ios-sdk/Bolts-IOS/build/Debug",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "EthanolExamples/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
