@@ -36,6 +36,7 @@
 		0CF38FE91B7AA90A00A32BE1 /* EthanolUIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF38FE81B7AA90900A32BE1 /* EthanolUIComponents.framework */; };
 		65ABB96A1B8C9243002E9DB3 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ABB9691B8C9243002E9DB3 /* ContactDetailViewController.swift */; };
 		65F1A2C71B8B4E500044854C /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F1A2C61B8B4E500044854C /* ContactsViewController.swift */; };
+		F407C07D1B988B5300428E8E /* EthanolContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F407C07C1B988B5300428E8E /* EthanolContacts.framework */; };
 		F47357F81B44320C007688EC /* EthanolExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47357F71B44320C007688EC /* EthanolExamplesTests.swift */; };
 		F47358031B44320C007688EC /* EthanolExamplesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47358021B44320C007688EC /* EthanolExamplesUITests.swift */; };
 		F4C384A21B7E9B5D00F2B30A /* EthanolUIExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C384A11B7E9B5D00F2B30A /* EthanolUIExtensions.framework */; };
@@ -100,9 +101,9 @@
 		0CBD47D21B8F64710005C476 /* TextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextFieldViewController.h; path = UIExtensions/TextFieldViewController.h; sourceTree = "<group>"; };
 		0CBD47DB1B8F647F0005C476 /* ETHTextFieldPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = ETHTextFieldPlayground.playground; path = ValidationFormatting/ETHTextFieldPlayground.playground; sourceTree = "<group>"; };
 		0CF38FE81B7AA90900A32BE1 /* EthanolUIComponents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolUIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		654B36691B85F0F000FAA212 /* EthanolContacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolContacts.framework; path = EthanolContacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65ABB9691B8C9243002E9DB3 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		65F1A2C61B8B4E500044854C /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		F407C07C1B988B5300428E8E /* EthanolContacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolContacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47357DF1B44320B007688EC /* EthanolExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EthanolExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47357F31B44320C007688EC /* EthanolExamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EthanolExamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47357F71B44320C007688EC /* EthanolExamplesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthanolExamplesTests.swift; sourceTree = "<group>"; };
@@ -118,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F407C07D1B988B5300428E8E /* EthanolContacts.framework in Frameworks */,
 				F4C384A21B7E9B5D00F2B30A /* EthanolUIExtensions.framework in Frameworks */,
 				0CF38FE91B7AA90A00A32BE1 /* EthanolUIComponents.framework in Frameworks */,
 				0C4A0A0C1B79594F005D2203 /* CocoaLumberjack.framework in Frameworks */,
@@ -311,7 +313,7 @@
 		F47359751B45BDBB007688EC /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				654B36691B85F0F000FAA212 /* EthanolContacts.framework */,
+				F407C07C1B988B5300428E8E /* EthanolContacts.framework */,
 				F4C384A11B7E9B5D00F2B30A /* EthanolUIExtensions.framework */,
 				0CF38FE81B7AA90900A32BE1 /* EthanolUIComponents.framework */,
 				0C4A0A071B79594F005D2203 /* CocoaLumberjack.framework */,
@@ -621,7 +623,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "EthanolExamples/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -633,7 +634,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EthanolExamples/Supporting Files/EthanolExamples-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				USER_HEADER_SEARCH_PATHS = "Carthage/Checkout/ethanol-validation-formatting/EthanolValidationFormatting/EthanolValidationFormatting.h\n Carthage/Checkout/NSInvocation-Helpers/NSInvocationHelpers/NSInvocationHelpers.h\nCarthage/Checkout/NSInvocation-Helpers/NSInvocationHelpers/NSInvocationHelpers.h\n Carthage/Checkout/ethanol-ui-components/EthanolUIComponents/EthanolUIComponents.h Carthage/Checkout/ethanol-utilities/EthanolUtilities/EthanolUtilities.h\n Carthage/Checkout/ethanol-tools/EthanolTools/EthanolTools.h\n Carthage/Checkout/CocoaLumberjack/Classes/CocoaLumberjack.h\n";
+				USER_HEADER_SEARCH_PATHS = "Carthage/Checkout/ethanol-validation-formatting/EthanolValidationFormatting/EthanolValidationFormatting.h Carthage/Checkout/NSInvocation-Helpers/NSInvocationHelpers/NSInvocationHelpers.h Carthage/Checkout/NSInvocation-Helpers/NSInvocationHelpers/NSInvocationHelpers.h Carthage/Checkout/ethanol-ui-components/EthanolUIComponents/EthanolUIComponents.h Carthage/Checkout/ethanol-utilities/EthanolUtilities/EthanolUtilities.h Carthage/Checkout/ethanol-tools/EthanolTools/EthanolTools.h Carthage/Checkout/CocoaLumberjack/Classes/CocoaLumberjack.h";
 			};
 			name = Debug;
 		};
@@ -642,7 +643,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "EthanolExamples/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -653,7 +653,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fueled.EthanolExamples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EthanolExamples/Supporting Files/EthanolExamples-Bridging-Header.h";
-				USER_HEADER_SEARCH_PATHS = "Carthage/Checkout/ethanol-validation-formatting/EthanolValidationFormatting/EthanolValidationFormatting.h\n Carthage/Checkout/NSInvocation-Helpers/NSInvocationHelpers/NSInvocationHelpers.h\nCarthage/Checkout/NSInvocation-Helpers/NSInvocationHelpers/NSInvocationHelpers.h\n Carthage/Checkout/ethanol-ui-components/EthanolUIComponents/EthanolUIComponents.h Carthage/Checkout/ethanol-utilities/EthanolUtilities/EthanolUtilities.h\n Carthage/Checkout/ethanol-tools/EthanolTools/EthanolTools.h\n Carthage/Checkout/CocoaLumberjack/Classes/CocoaLumberjack.h\n";
+				USER_HEADER_SEARCH_PATHS = "Carthage/Checkout/ethanol-validation-formatting/EthanolValidationFormatting/EthanolValidationFormatting.h Carthage/Checkout/NSInvocation-Helpers/NSInvocationHelpers/NSInvocationHelpers.h Carthage/Checkout/NSInvocation-Helpers/NSInvocationHelpers/NSInvocationHelpers.h Carthage/Checkout/ethanol-ui-components/EthanolUIComponents/EthanolUIComponents.h Carthage/Checkout/ethanol-utilities/EthanolUtilities/EthanolUtilities.h Carthage/Checkout/ethanol-tools/EthanolTools/EthanolTools.h Carthage/Checkout/CocoaLumberjack/Classes/CocoaLumberjack.h";
 			};
 			name = Release;
 		};
