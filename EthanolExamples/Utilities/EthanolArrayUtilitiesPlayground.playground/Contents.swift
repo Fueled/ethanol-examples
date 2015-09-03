@@ -12,8 +12,12 @@ This helper will provide you handy methods such as:
 Implemented in *EthanolArrayUtilities*. Extension of SequenceType protocol.
 */
 
-// TODO
 let arrayOfElements1 = ["elt1", "elt2", "elt3", "elt4"]
+let indexFound = arrayOfElements1.find({ $0 == "elt3" })
+indexFound
+
+let indexNotFound = arrayOfElements1.find({ $0 == "elt5" })
+indexNotFound
 
 /*:
 ## Keep range of Array

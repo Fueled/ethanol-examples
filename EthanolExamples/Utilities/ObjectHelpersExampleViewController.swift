@@ -50,7 +50,7 @@ class ObjectHelpersExampleViewController: UIViewController {
   // MARK: Method Swizzling
   
   @IBAction func methodSwizzlingButtonTapped(sender: AnyObject) {
-    let alertController = TestSwizzledAlertController(title: "This alert controller will be Swizzled", message: "This text is not gonna be displayed because will be changed at runtime.", preferredStyle: .Alert)
+    let alertController = TestSwizzledAlertController(title: "This alert controller will be Swizzled", message: "This text is not going to be displayed because will be changed at runtime.", preferredStyle: .Alert)
     let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
     alertController.addAction(defaultAction)
     
@@ -71,11 +71,11 @@ public class TestSwizzledAlertController: UIAlertController {
     if self !== TestSwizzledAlertController.self {
       return
     }
-    
-    UIAlertController.eth_swizzleSelector(Selector("init:message:preferredStyle:"), withSelector: Selector("eth_init:message:preferredStyle:"))
+		
+    TestSwizzledAlertController.eth_swizzleClassSelector(Selector("alertControllerWithTitle:message:preferredStyle:"), withSelector: Selector("eth_init:message:preferredStyle:"))
   }
   
-  public func eth_init(title: String?, message: String?, preferredStyle: UIAlertControllerStyle) -> TestSwizzledAlertController {
-    return eth_init("SWIZZLED", message: "The content of this message has been swizzled", preferredStyle: preferredStyle)
+  @objc public class func eth_init(title: String?, message: String?, preferredStyle: UIAlertControllerStyle) -> UIAlertController {
+		return UIAlertController(title: "SWIZZLED", message: "The content of this message has been swizzled", preferredStyle: preferredStyle)
   }
 }

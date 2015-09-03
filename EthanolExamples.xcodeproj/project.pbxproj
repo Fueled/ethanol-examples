@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C1E378F1B94E9AB007DCA90 /* ScreenManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C1E378E1B94E9AB007DCA90 /* ScreenManagerViewController.xib */; };
-		0C1E37911B94E9C1007DCA90 /* ScreenManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1E37901B94E9C1007DCA90 /* ScreenManagerViewController.swift */; };
 		0C1E37821B9111D7007DCA90 /* DemoMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1E37801B9111D7007DCA90 /* DemoMapViewController.swift */; };
 		0C1E37831B9111D7007DCA90 /* DemoMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C1E37811B9111D7007DCA90 /* DemoMapViewController.xib */; };
+		0C1E378F1B94E9AB007DCA90 /* ScreenManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C1E378E1B94E9AB007DCA90 /* ScreenManagerViewController.xib */; };
+		0C1E37911B94E9C1007DCA90 /* ScreenManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1E37901B94E9C1007DCA90 /* ScreenManagerViewController.swift */; };
 		0C4A0A0C1B79594F005D2203 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4A0A071B79594F005D2203 /* CocoaLumberjack.framework */; };
 		0C4A0A0D1B79594F005D2203 /* EthanolTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4A0A081B79594F005D2203 /* EthanolTools.framework */; };
 		0C4A0A0E1B79594F005D2203 /* EthanolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4A0A091B79594F005D2203 /* EthanolUtilities.framework */; };
@@ -60,14 +60,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C1E378E1B94E9AB007DCA90 /* ScreenManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScreenManagerViewController.xib; sourceTree = "<group>"; };
-		0C1E37901B94E9C1007DCA90 /* ScreenManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenManagerViewController.swift; sourceTree = "<group>"; };
+		0C1E37801B9111D7007DCA90 /* DemoMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoMapViewController.swift; path = UIExtensions/DemoMapViewController.swift; sourceTree = "<group>"; };
+		0C1E37811B9111D7007DCA90 /* DemoMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DemoMapViewController.xib; path = UIExtensions/DemoMapViewController.xib; sourceTree = "<group>"; };
 		0C1E378A1B94CAC8007DCA90 /* EthanolArrayUtilitiesPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = EthanolArrayUtilitiesPlayground.playground; path = Utilities/EthanolArrayUtilitiesPlayground.playground; sourceTree = "<group>"; };
 		0C1E378B1B94CAC8007DCA90 /* EthanolSwiftHelpersPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = EthanolSwiftHelpersPlayground.playground; path = Utilities/EthanolSwiftHelpersPlayground.playground; sourceTree = "<group>"; };
 		0C1E378C1B94CAC8007DCA90 /* NSString+EthanolUtilsPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = "NSString+EthanolUtilsPlayground.playground"; path = "Utilities/NSString+EthanolUtilsPlayground.playground"; sourceTree = "<group>"; };
-		0C1E378D1B94CAC8007DCA90 /* NSTimer+EthanolBlocks.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = "NSTimer+EthanolBlocks.playground"; path = "Utilities/NSTimer+EthanolBlocks.playground"; sourceTree = "<group>"; };
-		0C1E37801B9111D7007DCA90 /* DemoMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoMapViewController.swift; path = UIExtensions/DemoMapViewController.swift; sourceTree = "<group>"; };
-		0C1E37811B9111D7007DCA90 /* DemoMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DemoMapViewController.xib; path = UIExtensions/DemoMapViewController.xib; sourceTree = "<group>"; };
+		0C1E378E1B94E9AB007DCA90 /* ScreenManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScreenManagerViewController.xib; sourceTree = "<group>"; };
+		0C1E37901B94E9C1007DCA90 /* ScreenManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenManagerViewController.swift; sourceTree = "<group>"; };
 		0C4A0A071B79594F005D2203 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C4A0A081B79594F005D2203 /* EthanolTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C4A0A091B79594F005D2203 /* EthanolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,7 +165,6 @@
 				0C1E378A1B94CAC8007DCA90 /* EthanolArrayUtilitiesPlayground.playground */,
 				0C1E378B1B94CAC8007DCA90 /* EthanolSwiftHelpersPlayground.playground */,
 				0C1E378C1B94CAC8007DCA90 /* NSString+EthanolUtilsPlayground.playground */,
-				0C1E378D1B94CAC8007DCA90 /* NSTimer+EthanolBlocks.playground */,
 				0C8EEDF11B95F6F200974BDB /* NSString+BoundingSizePlayground.playground */,
 			);
 			name = Utilities;
