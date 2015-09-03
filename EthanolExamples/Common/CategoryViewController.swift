@@ -15,6 +15,7 @@ enum Category {
   case UIExtensions
   case Utilities
   case Tools
+  case Contacts
 }
 
 class CategoryViewController: UITableViewController {
@@ -27,7 +28,11 @@ class CategoryViewController: UITableViewController {
                                       DemoInformation(name: "AnimateTransitions", viewControllerClass: AnimateTransitionViewController.self),
                                       DemoInformation(name: "MapView Helper", viewControllerClass: DemoMapViewController.self)]),
     (.Utilities, "Utilities", [DemoInformation(name: "Object Helpers", viewControllerClass: ObjectHelpersExampleViewController.self)]),
-    (.Tools, "Tools", [DemoInformation(name: "Screen Manager", viewControllerClass: ScreenManagerViewController.self)])
+    (.Tools, "Tools", [DemoInformation(name: "Screen Manager", viewControllerClass: ScreenManagerViewController.self)]),
+    (.Contacts, "Contacts", [DemoInformation(name: "Contacts") { () -> UIViewController in
+      let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+      return mainStoryboard.instantiateViewControllerWithIdentifier("ContactsViewControllerID")
+      }]),
   ]
   
   private var demosSelected: (String, Array<DemoInformation>)?

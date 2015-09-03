@@ -19,3 +19,6 @@
 [submodule "Carthage/Checkouts/ethanol-ui-extensions"]
 	url = https://github.com/Fueled/ethanol-ui-extensions.git
 	path = Carthage/Checkouts/ethanol-ui-extensions
+[submodule "Carthage/Checkouts/ethanol-contacts"]
+	path = Carthage/Checkouts/ethanol-contacts
+	url = https://github.com/Fueled/ethanol-contacts.git
