@@ -33,6 +33,7 @@ string
 
 // Remove characters with specified preserved cursor.
 // If cursor nil, will have same behavior as above.
-var cursorPointer: Int = 2
+var cursorPointer: Int = 10
 (string as NSString).eth_stringByRemovingCharacters(NSCharacterSet(charactersInString: "bcdfghjklmnpqrstvw"), preserveCursor: &cursorPointer)
+cursorPointer
 string

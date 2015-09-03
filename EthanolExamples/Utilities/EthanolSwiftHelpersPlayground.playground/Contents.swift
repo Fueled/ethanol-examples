@@ -9,7 +9,7 @@ Provide you handy methods that delays block execution
 func minutesAndSecondsForDate(date: NSDate) -> String {
   let dateFormatter = NSDateFormatter()
   dateFormatter.dateFormat = "mm'm' ss's'"
-  println("Time: \(dateFormatter.stringFromDate(date))")
+  return "Time: \(dateFormatter.stringFromDate(date))"
 }
 
 /*
