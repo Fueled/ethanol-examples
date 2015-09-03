@@ -10,11 +10,9 @@ This category provides safer and more efficient code.
 
 // Convenience method created for test purpose
 func minutesAndSecondsForDate(date: NSDate) -> String {
-  let dateFormatterMinutes = NSDateFormatter()
-  let dateFormatterSeconds = NSDateFormatter()
-  dateFormatterMinutes.dateFormat = "mm"
-  dateFormatterSeconds.dateFormat = "ss"
-  return "Time: \(dateFormatterMinutes.stringFromDate(date))m \(dateFormatterSeconds.stringFromDate(date))s"
+  let dateFormatter = NSDateFormatter()
+  dateFormatter.dateFormat = "mm'm' ss's'"
+  println("Time: \(dateFormatter.stringFromDate(date))")
 }
 
 // Create not repeatable timer (only once)
