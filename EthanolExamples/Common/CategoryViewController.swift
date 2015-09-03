@@ -24,7 +24,8 @@ class CategoryViewController: UITableViewController {
   private let categories: [(Category, String, demos: [DemoInformation])] = [
     (.UIComponents, "UI Components", [DemoInformation(name: "TextField", viewControllerClass: TextFieldViewController.self)]),
     (.UIExtensions, "UI Extensions", [DemoInformation(name: "NavigationItem", viewControllerClass: NavigationItemViewController.self),
-                                      DemoInformation(name: "AnimateTransitions", viewControllerClass: AnimateTransitionViewController.self)]),
+                                      DemoInformation(name: "AnimateTransitions", viewControllerClass: AnimateTransitionViewController.self),
+                                      DemoInformation(name: "MapView Helper", viewControllerClass: DemoMapViewController.self)]),
     (.Utilities, "Utilities", [DemoInformation(name: "Object Helpers", viewControllerClass: ObjectHelpersExampleViewController.self)]),
     (.Tools, "Tools", [DemoInformation(name: "Screen Manager", viewControllerClass: ScreenManagerViewController.self)])
   ]
