@@ -10,9 +10,9 @@ import UIKit
 import MapKit
 import EthanolUIExtensions
 
-let kNewYorkCityLatitude = 40.780247
-let kNewYorkCityLongitude = -73.971210
-let kAnimationDuration = 0.3
+private let kNewYorkCityLatitude = 40.780247
+private let kNewYorkCityLongitude = -73.971210
+private let kAnimationDuration = 0.3
 
 final class DemoMapViewController: UIViewController, MKMapViewDelegate {
   @IBOutlet weak var mapView: MKMapView!
@@ -24,7 +24,7 @@ final class DemoMapViewController: UIViewController, MKMapViewDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    self.title = "Demo MapView"
+    title = "Demo MapView"
   }
   
   override func viewWillAppear(animated: Bool) {
