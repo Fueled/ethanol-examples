@@ -57,6 +57,10 @@
 /* Begin PBXFileReference section */
 		0C1E378E1B94E9AB007DCA90 /* ScreenManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScreenManagerViewController.xib; sourceTree = "<group>"; };
 		0C1E37901B94E9C1007DCA90 /* ScreenManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenManagerViewController.swift; sourceTree = "<group>"; };
+		0C1E378A1B94CAC8007DCA90 /* EthanolArrayUtilitiesPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = EthanolArrayUtilitiesPlayground.playground; path = Utilities/EthanolArrayUtilitiesPlayground.playground; sourceTree = "<group>"; };
+		0C1E378B1B94CAC8007DCA90 /* EthanolSwiftHelpersPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = EthanolSwiftHelpersPlayground.playground; path = Utilities/EthanolSwiftHelpersPlayground.playground; sourceTree = "<group>"; };
+		0C1E378C1B94CAC8007DCA90 /* NSString+EthanolUtilsPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = "NSString+EthanolUtilsPlayground.playground"; path = "Utilities/NSString+EthanolUtilsPlayground.playground"; sourceTree = "<group>"; };
+		0C1E378D1B94CAC8007DCA90 /* NSTimer+EthanolBlocks.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = "NSTimer+EthanolBlocks.playground"; path = "Utilities/NSTimer+EthanolBlocks.playground"; sourceTree = "<group>"; };
 		0C4A0A071B79594F005D2203 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C4A0A081B79594F005D2203 /* EthanolTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C4A0A091B79594F005D2203 /* EthanolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +71,8 @@
 		0C4DF2701B8F698F00A30559 /* DemoInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoInformation.swift; path = Common/DemoInformation.swift; sourceTree = "<group>"; };
 		0C4E08F11B90C680007067D7 /* ObjectHelpersExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObjectHelpersExampleViewController.swift; path = Utilities/ObjectHelpersExampleViewController.swift; sourceTree = "<group>"; };
 		0C4E08F31B90C6F2007067D7 /* ObjectHelpersExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ObjectHelpersExampleViewController.xib; sourceTree = "<group>"; };
+		0C8EEDF01B95F61700974BDB /* EthanolSecurityPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = EthanolSecurityPlayground.playground; path = Utilities/EthanolSecurityPlayground.playground; sourceTree = "<group>"; };
+		0C8EEDF11B95F6F200974BDB /* NSString+BoundingSizePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = "NSString+BoundingSizePlayground.playground"; path = "Utilities/NSString+BoundingSizePlayground.playground"; sourceTree = "<group>"; };
 		0CBD47B41B8F63D90005C476 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CBD47BA1B8F63EE0005C476 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		0CBD47BF1B8F64190005C476 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Resources/Storyboards/Main.storyboard; sourceTree = "<group>"; };
@@ -145,6 +151,12 @@
 			children = (
 				0C4E08F11B90C680007067D7 /* ObjectHelpersExampleViewController.swift */,
 				0C4E08F31B90C6F2007067D7 /* ObjectHelpersExampleViewController.xib */,
+				0C8EEDF01B95F61700974BDB /* EthanolSecurityPlayground.playground */,
+				0C1E378A1B94CAC8007DCA90 /* EthanolArrayUtilitiesPlayground.playground */,
+				0C1E378B1B94CAC8007DCA90 /* EthanolSwiftHelpersPlayground.playground */,
+				0C1E378C1B94CAC8007DCA90 /* NSString+EthanolUtilsPlayground.playground */,
+				0C1E378D1B94CAC8007DCA90 /* NSTimer+EthanolBlocks.playground */,
+				0C8EEDF11B95F6F200974BDB /* NSString+BoundingSizePlayground.playground */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
