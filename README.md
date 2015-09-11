@@ -8,7 +8,7 @@ Before you're able to compile it, you must fetch its dependencies via [Carthage]
 
 ### Playground development
 
-Once the EthanolExamples scheme is compiled on an **iphone simulator** (![Screenshot](https://www.dropbox.com/s/gb6tzot6uvwn74x/Screenshot%202015-08-14%2012.07.15.png?dl=1) for example), you are free to reference any frameworks from the workspace into the playground (Via `#import`s). It's very important to compile on the simulator otherwise the playground will not find the frameworks.
+Once the EthanolExamples scheme is compiled on an **iphone simulator** (![Screenshot](https://www.dropbox.com/s/gb6tzot6uvwn74x/Screenshot%202015-08-14%2012.07.15.png?dl=1) for example), you are free to reference any frameworks from the workspace into the playground (Via `#import`s). It's very important to compile on the simulator otherwise playgrounds won't find the frameworks.
 
 You can also compile only a given framework by selecting its scheme and building only that scheme (![Screenshot](https://www.dropbox.com/s/d3ckyy92gbuve53/Screenshot%202015-08-14%2012.07.01.png?dl=1) for example) for development purpose.
 
@@ -18,7 +18,7 @@ Note: You can create additional playgrounds using the xcode interface, but make 
 
 ### Ethanol Frameworks development
 
-The frameworks being fetched as submodules, the project should be used to develop on the frameworks, as it allows for very fast iterative developement via playgrounds. It also allows to implement additional unit tests like you would on any other frameworks.
+The frameworks being fetched as submodules, the project of the framework should be used to develop on the frameworks, as it allows for very fast iterative developement via playgrounds. It also allows to implement additional unit tests like you would on any other frameworks.
 
 To develop on frameworks via the example project, you can simply change any files from the Framework project in the workspace. The tricky part comes from them being submodules: in order to commit a change to a framework, you have to reference the right .git folder which will be under `<workspace directory>/Carthage/Checkouts/<Framework folder>`. You can then commit, fetch and push as if you were in the framework's git repository.
 
@@ -66,13 +66,13 @@ For example, let's imagine that the framework `ethanol-social` has not been yet 
    Drag and drop it into the workspace:  
    ![result](https://www.dropbox.com/s/uuiyjo1ivkv5gf3/Screenshot%202015-09-08%2007.49.32.png?dl=1)
    
-2. Open the workspace `EthanolExamples.xcworkspace`, and go to the Link Binary with Libraries for the EthanolExamples target. To do so, first click on `EthanolExamples` project, then click on the target `EthanolExamples`, go to `Build Phases`, and finally expand `Link Binary with Libraries`.  
+2. Open the workspace `EthanolExamples.xcworkspace`, and go to the `Link Binary with Libraries` build phase for the EthanolExamples target. To do so, first click on `EthanolExamples` project, then click on the target `EthanolExamples`, go to `Build Phases`, and finally expand `Link Binary with Libraries`.  
       ![Build Phases](https://www.dropbox.com/s/8v4f3nb32qbftxx/Screenshot%202015-09-08%2007.58.53.png?dl=1)  
    From there, click the "+" button at the bottom and select the framework from the dependency you're adding (In our case, `EthanolSocial.framework`):  
    ![Add framework](https://www.dropbox.com/s/i7bcb3bhl7g6ii4/Screenshot%202015-09-08%2008.00.43.png?dl=1)  
-   If xcode was properly setting up this link, there would be no need for step #4 and #5.
+   _Note that if xcode was properly setting this up, there would be no need for step #4 and #5._
    
-3. We then need to update the `Carthage Copy Frameworks` build phases so that the new framework is properly copied where it should be when running the project. To do so, just exapnd the phase, and then click the "+" button to add the line `$(BUILT_PRODUCTS_DIR)/<Your framework name>` (In our case, it becomes `$(BUILT_PRODUCTS_DIR)/EthanolSocial.framework`)  
+3. We then need to update the `Carthage Copy Frameworks` build phase so that the new framework is properly copied where it should be when running the project. To do so, just exapnd the phase, and then click the "+" button to add the line `$(BUILT_PRODUCTS_DIR)/<Your framework name>` (In our case, it becomes `$(BUILT_PRODUCTS_DIR)/EthanolSocial.framework`)  
    ![Carthage Copy Frameworks](https://www.dropbox.com/s/lgw4800dn67j3zj/Screenshot%202015-09-08%2008.10.29.png?dl=1)  
    
 4. Now, we need to edit the project file so that everything works for other people when they fetch it later on. Do to so, first right-click on `EthanolExample` in the workspace and click on `Show in Finder`  
@@ -88,8 +88,8 @@ For example, let's imagine that the framework `ethanol-social` has not been yet 
 	F43F75DA1B9F05C200954745 /* EthanolSocial.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolSocial.framework; path = "../ethanol-social/build/Debug-iphoneos/EthanolSocial.framework"; sourceTree = "<group>"; };
 	```
 
-   See that ugly `path` reference? That's what we're going to fix. What's happening here is that xcode has found our framework but wants to us the result as if it was created via `carthage build`, which is not what we want, since we want to build is with xcode directly.  
-   In order to fix it, we need to tell xcode to go find the framework into the build directory for the current workspace (As everything build as part of the workspace goes into the same folder). This folder changes for everything project/workspace, and is indicated by the xcodebuild environment variable `BUILT_PRODUCTS_DIR`.
+   See that ugly `path` reference? That's what we're going to fix. What's happening here is that xcode has found our framework but wants to us the result as if it was created via `carthage build`, which is not what we want, since we want to build it with xcode directly.  
+   In order to fix it, we need to tell xcode to find the framework into the build directory for the current workspace (As everything built as part of the workspace goes into the same folder). This folder changes for every project/workspace, and is indicated by the xcodebuild environment variable `BUILT_PRODUCTS_DIR`.
    What we need to do then is this: change `sourceTree` so that it's relative to `BUILT_PRODUCTS_DIR`, and change the path so it's just the name of the framework. In our example, the line becomes:
 
 	```
