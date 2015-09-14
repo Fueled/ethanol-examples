@@ -34,6 +34,8 @@
 		0CBD47D91B8F64710005C476 /* TextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD47D01B8F64710005C476 /* TextFieldViewController.m */; };
 		0CBD47DA1B8F64710005C476 /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CBD47D11B8F64710005C476 /* TextFieldViewController.xib */; };
 		0CF38FE91B7AA90A00A32BE1 /* EthanolUIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF38FE81B7AA90900A32BE1 /* EthanolUIComponents.framework */; };
+		65273D961BA6E72D00FC7D7D /* FourSquareResourceFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65273D951BA6E72D00FC7D7D /* FourSquareResourceFetcher.swift */; };
+		65A1AB5F1BA6DF3700873B9C /* ResourcesExampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A1AB5D1BA6DF3700873B9C /* ResourcesExampleTableViewController.swift */; };
 		65ABB96A1B8C9243002E9DB3 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ABB9691B8C9243002E9DB3 /* ContactDetailViewController.swift */; };
 		65F1A2C71B8B4E500044854C /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F1A2C61B8B4E500044854C /* ContactsViewController.swift */; };
 		F407C07D1B988B5300428E8E /* EthanolContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F407C07C1B988B5300428E8E /* EthanolContacts.framework */; };
@@ -100,6 +102,8 @@
 		0CBD47D21B8F64710005C476 /* TextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = TextFieldViewController.h; path = UIExtensions/TextFieldViewController.h; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
 		0CBD47DB1B8F647F0005C476 /* ETHTextFieldPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = ETHTextFieldPlayground.playground; path = ValidationFormatting/ETHTextFieldPlayground.playground; sourceTree = "<group>"; };
 		0CF38FE81B7AA90900A32BE1 /* EthanolUIComponents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolUIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65273D951BA6E72D00FC7D7D /* FourSquareResourceFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FourSquareResourceFetcher.swift; path = Utilities/FourSquareResourceFetcher.swift; sourceTree = "<group>"; };
+		65A1AB5D1BA6DF3700873B9C /* ResourcesExampleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResourcesExampleTableViewController.swift; path = Utilities/ResourcesExampleTableViewController.swift; sourceTree = "<group>"; };
 		65ABB9691B8C9243002E9DB3 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		65F1A2C61B8B4E500044854C /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		F407C07C1B988B5300428E8E /* EthanolContacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolContacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +165,8 @@
 			children = (
 				0C4E08F11B90C680007067D7 /* ObjectHelpersExampleViewController.swift */,
 				0C4E08F31B90C6F2007067D7 /* ObjectHelpersExampleViewController.xib */,
+				65A1AB5D1BA6DF3700873B9C /* ResourcesExampleTableViewController.swift */,
+				65273D951BA6E72D00FC7D7D /* FourSquareResourceFetcher.swift */,
 				0C8EEDF01B95F61700974BDB /* EthanolSecurityPlayground.playground */,
 				0C1E378A1B94CAC8007DCA90 /* EthanolArrayUtilitiesPlayground.playground */,
 				0C1E378B1B94CAC8007DCA90 /* EthanolSwiftHelpersPlayground.playground */,
@@ -487,6 +493,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65A1AB5F1BA6DF3700873B9C /* ResourcesExampleTableViewController.swift in Sources */,
 				0C4DF2721B8F698F00A30559 /* DemoListViewController.swift in Sources */,
 				0CBD47B81B8F63D90005C476 /* AppDelegate.swift in Sources */,
 				0CBD47D71B8F64710005C476 /* SamplePushViewController.swift in Sources */,
@@ -495,6 +502,7 @@
 				0CBD47D91B8F64710005C476 /* TextFieldViewController.m in Sources */,
 				0C1E37911B94E9C1007DCA90 /* ScreenManagerViewController.swift in Sources */,
 				0CBD47D41B8F64710005C476 /* AnimateTransitionViewController.swift in Sources */,
+				65273D961BA6E72D00FC7D7D /* FourSquareResourceFetcher.swift in Sources */,
 				0C4DF2711B8F698F00A30559 /* CategoryViewController.swift in Sources */,
 				0CBD47D51B8F64710005C476 /* NavigationItemViewController.swift in Sources */,
 				0C1E37821B9111D7007DCA90 /* DemoMapViewController.swift in Sources */,

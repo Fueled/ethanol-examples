@@ -129,6 +129,34 @@
             </objects>
             <point key="canvasLocation" x="1698" y="1818"/>
         </scene>
+        <!--Resources Example Table View Controller-->
+        <scene sceneID="nOY-4b-skO">
+            <objects>
+                <tableViewController storyboardIdentifier="ResourcesExampleTableViewControllerID" id="veM-AX-BOY" customClass="ResourcesExampleTableViewController" customModule="EthanolExamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="avy-RE-wT7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ResourceFetcherCellIdentifier" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResourceFetcherCellIdentifier" id="ChY-fT-Zfk">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ChY-fT-Zfk" id="Jtp-vO-ZPz">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="veM-AX-BOY" id="Gbx-0v-9rJ"/>
+                            <outlet property="delegate" destination="veM-AX-BOY" id="QYD-bO-xnI"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XJ2-TH-PNw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1318" y="2675"/>
+        </scene>
         <!--Contact Detail View Controller-->
         <scene sceneID="8rT-14-hZG">
             <objects>
