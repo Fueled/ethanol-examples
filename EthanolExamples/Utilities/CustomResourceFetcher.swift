@@ -14,13 +14,20 @@ class CustomResourceFetcher: ResourceFetcher {
 		let delayTime = 2.0
 		delay(delayTime) { () -> () in
 			var randomArray: [String] = []
-			for index in 0..<pageLimit {
-				randomArray.append("Page - \(pageNumber) - \(index)")
+
+			if (pageNumber == 5) { // Last Page
+				for index in 0..<pageLimit-1 {
+					randomArray.append("Page - \(pageNumber) - \(index)")
+				}
+			} else {
+				for index in 0..<pageLimit {
+					randomArray.append("Page - \(pageNumber) - \(index)")
+				}
 			}
 
 			let error = NSError(domain: "APIERROR", code: 400, userInfo: [NSLocalizedDescriptionKey : "NOTHING ERROR"])
 
-			let successChance = 90 // percent success chance
+			let successChance = 100 // percent success chance
 			let success = (random() % 100 <= successChance)
 
 			if success {

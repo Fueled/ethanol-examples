@@ -10,6 +10,8 @@ import UIKit
 import EthanolUtilities
 
 let resourceFetcherCellIdentifier = "ResourceFetcherCellIdentifier"
+let startResourceFetcherOffset: CGFloat = 100.0
+let loadMoreHeight: CGFloat = 44.0
 
 class ResourcesExampleTableViewController: UITableViewController {
 
@@ -19,42 +21,50 @@ class ResourcesExampleTableViewController: UITableViewController {
 	var isLoading = false
 	var needsToLoadMoreData = true
 
+	// MARK: - Lifecycle Methods
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		customFetcher.startFetchingProducts { (inner) -> Void in
 			do {
 				let result = try inner()
-				self.dataSource = result.objects
+				self.dataSource = (result.resourceFetcher?.allObjects) ?? []
 				self.tableView.reloadData()
+
+				if result.hasMoreDataToLoad {
+					self.addLoadMore()
+				}
 			} catch {
-				print("error occurred.")
+				print("Error : \(error)")
 			}
 		}
 	}
 
+	// MARK: - Custom Helper Methods
+
 	func addLoadMore(){
-		if self.tableView.numberOfRowsInSection(0) == 0 {
-			return;
-		}
-		guard let _ = self.loadMoreActivity else {
-			self.loadMoreActivity = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
-			let screenWidth = UIScreen.mainScreen().bounds.size.width
-			self.loadMoreActivity!.frame = CGRectMake(0.0, 0.0, screenWidth, 44.0);
-			self.loadMoreActivity?.startAnimating()
-			self.tableView.tableFooterView = self.loadMoreActivity
+		if tableView.numberOfRowsInSection(0) == 0 {
 			return
 		}
+		guard let _ = loadMoreActivity else {
+			loadMoreActivity = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
+			let screenWidth = UIScreen.mainScreen().bounds.size.width
+			loadMoreActivity!.frame = CGRectMake(0.0, 0.0, screenWidth, loadMoreHeight)
+			animateLoadMoreActivity()
+			return
+		}
+		animateLoadMoreActivity()
+	}
 
-		self.loadMoreActivity?.startAnimating()
-		self.tableView.tableFooterView = self.loadMoreActivity
-
+	func animateLoadMoreActivity() {
+		loadMoreActivity?.startAnimating()
+		tableView.tableFooterView = loadMoreActivity
 	}
 
 	func removeLoadMore() {
 		loadMoreActivity?.stopAnimating()
-		self.tableView.tableFooterView = nil;
+		tableView.tableFooterView = nil
 	}
-
 
 	func fetchNextPage() {
 		if isLoading {
@@ -64,32 +74,32 @@ class ResourcesExampleTableViewController: UITableViewController {
 		customFetcher.fetchNextPage { (inner) -> Void in
 			do {
 				let result = try inner()
-				self.dataSource += result.objects
-				self.appendCellsForMoreObjects(result.objects.count)
-//				self.tableView.reloadData()
+				self.dataSource = (result.resourceFetcher?.allObjects) ?? []
+				self.tableView.reloadData()
 				self.needsToLoadMoreData = result.hasMoreDataToLoad
 				self.isLoading = false
+				if result.hasMoreDataToLoad == false {
+					self.removeLoadMore()
+				}
 			} catch {
 				print("error occurred.")
 			}
 		}
 	}
 
-	func appendCellsForMoreObjects(objectsCount:Int) {
+	func shouldShowLoadMoreFor(scrollView:UIScrollView) -> Bool{
+		let currentOffset = scrollView.contentOffset
+		let scrollViewBounds = scrollView.bounds
+		let scrollViewContentSize = scrollView.contentSize
+		let scrollViewInsets = scrollView.contentInset
 
-		let previousCellCount = self.tableView.numberOfRowsInSection(0)
+		let bottomScrolledYPosition = currentOffset.y + scrollViewBounds.size.height + scrollViewInsets.bottom
+		let scrollViewContentHeight = scrollViewContentSize.height
+		let reloadDistance: CGFloat = 0.0
 
-		let nextCellCount = previousCellCount + objectsCount;
-		if nextCellCount > previousCellCount {
-			var indexPaths: [NSIndexPath] = []
-			for counter in previousCellCount..<nextCellCount {
-				let indexPath = NSIndexPath(forRow: counter, inSection: 0)
-				indexPaths.append(indexPath)
-			}
-			tableView.beginUpdates()
-			tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.None)
-			tableView.endUpdates()
-		}
+		var shouldShowLoadMore = (bottomScrolledYPosition - scrollViewContentHeight + reloadDistance - loadMoreHeight + startResourceFetcherOffset) > 0
+		shouldShowLoadMore = shouldShowLoadMore && needsToLoadMoreData
+		return shouldShowLoadMore
 	}
 
 	// MARK: - Table view data source
@@ -103,7 +113,6 @@ class ResourcesExampleTableViewController: UITableViewController {
 		let fetchedObject = dataSource[indexPath.row] as! String
 		cell.textLabel?.text = fetchedObject
 		return cell
-
 	}
 
 	// MARK: UIScrollViewDelegate Methods
@@ -112,17 +121,4 @@ class ResourcesExampleTableViewController: UITableViewController {
 			fetchNextPage()
 		}
 	}
-
-	func shouldShowLoadMoreFor(scrollView:UIScrollView) -> Bool{
-		let currentOffset = scrollView.contentOffset
-		let scrollViewBounds = scrollView.bounds
-		let scrollViewContentSize = scrollView.contentSize
-		let scrollViewInsets = scrollView.contentInset
-
-		let bottomScrolledYPosition = currentOffset.y + scrollViewBounds.size.height + scrollViewInsets.bottom
-		let scrollViewContentHeight = scrollViewContentSize.height
-		let reloadDistance: CGFloat = 0.0
-		return ((bottomScrolledYPosition - scrollViewContentHeight + reloadDistance - 44.0 + 100.0) > 0 && self.needsToLoadMoreData);
-	}
-	
 }
