@@ -96,8 +96,8 @@ class ResourcesExampleTableViewController: UITableViewController {
 		let bottomScrolledYPosition = currentOffset.y + scrollViewBounds.size.height + scrollViewInsets.bottom
 		let scrollViewContentHeight = scrollViewContentSize.height
 		let reloadDistance: CGFloat = 0.0
-
-		var shouldShowLoadMore = (bottomScrolledYPosition - scrollViewContentHeight + reloadDistance - loadMoreHeight + startResourceFetcherOffset) > 0
+		let	bottomPositionY	= bottomScrolledYPosition - scrollViewContentHeight + reloadDistance
+		var shouldShowLoadMore = ((bottomPositionY - loadMoreHeight + startResourceFetcherOffset) > 0)
 		shouldShowLoadMore = shouldShowLoadMore && needsToLoadMoreData
 		return shouldShowLoadMore
 	}
