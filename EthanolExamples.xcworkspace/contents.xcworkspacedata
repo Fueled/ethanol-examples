@@ -15,6 +15,9 @@
          location = "group:Carthage/Checkouts/ethanol-contacts/EthanolContacts.xcodeproj">
       </FileRef>
       <FileRef
+         location = "group:Carthage/Checkouts/ethanol-social/EthanolSocial.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:Carthage/Checkouts/NSInvocation-Helpers/NSInvocationHelpers.xcodeproj">
       </FileRef>
       <FileRef

@@ -16,6 +16,7 @@ enum Category {
   case Utilities
   case Tools
   case Contacts
+  case Social
 }
 
 class CategoryViewController: UITableViewController {
@@ -33,8 +34,17 @@ class CategoryViewController: UITableViewController {
       let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
       return mainStoryboard.instantiateViewControllerWithIdentifier("ContactsViewControllerID")
       }]),
+ 	(.Social, "Social", [DemoInformation(name: "FacebookIntegration", viewControllerBuilder: { () -> UIViewController in
+		let main = UIStoryboard(name: "Main", bundle: nil)
+		let controller = main.instantiateViewControllerWithIdentifier("FacebookIntegrationViewControllerIdentifier")
+		return controller
+	}), DemoInformation(name: "TwitterIntegration", viewControllerBuilder: { () -> UIViewController in
+		let main = UIStoryboard(name: "Main", bundle: nil)
+		let controller = main.instantiateViewControllerWithIdentifier("TwitterIntegrationViewControllerIdentifier")
+		return controller
+	})]),
   ]
-  
+
   private var demosSelected: (String, Array<DemoInformation>)?
   
   override func viewDidLoad() {
@@ -42,6 +52,7 @@ class CategoryViewController: UITableViewController {
     
     self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: CategoryViewControllerTableViewCellIdentifier)
   }
+
   
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)

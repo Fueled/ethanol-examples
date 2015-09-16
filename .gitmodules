@@ -22,3 +22,9 @@
 [submodule "Carthage/Checkouts/ethanol-contacts"]
 	path = Carthage/Checkouts/ethanol-contacts
 	url = https://github.com/Fueled/ethanol-contacts.git
+[submodule "Carthage/Checkouts/ethanol-social"]
+	path = Carthage/Checkouts/ethanol-social
+	url = https://github.com/Fueled/ethanol-social.git
+[submodule "Carthage/Checkouts/facebook-ios-sdk"]
+	path = Carthage/Checkouts/facebook-ios-sdk
+	url = git@github.com:facebook/facebook-ios-sdk.git
