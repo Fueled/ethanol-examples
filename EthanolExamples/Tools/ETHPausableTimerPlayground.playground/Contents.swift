@@ -24,13 +24,13 @@ A few handy initializers, both class and instance methods, are provided to you.
 /*: Create timer already running, executing code declared in block once done.
 */
 let timer1 = ETHPausableTimer(timeInterval: 5.0, block: { (timer) -> Void in
-  // Code executed once done. 
-  // The timeInterval has elapsed, timeInterval property is 0 and the time has been increased by 5 seconds.
- 	timer.timeInterval
-  minutesAndSecondsForDate(NSDate())
-  }, paused: false)
+	// Code executed once done.
+	// The timeInterval has elapsed, timeInterval property is 0 and the time has been increased by 5 seconds.
+	timer.timeInterval
+	minutesAndSecondsForDate(NSDate())
+	}, paused: false)
 
-// Code executed right after the initializer. 
+// Code executed right after the initializer.
 // The timer is about to start.
 timer1.timeInterval
 minutesAndSecondsForDate(NSDate())
@@ -38,11 +38,11 @@ minutesAndSecondsForDate(NSDate())
 /*: Create timer not already running.
 */
 let timer2 = ETHPausableTimer(timeInterval: 5.0, block: { (timer) -> Void in
-  // Code executed once done.
-  // timeInterval is now 0 because elapsed, time has been incremented by 7.5 seconds (5 seconds timer + 2.5 seconds sleep).
- 	timer.timeInterval
-  minutesAndSecondsForDate(NSDate())
-  }, paused: false)
+	// Code executed once done.
+	// timeInterval is now 0 because elapsed, time has been incremented by 7.5 seconds (5 seconds timer + 2.5 seconds sleep).
+	timer.timeInterval
+	minutesAndSecondsForDate(NSDate())
+	}, paused: false)
 
 // Start timer.
 // At that point, timeInterval is not equal to 5 anymore (but slightly < 5) because the timer starts before we display that value, and it's so fast that it has time to update timeInterval. We also keep track of the current time.

@@ -2,7 +2,7 @@ import EthanolUIExtensions
 import XCPlayground
 /*:
 # ETHPlaceholderTextView Playground
-UITextView is a great control widely used and providing a lot of benefits. 
+UITextView is a great control widely used and providing a lot of benefits.
 However, one of its main limitations often force developers to subclass it/find workarounds: there is no placeholder.
 Learn how to use ETHTextView in your project and enjoy a Text View with placeholder!
 */
@@ -28,10 +28,10 @@ ethPlaceholderTextView.placeholderInsets = UIEdgeInsetsMake(ethPlaceholderTextVi
 */
 // Set attributed placeholder
 let attributes = [
-  NSUnderlineStyleAttributeName : 1,
-  NSForegroundColorAttributeName : UIColor.redColor(),
-  NSTextEffectAttributeName : NSTextEffectLetterpressStyle,
-  NSStrokeWidthAttributeName : 3.0]
+	NSUnderlineStyleAttributeName : 1,
+	NSForegroundColorAttributeName : UIColor.redColor(),
+	NSTextEffectAttributeName : NSTextEffectLetterpressStyle,
+	NSStrokeWidthAttributeName : 3.0]
 
 ethPlaceholderTextView.attributedPlaceholder = NSAttributedString(string: "Type some text here.", attributes: attributes)
 

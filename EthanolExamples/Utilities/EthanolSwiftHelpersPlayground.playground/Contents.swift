@@ -7,9 +7,9 @@ Provide you handy methods that delays block execution
 
 // Convenience method created for test purpose
 func minutesAndSecondsForDate(date: NSDate) -> String {
-  let dateFormatter = NSDateFormatter()
-  dateFormatter.dateFormat = "mm'm' ss's'"
-  return "Time: \(dateFormatter.stringFromDate(date))"
+	let dateFormatter = NSDateFormatter()
+	dateFormatter.dateFormat = "mm'm' ss's'"
+	return "Time: \(dateFormatter.stringFromDate(date))"
 }
 
 /*
@@ -20,7 +20,7 @@ Implemented in *EthanolSwiftHelpers*.
 
 minutesAndSecondsForDate(NSDate())
 delay(3.0) {
-  minutesAndSecondsForDate(NSDate())
+	minutesAndSecondsForDate(NSDate())
 }
 
 // Playground Test Code allowing for asynchronous tests, do not delete

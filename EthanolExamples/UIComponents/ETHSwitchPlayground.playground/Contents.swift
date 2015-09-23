@@ -33,8 +33,8 @@ ethSwitch.on = true
 /*:
 ## Custom Background Images
 Specify custon background images for ON and/or OFF state.
-Custom background image takes priority over custom background color. 
-This means that if both custom background image and custom background color have been set, the custom background color won't be seen because hidden by custom background image. 
+Custom background image takes priority over custom background color.
+This means that if both custom background image and custom background color have been set, the custom background color won't be seen because hidden by custom background image.
 However, this custom background color really exists underneath the custom background image. This color might subsequently be seen if the custom background image is not fully opaque.
 */
 

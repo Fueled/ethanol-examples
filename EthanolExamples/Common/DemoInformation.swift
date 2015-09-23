@@ -9,33 +9,33 @@
 import Foundation
 
 class DemoInformation {
-  private let viewControllerClass: NSObject.Type?
-  private let viewControllerBuilder: (() -> UIViewController)?
-  let name: String
-  
-  var viewController: UIViewController {
-    get {
-      if let viewControllerBuilder = self.viewControllerBuilder {
-        return viewControllerBuilder()
-      }
-      if let viewControllerClass = self.viewControllerClass {
-        return viewControllerClass.init() as! UIViewController
-      }
-      
-      return UIViewController()
-    }
-  }
-  
-  init(name: String, viewControllerClass: NSObject.Type) {
-    self.name = name
-    self.viewControllerClass = viewControllerClass
-    self.viewControllerBuilder = nil
-  }
-  
-  init(name: String, viewControllerBuilder: () -> UIViewController) {
-    self.name = name
-    self.viewControllerClass = nil
-    self.viewControllerBuilder = viewControllerBuilder
-  }
-  
+	private let viewControllerClass: NSObject.Type?
+	private let viewControllerBuilder: (() -> UIViewController)?
+	let name: String
+	
+	var viewController: UIViewController {
+		get {
+			if let viewControllerBuilder = self.viewControllerBuilder {
+				return viewControllerBuilder()
+			}
+			if let viewControllerClass = self.viewControllerClass {
+				return viewControllerClass.init() as! UIViewController
+			}
+			
+			return UIViewController()
+		}
+	}
+	
+	init(name: String, viewControllerClass: NSObject.Type) {
+		self.name = name
+		self.viewControllerClass = viewControllerClass
+		self.viewControllerBuilder = nil
+	}
+	
+	init(name: String, viewControllerBuilder: () -> UIViewController) {
+		self.name = name
+		self.viewControllerClass = nil
+		self.viewControllerBuilder = viewControllerBuilder
+	}
+	
 }

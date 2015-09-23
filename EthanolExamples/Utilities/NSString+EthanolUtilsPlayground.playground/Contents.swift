@@ -2,7 +2,7 @@ import EthanolUtilities
 import EthanolValidationFormatting
 /*:
 # NSString+EthanolUtils Playground
-One of the most widely used objects in the iOS world is obviously NSString. There always are situations where developers will need to deal with strings. 
+One of the most widely used objects in the iOS world is obviously NSString. There always are situations where developers will need to deal with strings.
 This category provides helpful helper methods that will allow you to save a lot of time, such as:
 * Check if contains substring
 * Get string by removing characters (can possibly preserve cursor)

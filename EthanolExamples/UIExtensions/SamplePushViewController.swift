@@ -9,16 +9,16 @@
 import UIKit
 
 class SamplePushViewController: UIViewController {
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    
-    self.title = "test"
-  }
-
-  override func viewDidAppear(animated: Bool) {
-    super.viewDidAppear(animated)
-    
-    print("current back button title \(self.navigationController?.eth_currentBackButtonTitle)")
-  }
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		self.title = "test"
+	}
+	
+	override func viewDidAppear(animated: Bool) {
+		super.viewDidAppear(animated)
+		
+		print("current back button title \(self.navigationController?.eth_currentBackButtonTitle)")
+	}
 }

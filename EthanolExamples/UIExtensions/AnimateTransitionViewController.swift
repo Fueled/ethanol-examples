@@ -9,17 +9,17 @@
 import UIKit
 
 class AnimateTransitionViewController: UIViewController {
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view.
-    self.title = "Animate"
-  }
-  
-  
-  @IBAction func pushWithAnimationTapped(sender: AnyObject) {
-    let viewController = SamplePushViewController()
-    self.navigationController?.eth_animatedTransitionToViewController(viewController, transitionOption: UIViewAnimationOptions.TransitionFlipFromRight, completionHandler: { (Bool finished) -> Void in
-    })
-  }
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		// Do any additional setup after loading the view.
+		self.title = "Animate"
+	}
+	
+	
+	@IBAction func pushWithAnimationTapped(sender: AnyObject) {
+		let viewController = SamplePushViewController()
+		self.navigationController?.eth_animatedTransitionToViewController(viewController, transitionOption: UIViewAnimationOptions.TransitionFlipFromRight, completionHandler: { (Bool finished) -> Void in
+		})
+	}
 }

@@ -13,40 +13,40 @@ Learn how to use ETHTextField in your project and enjoy its numerous benefits su
 
 // Declaration of a test class that demonstrates how to create the ETHTextField, how to conform to its delegate ETHTextFieldDelegate, and how to implement its method textField:didValidateText:withReason:withSuccess:error:
 public final class ETHTextFieldTestClass: NSObject, ETHTextFieldDelegate {
-  public final var ethTextfield: ETHTextField
-  
-  override init() {
-    ethTextfield = ETHTextField(frame: CGRectMake(0.0, 0.0, 400.0, 50.0))
-    super.init()
-    
-    ethTextfield.textAlignment = .Center
-    ethTextfield.delegate = self
-  }
-  
-  // ETHTextFieldDelegate method called everytime a ETHTextField validates. Error handling will be implemented here.
-  // If you return false in that method, the ETHTextField will not loose focus and still be the first responder
-  public func textField(textField: ETHTextField, didValidateText text: String, withReason reason: ETHTextFieldValidationReason, withSuccess success: Bool, error: NSError) -> Bool {
-    if !success {
-      switch reason {
-        // Handle error here
-        // For instance, display UIAlertController view, change ETHTextField background color to red, etc.
-        
-      case .KeyTapped:
-        // Validation triggered whenever user adds or removes a character
-        break
-      case .ReturnTapped:
-        // Validation triggered by Keyboard Return key tapped
-        break
-      case .LostFocus:
-        // Validation triggered when text field wants to resign first responder
-        break
-      case .Programatically:
-        // Validation triggered when we call validateInput()
-        break
-      }
-    }
-    return success
-  }
+	public final var ethTextfield: ETHTextField
+	
+	override init() {
+		ethTextfield = ETHTextField(frame: CGRectMake(0.0, 0.0, 400.0, 50.0))
+		super.init()
+		
+		ethTextfield.textAlignment = .Center
+		ethTextfield.delegate = self
+	}
+	
+	// ETHTextFieldDelegate method called everytime a ETHTextField validates. Error handling will be implemented here.
+	// If you return false in that method, the ETHTextField will not loose focus and still be the first responder
+	public func textField(textField: ETHTextField, didValidateText text: String, withReason reason: ETHTextFieldValidationReason, withSuccess success: Bool, error: NSError) -> Bool {
+		if !success {
+			switch reason {
+				// Handle error here
+				// For instance, display UIAlertController view, change ETHTextField background color to red, etc.
+				
+			case .KeyTapped:
+				// Validation triggered whenever user adds or removes a character
+				break
+			case .ReturnTapped:
+				// Validation triggered by Keyboard Return key tapped
+				break
+			case .LostFocus:
+				// Validation triggered when text field wants to resign first responder
+				break
+			case .Programatically:
+				// Validation triggered when we call validateInput()
+				break
+			}
+		}
+		return success
+	}
 }
 
 let testClass = ETHTextFieldTestClass()
@@ -84,9 +84,9 @@ testClass.ethTextfield.validator = ETHNonemptyValidator()
 // Valid Non Empty Field
 testClass.ethTextfield.text = "Some Text"
 do {
-  try testClass.ethTextfield.validator?.validateObject(testClass.ethTextfield.text)
+	try testClass.ethTextfield.validator?.validateObject(testClass.ethTextfield.text)
 } catch {
-  error
+	error
 }
 
 // Invalid Non Empty Field
@@ -173,9 +173,9 @@ testClass.ethTextfield.validateInput()
 // Invalid Non Empty Field, catch error
 testClass.ethTextfield.text = "thisIsInvalid.com"
 do {
-  try testClass.ethTextfield.validator?.validateObject(testClass.ethTextfield.text)
+	try testClass.ethTextfield.validator?.validateObject(testClass.ethTextfield.text)
 } catch {
-  error
+	error
 }
 
 /*:
