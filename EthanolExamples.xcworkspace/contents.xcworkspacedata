@@ -12,6 +12,9 @@
       location = "container:"
       name = "Dependencies">
       <FileRef
+         location = "group:Carthage/Checkouts/ethanol-utilities/EthanolUtilities.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:Carthage/Checkouts/ethanol-contacts/EthanolContacts.xcodeproj">
       </FileRef>
       <FileRef
@@ -22,9 +25,6 @@
       </FileRef>
       <FileRef
          location = "group:Carthage/Checkouts/ethanol-tools/EthanolTools.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:Carthage/Checkouts/ethanol-utilities/EthanolUtilities.xcodeproj">
       </FileRef>
       <FileRef
          location = "group:Carthage/Checkouts/ethanol-validation-formatting/EthanolValidationFormatting.xcodeproj">
