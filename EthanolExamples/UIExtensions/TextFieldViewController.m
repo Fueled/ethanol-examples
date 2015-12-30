@@ -68,7 +68,7 @@ static NSString * const kCellIdentifier = @"Cell";
   
   self.validators = @[[ETHNonemptyValidator validator],
                       [ETHSelectorValidator validatorWithSelector:@selector(eth_isValidEmail) error:@"This is not a valid email"],
-                      [ETHBlockValidator validatorWithBlock:^BOOL(id object, NSString **errorMessage) {
+                      [ETHBlockValidator validatorWithBlock:^BOOL(ETHBlockValidator * validator, id object, NSString **errorMessage) {
                         NSString * string = object;
                         if([string rangeOfString:@"Ethanol"].location != NSNotFound) {
                           return YES;
