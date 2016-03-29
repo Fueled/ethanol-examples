@@ -1,1 +1,3 @@
-github "Fueled/ethanol-ui-components"
+github "Fueled/ethanol-ui-components" "placeholder-text-view"
+github "Fueled/ethanol-ui-extensions" ~> 0.1
+github "Fueled/ethanol-contacts" ~> 0.1
