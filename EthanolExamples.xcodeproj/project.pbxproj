@@ -100,6 +100,7 @@
 		0CBD47D21B8F64710005C476 /* TextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = TextFieldViewController.h; path = UIExtensions/TextFieldViewController.h; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
 		0CBD47DB1B8F647F0005C476 /* ETHTextFieldPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = ETHTextFieldPlayground.playground; path = ValidationFormatting/ETHTextFieldPlayground.playground; sourceTree = "<group>"; };
 		0CF38FE81B7AA90900A32BE1 /* EthanolUIComponents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolUIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CF5454E1CAAE120006E3569 /* ETHPlaceholderTextViewPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = ETHPlaceholderTextViewPlayground.playground; path = UIComponents/ETHPlaceholderTextViewPlayground.playground; sourceTree = "<group>"; };
 		65ABB9691B8C9243002E9DB3 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		65F1A2C61B8B4E500044854C /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		F407C07C1B988B5300428E8E /* EthanolContacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolContacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +213,7 @@
 			children = (
 				0CBD47C71B8F64640005C476 /* ETHPageControlPlayground.playground */,
 				0CBD47C81B8F64640005C476 /* ETHSwitchPlayground.playground */,
+				0CF5454E1CAAE120006E3569 /* ETHPlaceholderTextViewPlayground.playground */,
 			);
 			name = UIComponents;
 			sourceTree = "<group>";

@@ -1,24 +1,24 @@
 [submodule "Carthage/Checkouts/CocoaLumberjack"]
 	path = Carthage/Checkouts/CocoaLumberjack
-	url = ssh://git@github.com/CocoaLumberjack/CocoaLumberjack.git
+	url = https://github.com/CocoaLumberjack/CocoaLumberjack.git
 [submodule "Carthage/Checkouts/NSInvocation-Helpers"]
 	path = Carthage/Checkouts/NSInvocation-Helpers
-	url = ssh://git@github.com/stephanecopin/NSInvocation-Helpers.git
+	url = https://github.com/stephanecopin/NSInvocation-Helpers.git
 [submodule "Carthage/Checkouts/ethanol-utilities"]
 	path = Carthage/Checkouts/ethanol-utilities
-	url = ssh://git@github.com/Fueled/ethanol-utilities.git
+	url = https://github.com/Fueled/ethanol-utilities.git
 [submodule "Carthage/Checkouts/ethanol-tools"]
 	path = Carthage/Checkouts/ethanol-tools
-	url = ssh://git@github.com/Fueled/ethanol-tools.git
+	url = https://github.com/Fueled/ethanol-tools.git
 [submodule "Carthage/Checkouts/ethanol-validation-formatting"]
 	path = Carthage/Checkouts/ethanol-validation-formatting
-	url = ssh://git@github.com/Fueled/ethanol-validation-formatting.git
+	url = https://github.com/Fueled/ethanol-validation-formatting.git
 [submodule "Carthage/Checkouts/ethanol-ui-components"]
 	path = Carthage/Checkouts/ethanol-ui-components
-	url = ssh://git@github.com/Fueled/ethanol-ui-components.git
+	url = https://github.com/Fueled/ethanol-ui-components.git
 [submodule "Carthage/Checkouts/ethanol-ui-extensions"]
-	url = ssh://git@github.com/Fueled/ethanol-ui-extensions.git
+	url = https://github.com/Fueled/ethanol-ui-extensions.git
 	path = Carthage/Checkouts/ethanol-ui-extensions
 [submodule "Carthage/Checkouts/ethanol-contacts"]
 	path = Carthage/Checkouts/ethanol-contacts
-	url = ssh://git@github.com/Fueled/ethanol-contacts.git
+	url = https://github.com/Fueled/ethanol-contacts.git
