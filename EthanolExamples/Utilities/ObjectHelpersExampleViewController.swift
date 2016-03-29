@@ -15,7 +15,6 @@ struct ObjectHelpersExampleViewControllerConstants {
 }
 
 class ObjectHelpersExampleViewController: UIViewController {
-  
   @IBOutlet weak var executeOnDeallocButton: UIButton!
   var viewToDealloc = UIView()
   
@@ -28,22 +27,22 @@ class ObjectHelpersExampleViewController: UIViewController {
   // MARK: Execute On Dealloc
   
   @IBAction func executeOnDeallocButtonTapped(sender: AnyObject) {
-    if let text = executeOnDeallocButton.titleLabel?.text where text == ObjectHelpersExampleViewControllerConstants.createViewString {
-      executeOnDeallocButton.setTitle(ObjectHelpersExampleViewControllerConstants.deallocViewString, forState: .Normal)
-      viewToDealloc = UIView(frame: CGRect(x: executeOnDeallocButton.frame.origin.x + executeOnDeallocButton.frame.size.width + 20.0, y: executeOnDeallocButton.frame.origin.y, width: executeOnDeallocButton.frame.size.height, height: executeOnDeallocButton.frame.size.height))
-      viewToDealloc.backgroundColor = UIColor.redColor()
+    if let text = self.executeOnDeallocButton.titleLabel?.text where text == ObjectHelpersExampleViewControllerConstants.createViewString {
+      self.executeOnDeallocButton.setTitle(ObjectHelpersExampleViewControllerConstants.deallocViewString, forState: .Normal)
+      self.viewToDealloc = UIView(frame: CGRect(x: self.executeOnDeallocButton.frame.origin.x + self.executeOnDeallocButton.frame.size.width + 20.0, y: self.executeOnDeallocButton.frame.origin.y, width: self.executeOnDeallocButton.frame.size.height, height: self.executeOnDeallocButton.frame.size.height))
+      self.viewToDealloc.backgroundColor = UIColor.redColor()
       view.addSubview(viewToDealloc)
       
-      viewToDealloc.eth_performBlockOnDealloc({ object in
+      self.viewToDealloc.eth_performBlockOnDealloc({ object in
         let alertController = UIAlertController(title: "View Deallocated", message: "The view has been deallocated", preferredStyle: .Alert)
         let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
         alertController.addAction(defaultAction)
         self.presentViewController(alertController, animated: true, completion: nil)
       })
     } else {
-      executeOnDeallocButton.setTitle(ObjectHelpersExampleViewControllerConstants.createViewString, forState: .Normal)
-      viewToDealloc.removeFromSuperview()
-      viewToDealloc = UIView()  // Create a new view deallocs the previous one, and triggers our performBlockOnDealloc to be called.
+      self.executeOnDeallocButton.setTitle(ObjectHelpersExampleViewControllerConstants.createViewString, forState: .Normal)
+      self.viewToDealloc.removeFromSuperview()
+      self.viewToDealloc = UIView()  // Create a new view deallocs the previous one, and triggers our performBlockOnDealloc to be called.
     }
   }
   
@@ -61,18 +60,17 @@ class ObjectHelpersExampleViewController: UIViewController {
 }
 
 public class TestSwizzledAlertController: UIAlertController {
-  
   override public class func initialize() {
     struct Static {
       static var token: dispatch_once_t = 0
     }
-    
+
     // Make sure it is not a subclass
     if self !== TestSwizzledAlertController.self {
       return
     }
 		
-    TestSwizzledAlertController.eth_swizzleClassSelector(Selector("alertControllerWithTitle:message:preferredStyle:"), withSelector: Selector("eth_init:message:preferredStyle:"))
+    TestSwizzledAlertController.eth_swizzleClassSelector(#selector(UIAlertController.init(title:message:preferredStyle:)), withSelector: #selector(TestSwizzledAlertController.eth_init(_:message:preferredStyle:)))
   }
   
   @objc public class func eth_init(title: String?, message: String?, preferredStyle: UIAlertControllerStyle) -> UIAlertController {
