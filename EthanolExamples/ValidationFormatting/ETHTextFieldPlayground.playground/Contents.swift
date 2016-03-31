@@ -25,7 +25,7 @@ public final class ETHTextFieldTestClass: NSObject, ETHTextFieldDelegate {
 	
 	// ETHTextFieldDelegate method called everytime a ETHTextField validates. Error handling will be implemented here.
 	// If you return false in that method, the ETHTextField will not loose focus and still be the first responder
-	public func textField(textField: ETHTextField, didValidateText text: String, withReason reason: ETHTextFieldValidationReason, withSuccess success: Bool, error: NSError) -> Bool {
+	public func textField(textField: ETHTextField, didValidateText text: String, withReason reason: ETHTextFieldValidationReason, withSuccess success: Bool, error: NSError?) -> Bool {
 		if !success {
 			switch reason {
 				// Handle error here
@@ -83,11 +83,7 @@ testClass.ethTextfield.validator = ETHNonemptyValidator()
 
 // Valid Non Empty Field
 testClass.ethTextfield.text = "Some Text"
-do {
-	try testClass.ethTextfield.validator?.validateObject(testClass.ethTextfield.text)
-} catch {
-	error
-}
+testClass.ethTextfield.validator?.validateObject(testClass.ethTextfield.text!, error: nil)
 
 // Invalid Non Empty Field
 testClass.ethTextfield.text = ""
@@ -172,11 +168,7 @@ testClass.ethTextfield.validateInput()
 
 // Invalid Non Empty Field, catch error
 testClass.ethTextfield.text = "thisIsInvalid.com"
-do {
-	try testClass.ethTextfield.validator?.validateObject(testClass.ethTextfield.text)
-} catch {
-	error
-}
+testClass.ethTextfield.validator?.validateObject(testClass.ethTextfield.text!, error: nil)
 
 /*:
 __URL Validator__
@@ -290,6 +282,31 @@ testClass.ethTextfield.validateInput()
 
 // Invalid Credit Card Verification Code: contains a non-numeric character
 testClass.ethTextfield.text = "22a"
+testClass.ethTextfield.validateInput()
+
+/*:
+__Phone Number Validator__
+Validates phone numbers, whether they have a country prefix or not.
+The framework Ethanol relies can is able to tell if a phone number is invalid even if its syntax is correct (and this offline).
+*/
+
+// Set Validator
+testClass.ethTextfield.validator = ETHPhoneNumberValidator()
+
+// European Phone Number: wrong phone number (syntax, one number too many)
+testClass.ethTextfield.text = "34722222222"
+testClass.ethTextfield.validateInput()
+
+// European Phone Number: wrong phone number (right syntax but sequence of numbers impossible)
+testClass.ethTextfield.text = "4686067204"
+testClass.ethTextfield.validateInput()
+
+// American Phone Number: valid (without zone code)
+testClass.ethTextfield.text = "3472222222"
+testClass.ethTextfield.validateInput()
+
+// European Phone Number: valid (with zone code)
+testClass.ethTextfield.text = "+33668606893"
 testClass.ethTextfield.validateInput()
 
 /*:

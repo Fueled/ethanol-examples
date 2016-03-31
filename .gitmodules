@@ -22,3 +22,6 @@
 [submodule "Carthage/Checkouts/ethanol-contacts"]
 	path = Carthage/Checkouts/ethanol-contacts
 	url = ssh://git@github.com/Fueled/ethanol-contacts.git
+[submodule "Carthage/Checkouts/libPhoneNumber-iOS"]
+	path = Carthage/Checkouts/libPhoneNumber-iOS
+	url = ssh://git@github.com/iziz/libPhoneNumber-iOS.git
