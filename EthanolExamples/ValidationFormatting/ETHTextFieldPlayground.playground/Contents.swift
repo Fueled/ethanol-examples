@@ -22,7 +22,7 @@ public final class ETHTextFieldTestClass: NSObject, ETHTextFieldDelegate {
 		ethTextfield.textAlignment = .Center
 		ethTextfield.delegate = self
 	}
-	
+
 	// ETHTextFieldDelegate method called everytime a ETHTextField validates. Error handling will be implemented here.
 	// If you return false in that method, the ETHTextField will not loose focus and still be the first responder
 	public func textField(textField: ETHTextField, didValidateText text: String, withReason reason: ETHTextFieldValidationReason, withSuccess success: Bool, error: NSError?) -> Bool {
@@ -367,15 +367,14 @@ testClass.ethTextfield.text = "09/30"
 testClass.ethTextfield.text = "09/306666666666"
 
 /*:
-__Phone Number Validator [To Be Implemented]__
+__Phone Number Formatter__
 Formats your textfield text to conform official and international phone number conventions.
 Will automatically add a space after the country code if provided, parenthesis for american number, and obviously regular spacing spaces.
 If too many numbers, special formatting will be removed altogether.
 */
 
-/*
 // Set Formatter
-testClass.ethTextfield.formatter =
+testClass.ethTextfield.formatter = ETHPhoneNumberFormatter()
 
 // European Phone Number: without zone code
 testClass.ethTextfield.text = "0668606893"
@@ -385,7 +384,6 @@ testClass.ethTextfield.text = "+33668606893"
 
 // American Phone Number
 testClass.ethTextfield.text = "1668606893"
-*/
 
 /*:
 # Convenience Properties
