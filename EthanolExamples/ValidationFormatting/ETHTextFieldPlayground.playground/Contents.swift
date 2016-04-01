@@ -307,6 +307,41 @@ testClass.ethTextfield.validateInput()
 
 // European Phone Number: valid (with zone code)
 testClass.ethTextfield.text = "+33668606893"
+
+/*:
+__Compound Validator__
+Combines multiple validators at the same time, using at your convenience AND or OR logic operators.
+It is a subclass of ETHValidator and behaves just like any other "single" validator.
+*/
+
+// Set Validator OR
+testClass.ethTextfield.validator = ETHCompoundValidator(validators: [ETHNonemptyValidator(), ETHUSAStateValidator()], compoundOperator: .Or)
+
+// Invalid: Empty and Not a State
+testClass.ethTextfield.text = ""
+testClass.ethTextfield.validateInput()
+
+// Valid: Not Empty and Not a State
+testClass.ethTextfield.text = "not empty"
+testClass.ethTextfield.validateInput()
+
+// Valid: Not Empty and a State
+testClass.ethTextfield.text = "NY"
+testClass.ethTextfield.validateInput()
+
+// Set Validator AND
+testClass.ethTextfield.validator = ETHCompoundValidator(validators: [ETHNonemptyValidator(), ETHUSAStateValidator()], compoundOperator: .And)
+
+// Invalid: Empty and Not a State
+testClass.ethTextfield.text = ""
+testClass.ethTextfield.validateInput()
+
+// Invalid: Not Empty and Not a State
+testClass.ethTextfield.text = "not empty"
+testClass.ethTextfield.validateInput()
+
+// Valid: Not Empty and Valid State
+testClass.ethTextfield.text = "NY"
 testClass.ethTextfield.validateInput()
 
 /*:
