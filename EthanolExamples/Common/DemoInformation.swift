@@ -1,8 +1,8 @@
 //
-//  EthanolExamplesTests.swift
-//  EthanolExamplesTests
+//  DemoInformation.swift
+//  EthanolExamples
 //
-//  Created by Stephane Copin on 7/1/15.
+//  Created by Stephane Copin on 7/2/15.
 //  Copyright (c) 2015 Fueled Digital Media, LLC.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,30 +24,36 @@
 //  THE SOFTWARE.
 //
 
-import XCTest
+import Foundation
 
-class EthanolExamplesTests: XCTestCase {
+class DemoInformation {
+	private let viewControllerClass: NSObject.Type?
+	private let viewControllerBuilder: (() -> UIViewController)?
+	let name: String
 	
-	override func setUp() {
-		super.setUp()
-		// Put setup code here. This method is called before the invocation of each test method in the class.
-	}
-	
-	override func tearDown() {
-		// Put teardown code here. This method is called after the invocation of each test method in the class.
-		super.tearDown()
-	}
-	
-	func testExample() {
-		// This is an example of a functional test case.
-		// Use XCTAssert and related functions to verify your tests produce the correct results.
-	}
-	
-	func testPerformanceExample() {
-		// This is an example of a performance test case.
-		self.measureBlock() {
-			// Put the code you want to measure the time of here.
+	var viewController: UIViewController {
+		get {
+			if let viewControllerBuilder = self.viewControllerBuilder {
+				return viewControllerBuilder()
+			}
+			if let viewControllerClass = self.viewControllerClass {
+				return viewControllerClass.init() as! UIViewController
+			}
+			
+			return UIViewController()
 		}
+	}
+	
+	init(name: String, viewControllerClass: NSObject.Type) {
+		self.name = name
+		self.viewControllerClass = viewControllerClass
+		self.viewControllerBuilder = nil
+	}
+	
+	init(name: String, viewControllerBuilder: () -> UIViewController) {
+		self.name = name
+		self.viewControllerClass = nil
+		self.viewControllerBuilder = viewControllerBuilder
 	}
 	
 }

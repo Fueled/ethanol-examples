@@ -1,8 +1,8 @@
 //
-//  EthanolExamplesTests.swift
-//  EthanolExamplesTests
+//  NavigationItemViewController.swift
+//  EthanolExamples
 //
-//  Created by Stephane Copin on 7/1/15.
+//  Created by hhs-fueled on 17/08/15.
 //  Copyright (c) 2015 Fueled Digital Media, LLC.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,30 +24,34 @@
 //  THE SOFTWARE.
 //
 
-import XCTest
+import UIKit
+import EthanolUIExtensions
 
-class EthanolExamplesTests: XCTestCase {
+class NavigationItemViewController: UIViewController {
 	
-	override func setUp() {
-		super.setUp()
-		// Put setup code here. This method is called before the invocation of each test method in the class.
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		self.setupNavigationBar()
 	}
 	
-	override func tearDown() {
-		// Put teardown code here. This method is called after the invocation of each test method in the class.
-		super.tearDown()
+	func setupNavigationBar(){
+		self.navigationItem.setCustomBackButtonWithTitle("Custom", target:self, selector: #selector(backTapped))
+  
+		let attributedString = NSMutableAttributedString(string: "This is attributed title")
+		
+		var range = NSMakeRange(0, attributedString.length)
+		attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.lightGrayColor(), range:range)
+		
+		range = NSMakeRange(0, attributedString.length - 3)
+		attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range:range)
+		
+		let font = UIFont(name: "AvenirNext-Regular", size: 22.0)!
+		attributedString.addAttribute(NSFontAttributeName, value: font, range: range)
+		self.navigationItem.attributedTitle = attributedString
 	}
 	
-	func testExample() {
-		// This is an example of a functional test case.
-		// Use XCTAssert and related functions to verify your tests produce the correct results.
+	func backTapped(){
+		self.navigationController?.popViewControllerAnimated(true)
 	}
-	
-	func testPerformanceExample() {
-		// This is an example of a performance test case.
-		self.measureBlock() {
-			// Put the code you want to measure the time of here.
-		}
-	}
-	
 }

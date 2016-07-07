@@ -1,8 +1,8 @@
 //
-//  EthanolExamplesTests.swift
-//  EthanolExamplesTests
+//  ContactDetailViewController.swift
+//  EthanolExamples
 //
-//  Created by Stephane Copin on 7/1/15.
+//  Created by hhs-fueled on 25/08/15.
 //  Copyright (c) 2015 Fueled Digital Media, LLC.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,29 +24,25 @@
 //  THE SOFTWARE.
 //
 
-import XCTest
+import UIKit
+import EthanolContacts
 
-class EthanolExamplesTests: XCTestCase {
+class ContactDetailViewController: UIViewController {
 	
-	override func setUp() {
-		super.setUp()
-		// Put setup code here. This method is called before the invocation of each test method in the class.
+	@IBOutlet weak var descriptionLabel: UILabel!
+	
+	var contact: Contact?
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		self.populateContactDetails()
 	}
 	
-	override func tearDown() {
-		// Put teardown code here. This method is called after the invocation of each test method in the class.
-		super.tearDown()
-	}
-	
-	func testExample() {
-		// This is an example of a functional test case.
-		// Use XCTAssert and related functions to verify your tests produce the correct results.
-	}
-	
-	func testPerformanceExample() {
-		// This is an example of a performance test case.
-		self.measureBlock() {
-			// Put the code you want to measure the time of here.
+	func populateContactDetails(){
+		if let contact = contact {
+			let descriptionString = "givenName : \(contact.givenName) , familyName : \(contact.familyName) , middleName : \(contact.middleName) , phone : \(contact.phone) , emails : \(contact.emails) , addresses : \(contact.addresses) , organizationName : \(contact.organizationName) , jobTitle : \(contact.jobTitle) , departmentName : \(contact.departmentName) , nickname : \(contact.nickname) , urls : \(contact.urls) , birthdayDate : \(contact.birthdayDate)"
+			self.descriptionLabel.text = descriptionString
 		}
 	}
 	

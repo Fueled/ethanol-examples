@@ -1,8 +1,8 @@
 //
-//  EthanolExamplesTests.swift
-//  EthanolExamplesTests
+//  screenManagerViewController.swift
+//  EthanolExamples
 //
-//  Created by Stephane Copin on 7/1/15.
+//  Created by Bastien Falcou on 8/31/15.
 //  Copyright (c) 2015 Fueled Digital Media, LLC.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,30 +24,30 @@
 //  THE SOFTWARE.
 //
 
-import XCTest
+import UIKit
+import EthanolTools
+import EthanolUtilities
 
-class EthanolExamplesTests: XCTestCase {
+class ScreenManagerViewController: UIViewController {
 	
-	override func setUp() {
-		super.setUp()
-		// Put setup code here. This method is called before the invocation of each test method in the class.
+	var screenManager: ETHScreenManager!
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		screenManager = ETHScreenManager(screenStatus: UIApplication.sharedApplication().applicationState == .Active ? .On : .Unknown)
+		screenManager.startUpdatingScreenStatus()
 	}
 	
-	override func tearDown() {
-		// Put teardown code here. This method is called after the invocation of each test method in the class.
-		super.tearDown()
-	}
-	
-	func testExample() {
-		// This is an example of a functional test case.
-		// Use XCTAssert and related functions to verify your tests produce the correct results.
-	}
-	
-	func testPerformanceExample() {
-		// This is an example of a performance test case.
-		self.measureBlock() {
-			// Put the code you want to measure the time of here.
+	@IBAction func didTapNotificationButton(sender: AnyObject) {
+		delay(5.0) {
+			ETHScreenManager.wakeUpScreenWithMessage("I am a local Push Notification!")
 		}
 	}
 	
+	@IBAction func didTapWakeScreenUpButton(sender: AnyObject) {
+		delay(5.0) {
+			ETHScreenManager.wakeUpScreen()
+		}
+	}
 }

@@ -1,8 +1,8 @@
 //
-//  EthanolExamplesTests.swift
-//  EthanolExamplesTests
+//  AnimateTransitionViewController.swift
+//  EthanolExamples
 //
-//  Created by Stephane Copin on 7/1/15.
+//  Created by hhs-fueled on 18/08/15.
 //  Copyright (c) 2015 Fueled Digital Media, LLC.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,30 +24,18 @@
 //  THE SOFTWARE.
 //
 
-import XCTest
+import UIKit
 
-class EthanolExamplesTests: XCTestCase {
-	
-	override func setUp() {
-		super.setUp()
-		// Put setup code here. This method is called before the invocation of each test method in the class.
+class AnimateTransitionViewController: UIViewController {
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		// Do any additional setup after loading the view.
+		self.title = "Animate"
 	}
-	
-	override func tearDown() {
-		// Put teardown code here. This method is called after the invocation of each test method in the class.
-		super.tearDown()
+
+	@IBAction func pushWithAnimationTapped(sender: AnyObject) {
+		let viewController = SamplePushViewController()
+		self.navigationController?.eth_animatedTransitionToViewController(viewController, transitionOption: UIViewAnimationOptions.TransitionFlipFromRight, completionHandler: { (finished) -> Void in
+		})
 	}
-	
-	func testExample() {
-		// This is an example of a functional test case.
-		// Use XCTAssert and related functions to verify your tests produce the correct results.
-	}
-	
-	func testPerformanceExample() {
-		// This is an example of a performance test case.
-		self.measureBlock() {
-			// Put the code you want to measure the time of here.
-		}
-	}
-	
 }

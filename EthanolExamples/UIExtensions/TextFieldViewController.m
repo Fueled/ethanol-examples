@@ -3,13 +3,33 @@
 //  Ethanol Example
 //
 //  Created by Stephane Copin on 3/20/14.
-//  Copyright (c) 2014 Fueled. All rights reserved.
+//  Copyright (c) 2015 Fueled Digital Media, LLC.
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
 //
 
 #import "TextFieldViewController.h"
 
-@import EthanolUIComponents;
 @import EthanolValidationFormatting;
+@import EthanolUIComponents;
+@import EthanolUIExtensions;
+@import EthanolTools;
 
 static NSString * const kCellIdentifier = @"Cell";
 
@@ -44,9 +64,29 @@ static NSString * const kCellIdentifier = @"Cell";
   [self.validatorTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellIdentifier];
   [self.charactersTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellIdentifier];
   
+  [self handleKeyboardNotifications];
+  
+  [self eth_registerForKeyboardNotificationsWithHandler:^(BOOL showing, KeyboardNotificationState state, CGRect beginRect, CGRect endRect, NSTimeInterval duration, UIViewAnimationOptions options) {
+    switch (state) {
+      case KeyboardNotificationStateDidShow:
+        self.view.backgroundColor = [UIColor redColor];
+        break;
+      case KeyboardNotificationStateWillShow:
+        self.view.backgroundColor = [UIColor greenColor];
+        break;
+      case KeyboardNotificationStateWillHide:
+        self.view.backgroundColor = [UIColor blueColor];
+        break;
+      case KeyboardNotificationStateDidHide:
+      default:
+        self.view.backgroundColor = [UIColor whiteColor];
+        break;
+    }
+  }];
+  
   self.validators = @[[ETHNonemptyValidator validator],
                       [ETHSelectorValidator validatorWithSelector:@selector(eth_isValidEmail) error:@"This is not a valid email"],
-                      [ETHBlockValidator validatorWithBlock:^BOOL(id object, NSString **errorMessage) {
+                      [ETHBlockValidator validatorWithBlock:^BOOL(ETHBlockValidator * validator, id object, NSString **errorMessage) {
                         NSString * string = object;
                         if([string rangeOfString:@"Ethanol"].location != NSNotFound) {
                           return YES;
@@ -81,10 +121,40 @@ static NSString * const kCellIdentifier = @"Cell";
   self.textField.maximumLength = 20;
 }
 
+- (void)handleKeyboardNotifications {
+  [self.validatorTableView eth_handleKeyboardNotifications];
+  [self.formatterTableView eth_handleKeyboardNotifications];
+  
+  // Example to show how notificatin can be read on any NSObject for custom changes
+  [self eth_registerForKeyboardNotificationsWithHandler:^(BOOL show, KeyboardNotificationState state, CGRect startRect, CGRect endRect, NSTimeInterval duration, UIViewAnimationOptions animationOptions) {
+    self.view.backgroundColor = show ? [UIColor redColor] : [UIColor whiteColor];
+    switch(state) {
+      case KeyboardNotificationStateWillShow:
+        self.containerScrollView.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.5];
+        break;
+      case KeyboardNotificationStateDidShow:
+        self.containerScrollView.backgroundColor = [[UIColor yellowColor] colorWithAlphaComponent:0.5];
+        break;
+      case KeyboardNotificationStateWillHide:
+        self.containerScrollView.backgroundColor = [[UIColor greenColor] colorWithAlphaComponent:0.5];
+        break;
+      case KeyboardNotificationStateDidHide:
+        self.containerScrollView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
+        break;
+    }
+  }];
+}
+
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
   
   [self.containerScrollView flashScrollIndicators];
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+  [super viewDidAppear:animated];
+  
+  NSLog(@"The top view controller is %@",[UIViewController topMostController]);
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {

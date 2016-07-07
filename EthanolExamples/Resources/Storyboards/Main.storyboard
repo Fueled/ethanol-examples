@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14F25a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dK3-FI-f9V">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ro1-Lg-jjX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dK3-FI-f9V" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oNu-1o-OAl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="O4T-md-38u" kind="relationship" relationship="rootViewController" id="Bpx-rm-6a1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ngc-WP-vHj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="320" y="1022"/>
+        </scene>
+        <!--Categories-->
+        <scene sceneID="Xt6-uS-Nag">
+            <objects>
+                <tableViewController id="O4T-md-38u" customClass="CategoryViewController" customModule="EthanolExamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Lh3-Er-5qm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="O4T-md-38u" id="beY-fa-jca"/>
+                            <outlet property="delegate" destination="O4T-md-38u" id="tkT-VH-i6N"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Categories" id="knl-dY-fEq"/>
+                    <connections>
+                        <segue destination="CEP-Sh-s2c" kind="show" identifier="ShowDemoListViewControllerSegueIdentifier" id="Mwf-AQ-mb8"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F7o-AS-0KS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1020" y="1022"/>
+        </scene>
+        <!--Demo List View Controller-->
+        <scene sceneID="8SX-75-3Zj">
+            <objects>
+                <tableViewController id="CEP-Sh-s2c" customClass="DemoListViewController" customModule="EthanolExamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="0NU-5d-Cel">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="CEP-Sh-s2c" id="0Tk-m9-aEc"/>
+                            <outlet property="delegate" destination="CEP-Sh-s2c" id="cPp-6P-Ywi"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mat-2G-1jn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1698" y="1022"/>
+        </scene>
+        <!--Contacts View Controller-->
+        <scene sceneID="F3X-RJ-NmC">
+            <objects>
+                <viewController storyboardIdentifier="ContactsViewControllerID" id="3wQ-RW-eh0" customClass="ContactsViewController" customModule="EthanolExamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LI3-08-QDb"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ofb-gJ-qNz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SWY-lE-tGG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hfM-L5-V9d">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContactsCell" textLabel="lGz-bn-PYf" style="IBUITableViewCellStyleDefault" id="kA4-lz-Tgr">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kA4-lz-Tgr" id="num-gF-fqN">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lGz-bn-PYf">
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="3wQ-RW-eh0" id="ZYA-Ci-WdD"/>
+                                    <outlet property="delegate" destination="3wQ-RW-eh0" id="3jZ-gn-H6F"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hfM-L5-V9d" firstAttribute="top" secondItem="SWY-lE-tGG" secondAttribute="topMargin" id="3LH-sr-G96"/>
+                            <constraint firstItem="Ofb-gJ-qNz" firstAttribute="top" secondItem="hfM-L5-V9d" secondAttribute="bottom" id="8bo-pB-5vd"/>
+                            <constraint firstAttribute="trailing" secondItem="hfM-L5-V9d" secondAttribute="trailing" id="LnL-8P-MHv"/>
+                            <constraint firstItem="hfM-L5-V9d" firstAttribute="top" secondItem="LI3-08-QDb" secondAttribute="bottom" id="ZWa-4r-M2e"/>
+                            <constraint firstItem="hfM-L5-V9d" firstAttribute="leading" secondItem="SWY-lE-tGG" secondAttribute="leading" id="e8s-d8-JlG"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ZWa-4r-M2e"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="hfM-L5-V9d" id="bZf-jw-ahH"/>
+                        <segue destination="1qK-9U-tEM" kind="show" identifier="ShowContactDetailSegue" id="lMt-J3-0G5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N90-pE-hjt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1698" y="1818"/>
+        </scene>
+        <!--Contact Detail View Controller-->
+        <scene sceneID="8rT-14-hZG">
+            <objects>
+                <viewController id="1qK-9U-tEM" customClass="ContactDetailViewController" customModule="EthanolExamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2GL-0a-7Zd"/>
+                        <viewControllerLayoutGuide type="bottom" id="TnZ-X7-GNL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8DM-ma-tgQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GE3-13-VKw">
+                                <rect key="frame" x="20" y="70" width="560" height="510"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GE3-13-VKw" firstAttribute="top" secondItem="8DM-ma-tgQ" secondAttribute="top" constant="70" id="8eC-1Q-THn"/>
+                            <constraint firstItem="GE3-13-VKw" firstAttribute="leading" secondItem="8DM-ma-tgQ" secondAttribute="leading" constant="20" id="IYL-Xq-GSG"/>
+                            <constraint firstItem="TnZ-X7-GNL" firstAttribute="top" secondItem="GE3-13-VKw" secondAttribute="bottom" constant="20" id="OcI-4a-KDx"/>
+                            <constraint firstAttribute="trailing" secondItem="GE3-13-VKw" secondAttribute="trailing" constant="20" id="pTp-dA-iEG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="GE3-13-VKw" id="jWl-ec-pmd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pHe-3q-h8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2412" y="1819"/>
+        </scene>
+    </scenes>
+</document>
