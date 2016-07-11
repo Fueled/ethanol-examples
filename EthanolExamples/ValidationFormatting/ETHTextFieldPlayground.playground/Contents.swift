@@ -22,10 +22,10 @@ public final class ETHTextFieldTestClass: NSObject, ETHTextFieldDelegate {
 		ethTextfield.textAlignment = .Center
 		ethTextfield.delegate = self
 	}
-	
+
 	// ETHTextFieldDelegate method called everytime a ETHTextField validates. Error handling will be implemented here.
 	// If you return false in that method, the ETHTextField will not loose focus and still be the first responder
-	public func textField(textField: ETHTextField, didValidateText text: String, withReason reason: ETHTextFieldValidationReason, withSuccess success: Bool, error: NSError) -> Bool {
+	public func textField(textField: ETHTextField, didValidateText text: String, withReason reason: ETHTextFieldValidationReason, withSuccess success: Bool, error: NSError?) -> Bool {
 		if !success {
 			switch reason {
 				// Handle error here
@@ -83,11 +83,7 @@ testClass.ethTextfield.validator = ETHNonemptyValidator()
 
 // Valid Non Empty Field
 testClass.ethTextfield.text = "Some Text"
-do {
-	try testClass.ethTextfield.validator?.validateObject(testClass.ethTextfield.text)
-} catch {
-	error
-}
+testClass.ethTextfield.validator?.validateObject(testClass.ethTextfield.text!, error: nil)
 
 // Invalid Non Empty Field
 testClass.ethTextfield.text = ""
@@ -172,11 +168,7 @@ testClass.ethTextfield.validateInput()
 
 // Invalid Non Empty Field, catch error
 testClass.ethTextfield.text = "thisIsInvalid.com"
-do {
-	try testClass.ethTextfield.validator?.validateObject(testClass.ethTextfield.text)
-} catch {
-	error
-}
+testClass.ethTextfield.validator?.validateObject(testClass.ethTextfield.text!, error: nil)
 
 /*:
 __URL Validator__
@@ -293,6 +285,66 @@ testClass.ethTextfield.text = "22a"
 testClass.ethTextfield.validateInput()
 
 /*:
+__Phone Number Validator__
+Validates phone numbers, whether they have a country prefix or not.
+The framework Ethanol relies can is able to tell if a phone number is invalid even if its syntax is correct (and this offline).
+*/
+
+// Set Validator
+testClass.ethTextfield.validator = ETHPhoneNumberValidator()
+
+// European Phone Number: wrong phone number (syntax, one number too many)
+testClass.ethTextfield.text = "34722222222"
+testClass.ethTextfield.validateInput()
+
+// European Phone Number: wrong phone number (right syntax but sequence of numbers impossible)
+testClass.ethTextfield.text = "4686067204"
+testClass.ethTextfield.validateInput()
+
+// American Phone Number: valid (without zone code)
+testClass.ethTextfield.text = "3472222222"
+testClass.ethTextfield.validateInput()
+
+// European Phone Number: valid (with zone code)
+testClass.ethTextfield.text = "+33668606893"
+
+/*:
+__Compound Validator__
+Combines multiple validators at the same time, using at your convenience AND or OR logic operators.
+It is a subclass of ETHValidator and behaves just like any other "single" validator.
+*/
+
+// Set Validator OR
+testClass.ethTextfield.validator = ETHCompoundValidator(validators: [ETHNonemptyValidator(), ETHUSAStateValidator()], compoundOperator: .Or)
+
+// Invalid: Empty and Not a State
+testClass.ethTextfield.text = ""
+testClass.ethTextfield.validateInput()
+
+// Valid: Not Empty and Not a State
+testClass.ethTextfield.text = "not empty"
+testClass.ethTextfield.validateInput()
+
+// Valid: Not Empty and a State
+testClass.ethTextfield.text = "NY"
+testClass.ethTextfield.validateInput()
+
+// Set Validator AND
+testClass.ethTextfield.validator = ETHCompoundValidator(validators: [ETHNonemptyValidator(), ETHUSAStateValidator()], compoundOperator: .And)
+
+// Invalid: Empty and Not a State
+testClass.ethTextfield.text = ""
+testClass.ethTextfield.validateInput()
+
+// Invalid: Not Empty and Not a State
+testClass.ethTextfield.text = "not empty"
+testClass.ethTextfield.validateInput()
+
+// Valid: Not Empty and Valid State
+testClass.ethTextfield.text = "NY"
+testClass.ethTextfield.validateInput()
+
+/*:
 # Formatters
 Formatters allow to automatically format Strings as they are being tapped by the user.
 */
@@ -350,15 +402,14 @@ testClass.ethTextfield.text = "09/30"
 testClass.ethTextfield.text = "09/306666666666"
 
 /*:
-__Phone Number Validator [To Be Implemented]__
+__Phone Number Formatter__
 Formats your textfield text to conform official and international phone number conventions.
 Will automatically add a space after the country code if provided, parenthesis for american number, and obviously regular spacing spaces.
 If too many numbers, special formatting will be removed altogether.
 */
 
-/*
 // Set Formatter
-testClass.ethTextfield.formatter =
+testClass.ethTextfield.formatter = ETHPhoneNumberFormatter()
 
 // European Phone Number: without zone code
 testClass.ethTextfield.text = "0668606893"
@@ -368,7 +419,6 @@ testClass.ethTextfield.text = "+33668606893"
 
 // American Phone Number
 testClass.ethTextfield.text = "1668606893"
-*/
 
 /*:
 # Convenience Properties

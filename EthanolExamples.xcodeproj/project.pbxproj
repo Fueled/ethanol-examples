@@ -14,13 +14,13 @@
 		0C4A0A0C1B79594F005D2203 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4A0A071B79594F005D2203 /* CocoaLumberjack.framework */; };
 		0C4A0A0D1B79594F005D2203 /* EthanolTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4A0A081B79594F005D2203 /* EthanolTools.framework */; };
 		0C4A0A0E1B79594F005D2203 /* EthanolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4A0A091B79594F005D2203 /* EthanolUtilities.framework */; };
-		0C4A0A0F1B79594F005D2203 /* EthanolValidationFormatting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4A0A0A1B79594F005D2203 /* EthanolValidationFormatting.framework */; };
 		0C4A0A101B79594F005D2203 /* NSInvocationHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4A0A0B1B79594F005D2203 /* NSInvocationHelpers.framework */; };
 		0C4DF2711B8F698F00A30559 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DF26E1B8F698F00A30559 /* CategoryViewController.swift */; };
 		0C4DF2721B8F698F00A30559 /* DemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DF26F1B8F698F00A30559 /* DemoListViewController.swift */; };
 		0C4DF2731B8F698F00A30559 /* DemoInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DF2701B8F698F00A30559 /* DemoInformation.swift */; };
 		0C4E08F21B90C680007067D7 /* ObjectHelpersExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E08F11B90C680007067D7 /* ObjectHelpersExampleViewController.swift */; };
 		0C4E08F41B90C6F2007067D7 /* ObjectHelpersExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4E08F31B90C6F2007067D7 /* ObjectHelpersExampleViewController.xib */; };
+		0C80359C1CAF265B0099196D /* EthanolValidationFormatting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C80359B1CAF265B0099196D /* EthanolValidationFormatting.framework */; };
 		0CBD47B81B8F63D90005C476 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD47B41B8F63D90005C476 /* AppDelegate.swift */; };
 		0CBD47BC1B8F63EE0005C476 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CBD47BA1B8F63EE0005C476 /* Assets.xcassets */; };
 		0CBD47C11B8F64190005C476 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBD47BF1B8F64190005C476 /* Main.storyboard */; };
@@ -70,13 +70,13 @@
 		0C4A0A071B79594F005D2203 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C4A0A081B79594F005D2203 /* EthanolTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C4A0A091B79594F005D2203 /* EthanolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C4A0A0A1B79594F005D2203 /* EthanolValidationFormatting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolValidationFormatting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C4A0A0B1B79594F005D2203 /* NSInvocationHelpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NSInvocationHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C4DF26E1B8F698F00A30559 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryViewController.swift; path = Common/CategoryViewController.swift; sourceTree = "<group>"; };
 		0C4DF26F1B8F698F00A30559 /* DemoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoListViewController.swift; path = Common/DemoListViewController.swift; sourceTree = "<group>"; };
 		0C4DF2701B8F698F00A30559 /* DemoInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoInformation.swift; path = Common/DemoInformation.swift; sourceTree = "<group>"; };
 		0C4E08F11B90C680007067D7 /* ObjectHelpersExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObjectHelpersExampleViewController.swift; path = Utilities/ObjectHelpersExampleViewController.swift; sourceTree = "<group>"; };
 		0C4E08F31B90C6F2007067D7 /* ObjectHelpersExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ObjectHelpersExampleViewController.xib; sourceTree = "<group>"; };
+		0C80359B1CAF265B0099196D /* EthanolValidationFormatting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolValidationFormatting.framework; path = EthanolValidationFormatting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C8EEDF01B95F61700974BDB /* EthanolSecurityPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = EthanolSecurityPlayground.playground; path = Utilities/EthanolSecurityPlayground.playground; sourceTree = "<group>"; };
 		0C8EEDF11B95F6F200974BDB /* NSString+BoundingSizePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = "NSString+BoundingSizePlayground.playground"; path = "Utilities/NSString+BoundingSizePlayground.playground"; sourceTree = "<group>"; };
 		0CBD47B41B8F63D90005C476 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +100,7 @@
 		0CBD47D21B8F64710005C476 /* TextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = TextFieldViewController.h; path = UIExtensions/TextFieldViewController.h; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
 		0CBD47DB1B8F647F0005C476 /* ETHTextFieldPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = ETHTextFieldPlayground.playground; path = ValidationFormatting/ETHTextFieldPlayground.playground; sourceTree = "<group>"; };
 		0CF38FE81B7AA90900A32BE1 /* EthanolUIComponents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolUIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CF5454E1CAAE120006E3569 /* ETHPlaceholderTextViewPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = ETHPlaceholderTextViewPlayground.playground; path = UIComponents/ETHPlaceholderTextViewPlayground.playground; sourceTree = "<group>"; };
 		65ABB9691B8C9243002E9DB3 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		65F1A2C61B8B4E500044854C /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		F407C07C1B988B5300428E8E /* EthanolContacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolContacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,13 +119,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C80359C1CAF265B0099196D /* EthanolValidationFormatting.framework in Frameworks */,
 				F407C07D1B988B5300428E8E /* EthanolContacts.framework in Frameworks */,
 				F4C384A21B7E9B5D00F2B30A /* EthanolUIExtensions.framework in Frameworks */,
 				0CF38FE91B7AA90A00A32BE1 /* EthanolUIComponents.framework in Frameworks */,
 				0C4A0A0C1B79594F005D2203 /* CocoaLumberjack.framework in Frameworks */,
 				0C4A0A0D1B79594F005D2203 /* EthanolTools.framework in Frameworks */,
 				0C4A0A0E1B79594F005D2203 /* EthanolUtilities.framework in Frameworks */,
-				0C4A0A0F1B79594F005D2203 /* EthanolValidationFormatting.framework in Frameworks */,
 				0C4A0A101B79594F005D2203 /* NSInvocationHelpers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,6 +213,7 @@
 			children = (
 				0CBD47C71B8F64640005C476 /* ETHPageControlPlayground.playground */,
 				0CBD47C81B8F64640005C476 /* ETHSwitchPlayground.playground */,
+				0CF5454E1CAAE120006E3569 /* ETHPlaceholderTextViewPlayground.playground */,
 			);
 			name = UIComponents;
 			sourceTree = "<group>";
@@ -311,13 +313,13 @@
 		F47359751B45BDBB007688EC /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				0C80359B1CAF265B0099196D /* EthanolValidationFormatting.framework */,
 				F407C07C1B988B5300428E8E /* EthanolContacts.framework */,
 				F4C384A11B7E9B5D00F2B30A /* EthanolUIExtensions.framework */,
 				0CF38FE81B7AA90900A32BE1 /* EthanolUIComponents.framework */,
 				0C4A0A071B79594F005D2203 /* CocoaLumberjack.framework */,
 				0C4A0A081B79594F005D2203 /* EthanolTools.framework */,
 				0C4A0A091B79594F005D2203 /* EthanolUtilities.framework */,
-				0C4A0A0A1B79594F005D2203 /* EthanolValidationFormatting.framework */,
 				0C4A0A0B1B79594F005D2203 /* NSInvocationHelpers.framework */,
 			);
 			name = Dependencies;
